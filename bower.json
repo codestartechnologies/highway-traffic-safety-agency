@@ -1,0 +1,32 @@
+{
+  "name": "htsa-template",
+  "description": "Highway Traffic Safety Administration HTML website template",
+  "private": true,
+  "authors": [
+    "Codestar Technologies"
+  ],
+  "license": "AGPL-3.0-or-later",
+  "keywords": [
+    "htsa template",
+    "highway traffic safety agency html template",
+    "htsa website template"
+  ],
+  "homepage": "https://github.com/codestartechnologies/htsa-template",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "semantic": "semantic-ui#^2.5.0",
+    "jquery": "^3.6.1",
+    "bootstrap": "^5.2.2",
+    "metismenu": "^3.0.7",
+    "animate-css": "^4.1.1",
+    "waypoints": "waypoint#^4.0.1",
+    "tiny-slider": "^2.9.4",
+    "scrollup": "^2.4.1"
+  }
+}
