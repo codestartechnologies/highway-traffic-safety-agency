@@ -37,9 +37,10 @@ if ( ! trait_exists( 'PageViewLoader' ) ) {
          * @param string $view      The relative path to the view file. Paths are separated using dots (.)
          * @param array $params     Parameters passed to the view. Default is an empty array
          * @param string $type      The directory to search for the view. Can be either "admin" or "public". Default is admin
+         * @param bool $once        Whether to include the view only once. Default true
          * @return void
          */
-        public function load_view( string $view, array $params = array(), string $type = 'admin' ) : void
+        public function load_view( string $view, array $params = array(), string $type = 'admin', bool $once = true ) : void
         {
             $view = str_replace( '.', '/', $view );
             $base_path = null;
@@ -54,7 +55,11 @@ if ( ! trait_exists( 'PageViewLoader' ) ) {
                         extract( $params );
                     }
 
-                    require_once $full_path;
+                    if ( $once ) {
+                        require_once $full_path;
+                    } else {
+                        require $full_path;
+                    }
                 } else {
                     $this->view_not_found_message( $full_path );
                 }

@@ -17,7 +17,8 @@ return array(
          *
          * Default: <nav>
          */
-        'wrapper_open'      => '',
+        // 'wrapper_open'      => '<div class="ui black circular labels text-center">',
+        'wrapper_open'      => '<div class="text-center"><div class="ui mini pagination menu">',
 
         /**
          * Markup for displaying the link to the first page
@@ -26,7 +27,8 @@ return array(
          *
          * Default: <a href="%s">&laquo;</a>
          */
-        'page_first'        => '',
+        // 'page_first'        => '<a class="ui label" href="%s"><i class="left double angle icon align-middle me-0"></i></a>',
+        'page_first'        => '<a href="%s" class="item"><i class="angle double left icon"></i></a>',
 
         /**
          * Markup for displaying the link to the previous page
@@ -35,7 +37,8 @@ return array(
          *
          * Default: <a href="%s">&lsaquo;</a>
          */
-        'page_prev'         => '',
+        // 'page_prev'         => '<a class="ui label" href="%s"><i class="left angle icon align-middle me-0"></i></a>',
+        'page_prev'         => '<a href="%s" class="item"><i class="angle left icon"></i></a>',
 
         /**
          * Markup for displaying the link to the current page
@@ -44,7 +47,8 @@ return array(
          *
          * Default: <a class="active" href="javascript:void(0);">%s</a>
          */
-        'page_current'      => '',
+        // 'page_current'      => '<a class="ui label" href="javascript:void(0);">%s</a>',
+        'page_current'      => '<a href="javascript:void(0);" class="active item">%s</a>',
 
         /**
          * Markup for displaying the dynamically generated links
@@ -53,7 +57,8 @@ return array(
          *
          * Default: <a href="%1$s">%2$s</a>
          */
-        'page_links'        => '',
+        // 'page_links'        => '<a class="ui label fw-lighter" href="%1$s">%2$s</a>',
+        'page_links'        => '<a href="%1$s" class="item">%2$s</a>',
 
         /**
          * Markup for displaying the link to the next page
@@ -62,7 +67,8 @@ return array(
          *
          * Default: <a href="%s">&rsaquo;</a>
          */
-        'page_next'         => '',
+        // 'page_next'         => '<a class="ui label" href="%s"><i class="right angle icon align-middle me-0"></i></a>',
+        'page_next'         => '<a href="%s" class="item"><i class="angle right icon"></i></a>',
 
         /**
          * Markup for displaying the link to the last page
@@ -71,14 +77,16 @@ return array(
          *
          * Default: <a href="%s">&raquo;</a>
          */
-        'page_last'         => '',
+        // 'page_last'         => '<a class="ui label" href="%s"><i class="right double angle icon align-middle me-0"></i></a>',
+        'page_last'         => '<a href="%s" class="item"><i class="angle double right icon"></i></a>',
 
         /**
          * Markup for displaying the closing pagination container tag
          *
          * Default: </nav>
          */
-        'wrapper_close'     => '',
+        // 'wrapper_close'     => '</div>',
+        'wrapper_close'     => '</div></div>',
     ),
 
     'simple_pagination_markup'  => array(

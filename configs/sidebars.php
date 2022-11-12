@@ -37,13 +37,13 @@ return array(
     /**
      * Configuration values for 'Front Page Resources' sidebar area
      */
-    'htsa_front_page_resources_sidebar'  => array(
+    'front_page_cards_sidebar'  => array(
 
         'name'              => esc_html__( 'Front Page Resources', 'htsa' ),
 
         'id'                => HTSA_FRONT_PAGE_RESOURCES_SIDEBAR_ID,
 
-        'description'       => esc_html__( 'Widgets in this area are shown in the front page.', 'htsa' ),
+        'description'       => esc_html__( 'Widgets in this area are shown in the front page, immediately after the Mayor welcome address', 'htsa' ),
 
         'class'             => '',
 
@@ -63,13 +63,65 @@ return array(
     /**
      * Configuration values for 'Front Page' sidebar area
      */
-    'htsa_front_page_sidebar'  => array(
+    'front_page_sidebar'  => array(
 
         'name'              => esc_html__( 'Front Page', 'htsa' ),
 
         'id'                => HTSA_FRONT_PAGE_SIDEBAR_ID,
 
         'description'       => esc_html__( 'Widgets in this area are shown in the front page, beside the featured and latest blog section', 'htsa' ),
+
+        'class'             => '',
+
+        'before_widget'     => '<div id="%1$s" class="mb-5 vstack align-items-center %2$s">',
+
+        'after_widget'      => '</div>',
+
+        'before_title'      => '<h4 class="fs-5 text-capitalize text-center fw-semibold mb-3">',
+
+        'after_title'       => '</h4>',
+
+        'before_sidebar'    => '',
+
+        'after_sidebar'     => '',
+    ),
+
+    /**
+     * Configuration values for 'Archive Pages' sidebar area
+     */
+    'archive_sidebar'  => array(
+
+        'name'              => esc_html__( 'Archive Pages', 'htsa' ),
+
+        'id'                => HTSA_ARCHIVES_SIDEBAR_ID,
+
+        'description'       => esc_html__( 'Widgets in this area are shown in archive pages', 'htsa' ),
+
+        'class'             => '',
+
+        'before_widget'     => '<div id="%1$s" class="mb-5 vstack align-items-center %2$s">',
+
+        'after_widget'      => '</div>',
+
+        'before_title'      => '<h4 class="fs-5 text-capitalize text-center fw-semibold mb-3">',
+
+        'after_title'       => '</h4>',
+
+        'before_sidebar'    => '',
+
+        'after_sidebar'     => '',
+    ),
+
+    /**
+     * Configuration values for 'Single Pages' sidebar area
+     */
+    'single_sidebar'  => array(
+
+        'name'              => esc_html__( 'Single Pages', 'htsa' ),
+
+        'id'                => HTSA_SINGLE_SIDEBAR_ID,
+
+        'description'       => esc_html__( 'Widgets in this area are shown in single pages', 'htsa' ),
 
         'class'             => '',
 

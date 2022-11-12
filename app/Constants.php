@@ -72,6 +72,16 @@ if ( ! class_exists( 'Constants' ) ) {
                 define( 'HTSA_SEMATIC_UI_CARD_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/card.min.css' );
             }
 
+            if ( ! defined( 'HTSA_SEMATIC_UI_CHECKBOX_CSS' ) ) {
+                // define( 'HTSA_SEMATIC_UI_CHECKBOX_CSS', 'https://cdn.jsdelivr.net/npm/' );
+                define( 'HTSA_SEMATIC_UI_CHECKBOX_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/checkbox.min.css' );
+            }
+
+            if ( ! defined( 'HTSA_SEMATIC_UI_COMMENT_CSS' ) ) {
+                // define( 'HTSA_SEMATIC_UI_COMMENT_CSS', 'https://cdn.jsdelivr.net/npm/' );
+                define( 'HTSA_SEMATIC_UI_COMMENT_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/comment.min.css' );
+            }
+
             if ( ! defined( 'HTSA_SEMATIC_UI_DIMMER_CSS' ) ) {
                 // define( 'HTSA_SEMATIC_UI_DIMMER_CSS', 'https://cdn.jsdelivr.net/npm/' );
                 define( 'HTSA_SEMATIC_UI_DIMMER_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/dimmer.min.css' );
@@ -90,6 +100,11 @@ if ( ! class_exists( 'Constants' ) ) {
             if ( ! defined( 'HTSA_SEMATIC_UI_EMBED_CSS' ) ) {
                 // define( 'HTSA_SEMATIC_UI_EMBED_CSS', 'https://cdn.jsdelivr.net/npm/' );
                 define( 'HTSA_SEMATIC_UI_EMBED_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/embed.min.css' );
+            }
+
+            if ( ! defined( 'HTSA_SEMATIC_UI_FEED_CSS' ) ) {
+                // define( 'HTSA_SEMATIC_UI_FEED_CSS', 'https://cdn.jsdelivr.net/npm/' );
+                define( 'HTSA_SEMATIC_UI_FEED_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/feed.min.css' );
             }
 
             if ( ! defined( 'HTSA_SEMATIC_UI_FORM_CSS' ) ) {
@@ -140,6 +155,11 @@ if ( ! class_exists( 'Constants' ) ) {
             if ( ! defined( 'HTSA_SEMATIC_UI_MODAL_CSS' ) ) {
                 // define( 'HTSA_SEMATIC_UI_MODAL_CSS', 'https://cdn.jsdelivr.net/npm/' );
                 define( 'HTSA_SEMATIC_UI_MODAL_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/modal.min.css' );
+            }
+
+            if ( ! defined( 'HTSA_SEMATIC_UI_SEARCH_CSS' ) ) {
+                // define( 'HTSA_SEMATIC_UI_SEARCH_CSS', 'https://cdn.jsdelivr.net/npm/' );
+                define( 'HTSA_SEMATIC_UI_SEARCH_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/search.min.css' );
             }
 
             if ( ! defined( 'HTSA_SEMATIC_UI_SIDEBAR_CSS' ) ) {
@@ -304,6 +324,14 @@ if ( ! class_exists( 'Constants' ) ) {
 
             if ( ! defined( 'HTSA_FRONT_PAGE_SIDEBAR_ID' ) ) {
                 define( 'HTSA_FRONT_PAGE_SIDEBAR_ID', 'htsa-front-page-sidebar' );
+            }
+
+            if ( ! defined( 'HTSA_ARCHIVES_SIDEBAR_ID' ) ) {
+                define( 'HTSA_ARCHIVES_SIDEBAR_ID', 'htsa-archives-sidebar' );
+            }
+
+            if ( ! defined( 'HTSA_SINGLE_SIDEBAR_ID' ) ) {
+                define( 'HTSA_SINGLE_SIDEBAR_ID', 'htsa-single-sidebar' );
             }
         }
     }

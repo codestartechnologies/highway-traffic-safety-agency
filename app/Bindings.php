@@ -19,11 +19,18 @@ use WTS_Theme\App\Admin\Menus\WTSOptionsPage;
 use WTS_Theme\App\Admin\Menus\WTSThemePage;
 use WTS_Theme\App\Admin\Notices\WTSAdminNotice;
 use WTS_Theme\App\Admin\Settings\WTSSettings;
+use WTS_Theme\App\Public\Sidebars\HTSAArchiveSidebar;
 use WTS_Theme\App\Public\Sidebars\HTSAFrontpageResourcesSidebar;
 use WTS_Theme\App\Public\Sidebars\HTSAFrontpageSidebar;
+use WTS_Theme\App\Public\Sidebars\HTSASingleSidebar;
 use WTS_Theme\App\Public\Sidebars\WTSSidebar;
 use WTS_Theme\App\Public\Widgets\HTSACallToActionWidget;
 use WTS_Theme\App\Public\Widgets\HTSACardWidget;
+use WTS_Theme\App\Public\Widgets\HTSAPostsCarouselWidget;
+use WTS_Theme\App\Public\Widgets\HTSARecentPostsWidget;
+use WTS_Theme\App\Public\Widgets\HTSASearchWidget;
+use WTS_Theme\App\Public\Widgets\HTSATagCloudWidget;
+use WTS_Theme\App\Public\Widgets\HTSAVideoWidget;
 use WTS_Theme\App\Public\Widgets\WTSWidget;
 
 /**
@@ -89,8 +96,10 @@ if ( ! class_exists( 'Bindings' ) ) {
          */
         public static array $sidebars = array(
             // WTSSidebar::class => 'sidebars.wts_sidebar',
-            HTSAFrontpageResourcesSidebar::class => 'sidebars.htsa_front_page_resources_sidebar',
-            HTSAFrontpageSidebar::class => 'sidebars.htsa_front_page_sidebar',
+            HTSAFrontpageResourcesSidebar::class => 'sidebars.front_page_cards_sidebar',
+            HTSAFrontpageSidebar::class => 'sidebars.front_page_sidebar',
+            HTSAArchiveSidebar::class => 'sidebars.archive_sidebar',
+            HTSASingleSidebar::class => 'sidebars.single_sidebar',
         );
 
         /**
@@ -102,7 +111,7 @@ if ( ! class_exists( 'Bindings' ) ) {
          * @since 1.0.0
          */
         public static array $unregistered_widgets = array(
-            WP_Widget_Calendar::class,
+            // WP_Widget_Calendar::class,
         );
 
         /**
@@ -117,6 +126,11 @@ if ( ! class_exists( 'Bindings' ) ) {
             // WTSWidget::class,
             HTSACardWidget::class,
             HTSACallToActionWidget::class,
+            HTSASearchWidget::class,
+            HTSATagCloudWidget::class,
+            HTSARecentPostsWidget::class,
+            HTSAPostsCarouselWidget::class,
+            HTSAVideoWidget::class,
         );
 
         /**
@@ -153,7 +167,7 @@ if ( ! class_exists( 'Bindings' ) ) {
          * @since 1.0.0
          */
         public static array $admin_notices = array(
-            WTSAdminNotice::class
+            // WTSAdminNotice::class,
         );
     }
 }

@@ -78,6 +78,26 @@ return array(
     ),
 
     /**
+     * Customize the opening tag markup for html element that will be added after the opening comment form tag
+     */
+    'after_open_form_tag' => '<div class="ui equal width form">',
+
+    /**
+     * Customize the closing tag markup for html element that will be added before the closing comment form tag
+     */
+    'before_close_form_tag' => '</div>',
+
+    /**
+     * Customize the markup for html element that will be added after the comment form
+     */
+    'after_form' => '<div class="ui hidden section divider"></div>',
+
+    /**
+     * Customize the markup for html element that will be added before the comment form
+     */
+    'before_form' => '<!-- Comment Form --><h3 class="ui horizontal section header divider text-capitalize"> leave a comment</h3>',
+
+    /**
      * Customize the markup used when filtering comment form default arguments.
      */
     'form_defaults_markup'  => array(
@@ -129,7 +149,7 @@ return array(
          *
          * Default: %1$s <a href="%2$s">%3$s</a>
          */
-        'title_reply_to'        => '',
+        'title_reply_to'        => '%1$s <a href="%2$s" class="link-dark text-decoration-underline text-capitalize">%3$s</a>',
 
     ),
 
@@ -144,7 +164,7 @@ return array(
          *
          * Default: <a href="%1$s" %3$s>%2$s</a>
          */
-        'container'  => '',
+        'container'  => '<a href="%1$s" %3$s class="fw-lighter link-danger text-lowercase fs-6">%2$s</a>',
     ),
 
     /**
@@ -159,7 +179,7 @@ return array(
          *
          * Default: <p><label>Fullname</label><input type="text" name="%1$s" value="%2$s" /></p><br />
          */
-        'author'    => '',
+        'author'    => '<div class="fields"><div class="required field"><label>Full name</label><input type="text" name="%1$s" placeholder="Full name" value="%2$s" /></div>',
 
         /**
          * Markup to display email field
@@ -168,7 +188,7 @@ return array(
          *
          * Default: <p><label>Email Address</label><input type="email" name="%1$s" value="%2$s" /></p><br />
          */
-        'email'     => '',
+        'email'     => '<div class="required field"><label>Email address</label><input type="email" name="%1$s" placeholder="Email address" value="%2$s" /></div></div>',
 
         /**
          * Markup to display comment field
@@ -177,7 +197,7 @@ return array(
          *
          * Default: <p><label>Your Comment</label><textarea name="%s"></textarea></p><br />
          */
-        'comment'   => '',
+        'comment'   => '<div class="required field"><label>Your comment</label><textarea name="%s"></textarea></div>',
 
         /**
          * Markup to display cookie consent field
@@ -186,7 +206,7 @@ return array(
          *
          * Default: <p><input type="checkbox" name="%1$s" value="yes" %2$s /><label>%3$s</label></p><br />
          */
-        'cookies'   => '',
+        'cookies'   => '<div class="required inline field"><div class="ui toggle checkbox" data-htsa-id="semanticUICheckbox"><input type="checkbox" tabindex="0" class="hidden" name="%1$s" value="yes" %2$s /><label>%3$s</label></div></div>',
 
     ),
 
@@ -197,7 +217,7 @@ return array(
         /**
          * Default: <p> %1$s %2$s </p>
          */
-        'container' => '',
+        'container' => '%1$s %2$s',
 
         /**
          * Markup for the submit element. Can be input element or button
@@ -206,7 +226,7 @@ return array(
          *
          * Default: <button type="submit" name="%1$s" id="%2$s">Add Comment</button>
          */
-        'button'    => '',
+        'button'    => '<button type="submit" class="ui animated black button" name="%1$s" id="%2$s"><span class="visible content">Add Comment</span><span class="hidden content">Submit</span></button>',
 
     ),
 

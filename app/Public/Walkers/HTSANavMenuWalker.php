@@ -24,7 +24,7 @@ if ( ! class_exists( 'HTSANavMenuWalker' ) ) {
     /**
      * Class HTSANavMenuWalker
      *
-     * This file contains Sidebar class for registering theme sidebar areas.
+     * This file contains HTSANavMenuWalker class for creating nav menu walker.
      *
      * @package WordpressThemeStarter
      * @author Chijindu Nzeako <chijindunzeako517@gmail.com>

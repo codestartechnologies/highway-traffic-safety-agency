@@ -15,6 +15,8 @@ namespace WTS_Theme\App;
 
 use Codestartechnologies\WordpressThemeStarter\Interfaces\ActionHooks;
 use Codestartechnologies\WordpressThemeStarter\Interfaces\FilterHooks;
+use WTS_Theme\App\Public\Walkers\HTSACommentWalker;
+use WTS_Theme\App\Public\Walkers\HTSACommentWalker2;
 use WTS_Theme\App\Public\Walkers\HTSANavMenuWalker;
 
 /**
@@ -87,6 +89,15 @@ if ( ! class_exists( 'Hooks' ) ) {
              */
             add_action( 'comment_form', array( $this, 'action_comment_form' ) );
 
+            /**
+             * Fires after the comment form.
+             */
+            add_action( 'comment_form_after', array( $this, 'action_comment_form_after' ) );
+
+            /**
+             * Fires before the comment form.
+             */
+            add_action( 'comment_form_before', array( $this, 'action_comment_form_before' ) );
         }
 
         /**
@@ -318,10 +329,13 @@ if ( ! class_exists( 'Hooks' ) ) {
             wp_enqueue_style( 'htsa-semantic-ui-ad', HTSA_SEMATIC_UI_AD_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-button', HTSA_SEMATIC_UI_BUTTON_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-card', HTSA_SEMATIC_UI_CARD_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-checkbox', HTSA_SEMATIC_UI_CHECKBOX_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-comment', HTSA_SEMATIC_UI_COMMENT_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-dimmer', HTSA_SEMATIC_UI_DIMMER_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-divider', HTSA_SEMATIC_UI_DIVIDER_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-dropdown', HTSA_SEMATIC_UI_DROPDOWN_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-embed', HTSA_SEMATIC_UI_EMBED_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-feed', HTSA_SEMATIC_UI_FEED_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-form', HTSA_SEMATIC_UI_FORM_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-header', HTSA_SEMATIC_UI_HEADER_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-icon', HTSA_SEMATIC_UI_ICON_CSS, array(), HTSA_THEME_VERSION );
@@ -332,6 +346,7 @@ if ( ! class_exists( 'Hooks' ) ) {
             wp_enqueue_style( 'htsa-semantic-ui-loader', HTSA_SEMATIC_UI_LOADER_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-menu', HTSA_SEMATIC_UI_MENU_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-modal', HTSA_SEMATIC_UI_MODAL_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-search', HTSA_SEMATIC_UI_SEARCH_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-sidebar', HTSA_SEMATIC_UI_SIDEBAR_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-transition', HTSA_SEMATIC_UI_TRANSITION_CSS, array(), HTSA_THEME_VERSION );
 
@@ -459,7 +474,9 @@ if ( ! class_exists( 'Hooks' ) ) {
          */
         public function action_comment_form_top() : void
         {
-            echo '<div id="wts-form-inner">';
+            $markup = wts_config( 'comments.after_open_form_tag' );
+            $markup = ( $markup ) ?: '<div id="wts-form-inner">';
+            echo $markup;
         }
 
         /**
@@ -473,7 +490,29 @@ if ( ! class_exists( 'Hooks' ) ) {
          */
         public function action_comment_form(int $post_id) : void
         {
-            echo '</div>';
+            $markup = wts_config( 'comments.before_close_form_tag' );
+            $markup = ( $markup ) ?: '</div>';
+            echo $markup;
+        }
+
+        /**
+         * Fires after the comment form.
+         *
+         */
+        public function action_comment_form_after() : void {
+            $markup = wts_config( 'comments.after_form' );
+            $markup = ( $markup ) ?: '<br />';
+            echo $markup;
+        }
+
+        /**
+         * Fires before the comment form.
+         *
+         */
+        public function action_comment_form_before() : void {
+            $markup = wts_config( 'comments.before_form' );
+            $markup = ( $markup ) ?: '';
+            echo $markup;
         }
 
         /**
@@ -892,8 +931,14 @@ if ( ! class_exists( 'Hooks' ) ) {
          */
         public function filter_wp_list_comments_args( array $parsed_args ) : array
         {
+            $parsed_args['walker'] = new HTSACommentWalker();
+            $parsed_args['max_depth'] = 1;
+
+            // $parsed_args['walker'] = new HTSACommentWalker2();
+            // $parsed_args['max_depth'] = 3;
+
+            // $parsed_args['callback'] = 'wts_wp_list_comments_cb';
             $parsed_args['type'] = 'comment';
-            $parsed_args['callback'] = 'wts_wp_list_comments_cb';
         	return $parsed_args;
         }
     }
