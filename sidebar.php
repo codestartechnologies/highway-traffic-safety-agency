@@ -1,4 +1,8 @@
 <?php
+/**
+ * The template file to display sidebar in Wordpress theme
+ *
+ */
 
 $default_page_id = get_option( 'wts_sidebar_page' )['default_page'] ?? null;
 $sidebar_active = get_option( 'wts_sidebar_page' )['show_sidebar'] ?? null;

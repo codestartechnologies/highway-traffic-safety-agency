@@ -258,7 +258,7 @@ return array(
     /**
      * Initial values to create customizer sections for front page.
      */
-    'htsa_frontpage_customizer'  => array(
+    'frontpage'  => array(
 
         'sections'  => array(
 
@@ -1503,4 +1503,83 @@ return array(
         ),
     ),
 
+    /**
+     * Initial values to create "Comments" customizer section.
+     */
+    'comments'  => array(
+
+        'sections'  => array(
+
+            array(
+
+                'id'    => 'htsa_comments_section',
+
+                'args'  => array(
+
+                    'title'                 => esc_html__( 'Comments', 'htsa' ),
+
+                    'description'           => esc_html__( 'Customize post comments list.', 'htsa' ),
+
+                    'active_callback'       => '_section_active_callback',
+
+                    'description_hidden'    => false,
+                ),
+            ),
+        ),
+
+        'settings'  => array(
+
+            /**
+             * Setting for comments list template
+             */
+            array(
+
+                'id'    => 'htsa_comments_list_template',
+
+                'args'  => array(
+
+                    'default'           => 'feed',
+
+                    'transport'         => 'refresh', //postMessage
+
+                    'validate_callback' => '_setting_validate_callback',
+
+                    'sanitize_callback' => 'sanitize_text_field',
+                ),
+            ),
+        ),
+
+        'controls'  => array(
+
+            /**
+             * Control for comments list template
+             */
+            array(
+
+                'id'    => 'htsa_comments_list_template_control',
+
+                'args'  => array(
+
+                    'settings'          => 'htsa_comments_list_template',
+
+                    'section'           => 'htsa_comments_section',
+
+                    'label'             => esc_html__( 'Comments Template', 'htsa' ),
+
+                    'description'       => esc_html__( 'Choose the template for displaying comments list.', 'htsa' ),
+
+                    'choices'           => array(
+
+                        'feed'      => esc_html__( 'Feed', 'htsa' ),
+
+                        'comments'  => esc_html__( 'Comments', 'htsa' ),
+                    ),
+
+                    'type'              => 'select',
+
+                    'active_callback'   => '_control_active_callback',
+                ),
+            ),
+        ),
+    ),
 );

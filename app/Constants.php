@@ -157,6 +157,11 @@ if ( ! class_exists( 'Constants' ) ) {
                 define( 'HTSA_SEMATIC_UI_MODAL_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/modal.min.css' );
             }
 
+            if ( ! defined( 'HTSA_SEMATIC_UI_REVEAL_CSS' ) ) {
+                // define( 'HTSA_SEMATIC_UI_REVEAL_CSS', 'https://cdn.jsdelivr.net/npm/' );
+                define( 'HTSA_SEMATIC_UI_REVEAL_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/reveal.min.css' );
+            }
+
             if ( ! defined( 'HTSA_SEMATIC_UI_SEARCH_CSS' ) ) {
                 // define( 'HTSA_SEMATIC_UI_SEARCH_CSS', 'https://cdn.jsdelivr.net/npm/' );
                 define( 'HTSA_SEMATIC_UI_SEARCH_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/search.min.css' );
@@ -332,6 +337,72 @@ if ( ! class_exists( 'Constants' ) ) {
 
             if ( ! defined( 'HTSA_SINGLE_SIDEBAR_ID' ) ) {
                 define( 'HTSA_SINGLE_SIDEBAR_ID', 'htsa-single-sidebar' );
+            }
+
+
+            /**
+             * Define post types
+             */
+
+            if ( ! defined( 'HTSA_PROFILE_POST_TYPE' ) ) {
+                define( 'HTSA_PROFILE_POST_TYPE', 'htsa_profile' );
+            }
+
+            if ( ! defined( 'HTSA_OFFICERS_POST_TYPE' ) ) {
+                define( 'HTSA_OFFICERS_POST_TYPE', 'htsa_officers' );
+            }
+
+            if ( ! defined( 'HTSA_BRANCHES_POST_TYPE' ) ) {
+                define( 'HTSA_BRANCHES_POST_TYPE', 'htsa_branch' );
+            }
+
+            if ( ! defined( 'HTSA_PENALTIES_POST_TYPE' ) ) {
+                define( 'HTSA_PENALTIES_POST_TYPE', 'htsa_penalty' );
+            }
+
+
+            /**
+             * Define post meta keys
+             */
+
+            if ( ! defined( 'HTSA_FEATURED_META_KEY' ) ) {
+                define( 'HTSA_FEATURED_META_KEY', 'htsa_post_featured' );
+            }
+
+            if ( ! defined( 'HTSA_PROFILE_POSITION_HELD_META_KEY' ) ) {
+                define( 'HTSA_PROFILE_POSITION_HELD_META_KEY', 'htsa_position_held' );
+            }
+
+            if ( ! defined( 'HTSA_PROFILE_SOCIAL_HANDLES_META_KEY' ) ) {
+                define( 'HTSA_PROFILE_SOCIAL_HANDLES_META_KEY', 'htsa_profile_social_handles' );
+            }
+
+            if ( ! defined( 'HTSA_OFFICER_CONTACT_META_KEY' ) ) {
+                define( 'HTSA_OFFICER_CONTACT_META_KEY', 'htsa_officer_contact' );
+            }
+
+            if ( ! defined( 'HTSA_OFFICER_ZONE_META_KEY' ) ) {
+                define( 'HTSA_OFFICER_ZONE_META_KEY', 'htsa_officer_zone' );
+            }
+
+            if ( ! defined( 'HTSA_BRANCH_LOCATION_META_KEY' ) ) {
+                define( 'HTSA_BRANCH_LOCATION_META_KEY', 'htsa_branch_location' );
+            }
+
+            if ( ! defined( 'HTSA_BRANCH_DIRECTION_META_KEY' ) ) {
+                define( 'HTSA_BRANCH_DIRECTION_META_KEY', 'htsa_branch_direction' );
+            }
+
+            if ( ! defined( 'HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY' ) ) {
+                define( 'HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY', 'htsa_penalty_vehicle_categories' );
+            }
+
+            /**
+             * Define shortcode tags
+             */
+
+            if ( ! defined( 'HTSA_CONTACT_FORM_SHORTCODE' ) ) {
+                define( 'HTSA_CONTACT_FORM_SHORTCODE', 'htsa_contact_form' );
             }
         }
     }

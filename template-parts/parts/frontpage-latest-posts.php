@@ -1,17 +1,6 @@
-<?php
-
-global $post;
-
-if ( ! empty( $args['data'] ) ) :
-
-?>
+<?php global $post; ?>
 
 <!-- Latest Blog -->
-<?php
-    get_template_part( 'template-parts/parts/title', null, array(
-        'title' => esc_html__( 'Latest Articles', 'htsa' ),
-    ) );
-?>
 <div class="ui hidden divider"></div>
 <div class="row row-cols-1 row-cols-md-2 g-5" data-htsa-id="latestBlogs">
     <?php
@@ -30,5 +19,3 @@ if ( ! empty( $args['data'] ) ) :
     ?>
 </div>
 <!-- End Latest Blog -->
-
-<?php endif; ?>

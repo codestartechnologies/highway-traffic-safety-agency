@@ -1,4 +1,13 @@
-<?php if ( is_active_sidebar( HTSA_FRONT_PAGE_RESOURCES_SIDEBAR_ID ) ) : ?>
+<?php
+/**
+ * The template file to display custom sidebar in Wordpress theme
+ *
+ */
+
+if ( is_active_sidebar( HTSA_FRONT_PAGE_RESOURCES_SIDEBAR_ID ) ) :
+
+?>
+
 <!-- Resources Sidebar Area -->
 <section>
     <div class="container">
@@ -14,4 +23,5 @@
 </section>
 <div class="ui hidden divider"></div>
 <!-- End Resources Sidebar Area -->
+
 <?php endif; ?>

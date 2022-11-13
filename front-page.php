@@ -90,17 +90,24 @@ get_header();
                 <?php get_sidebar( 'front-page' ); ?>
                 <main class="order-first order-lg-last col-lg-8 col-xl-9">
                     <?php
-                        $meta_key = HTSA_FEATURED_META_KEY ?? null;
-                        get_template_part( 'template-parts/parts/carousel', 'posts', array(
-                            'data' => wts_get_posts_by_key_value( 'post', $meta_key, '1', 5 ),
-                        ) );
 
-                        get_template_part( 'template-parts/parts/frontpage', 'latest-posts', array(
-                            'data' => get_posts( array(
+                        if ( ! empty( $data = wts_get_posts_by_key_value( 'post', HTSA_FEATURED_META_KEY, '1', 5 ) ) ) {
+                            get_template_part( 'template-parts/parts/carousel', 'posts', array(
+                                'data' => $data,
+                            ) );
+                        }
+
+                        if ( ! empty( $data = get_posts( array(
                                 'numberposts'   => 4,
                                 'post_type'     => 'post',
-                            ) ),
-                        ) );
+                        ) ) ) ) {
+                            get_template_part( 'template-parts/parts/title', null, array(
+                                'title' => esc_html__( 'Latest Articles', 'htsa' ),
+                            ) );
+                            get_template_part( 'template-parts/parts/frontpage', 'latest-posts', array(
+                                'data' => $data,
+                            ) );
+                        }
                     ?>
                 </main>
             </div>

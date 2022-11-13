@@ -23,11 +23,18 @@
             'title' => $title,
         ) );
 
+        $comments_template = get_theme_mod( 'htsa_comments_list_template', 'feed' );
+
     ?>
 
     <!-- Comments -->
+
+    <?php if ( 'feed' ===  $comments_template ) : ?>
     <div class="ui small feed">
-    <!-- <div class="ui small threaded comments"> -->
+    <?php elseif ( 'comments' === $comments_template ) : ?>
+    <div class="ui small threaded comments">
+    <?php endif; ?>
+
         <?php wp_list_comments(); ?>
     </div>
     <!-- End Comments -->

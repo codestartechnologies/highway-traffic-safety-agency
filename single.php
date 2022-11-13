@@ -6,6 +6,10 @@
 
 get_header();
 
-get_template_part( 'template-parts/content/page', 'single' );
+if ( is_singular( HTSA_PROFILE_POST_TYPE ) ) {
+    get_template_part( 'template-parts/content/page-single', 'profile' );
+} else {
+    get_template_part( 'template-parts/content/page-single' );
+}
 
 get_footer();

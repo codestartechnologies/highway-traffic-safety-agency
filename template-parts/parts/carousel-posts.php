@@ -1,10 +1,4 @@
-<?php
-
-global $post;
-
-if ( ! empty( $args['data'] ) ) {
-
-?>
+<?php global $post; ?>
 
 <!-- Featured Blog -->
 <div class="htsa-slider-dots">
@@ -33,7 +27,3 @@ if ( ! empty( $args['data'] ) ) {
 </div>
 <!-- End Featured Blog -->
 <div class="ui section hidden divider"></div>
-
-<?php
-
-}

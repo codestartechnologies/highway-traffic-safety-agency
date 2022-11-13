@@ -346,6 +346,7 @@ if ( ! class_exists( 'Hooks' ) ) {
             wp_enqueue_style( 'htsa-semantic-ui-loader', HTSA_SEMATIC_UI_LOADER_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-menu', HTSA_SEMATIC_UI_MENU_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-modal', HTSA_SEMATIC_UI_MODAL_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-reveal', HTSA_SEMATIC_UI_REVEAL_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-search', HTSA_SEMATIC_UI_SEARCH_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-sidebar', HTSA_SEMATIC_UI_SIDEBAR_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-transition', HTSA_SEMATIC_UI_TRANSITION_CSS, array(), HTSA_THEME_VERSION );
@@ -931,13 +932,18 @@ if ( ! class_exists( 'Hooks' ) ) {
          */
         public function filter_wp_list_comments_args( array $parsed_args ) : array
         {
-            $parsed_args['walker'] = new HTSACommentWalker();
-            $parsed_args['max_depth'] = 1;
+            $comments_template = get_theme_mod( 'htsa_comments_list_template', 'feed' );
 
-            // $parsed_args['walker'] = new HTSACommentWalker2();
-            // $parsed_args['max_depth'] = 3;
+            if ( $comments_template === 'feed' ) {
+                $parsed_args['walker'] = new HTSACommentWalker();
+                $parsed_args['max_depth'] = 1;
+            } elseif ( $comments_template === 'comments' ) {
+                $parsed_args['walker'] = new HTSACommentWalker2();
+                $parsed_args['max_depth'] = 3;
+            }
 
             // $parsed_args['callback'] = 'wts_wp_list_comments_cb';
+
             $parsed_args['type'] = 'comment';
         	return $parsed_args;
         }

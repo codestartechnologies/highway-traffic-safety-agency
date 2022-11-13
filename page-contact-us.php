@@ -1,6 +1,6 @@
 <?php
 /**
- * The privacy policy page template file in WordPress theme
+ * The page template file to display custom page in WordPress theme
  *
  */
 
@@ -8,32 +8,11 @@ get_header();
 
 ?>
 
-<style>
-    main  h1,
-    main  h2,
-    main  h3,
-    main  h4,
-    main  h5,
-    main  h6 {
-        color: grey;
-        font-family: Roboto, sans-serif;
-        text-transform: capitalize;
-        font-weight: normal;
-    }
-    main h1 + *,
-    main h2 + *,
-    main h3 + *,
-    main h4 + *,
-    main h5 + *,
-    main h6 + * {
-        margin-top: 1.5rem;
-    }
-</style>
-
 <div class="ui section hidden divider"></div>
 
 <!-- Main Content -->
 <main>
+
     <div class="container">
 
         <?php
@@ -44,7 +23,17 @@ get_header();
 
         <div class="ui hidden divider"></div>
 
-        <?php the_content(); ?>
+        <!-- Contact Section -->
+        <div class="text-muted">
+            <?php the_content(); ?>
+        </div>
+        <!-- End Contact Section -->
+
+        <?php
+            if ( shortcode_exists( HTSA_CONTACT_FORM_SHORTCODE ) ) {
+                echo do_shortcode( '[' . HTSA_CONTACT_FORM_SHORTCODE . ']' );
+            }
+        ?>
 
     </div>
 
