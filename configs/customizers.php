@@ -256,7 +256,7 @@ return array(
     ),
 
     /**
-     * Initial values to create customizer sections for front page.
+     * Initial values to create customizer settings for "Homepage Settings".
      */
     'frontpage'  => array(
 
@@ -1504,7 +1504,7 @@ return array(
     ),
 
     /**
-     * Initial values to create "Comments" customizer section.
+     * Initial values to create customizer settings for "Comments" section.
      */
     'comments'  => array(
 
@@ -1582,4 +1582,175 @@ return array(
             ),
         ),
     ),
+
+    /**
+     * Initial values to create customizer settings for "Site Identity".
+     */
+
+    'site_identity' => array(
+
+        'sections'  => array(
+
+        ),
+
+        'settings'  => array(
+
+            /**
+             * Setting for site facebook username
+             */
+            array(
+
+                'id'    => 'htsa_facebook_slug',
+
+                'args'  => array(
+
+                    'transport'         => 'refresh', //postMessage
+
+                    'validate_callback' => '_social_links_validate_callback',
+
+                    'sanitize_callback' => 'sanitize_text_field',
+                ),
+            ),
+
+            /**
+             * Setting for site twitter username
+             */
+            array(
+
+                'id'    => 'htsa_twitter_slug',
+
+                'args'  => array(
+
+                    'transport'         => 'refresh', //postMessage
+
+                    'validate_callback' => '_social_links_validate_callback',
+
+                    'sanitize_callback' => 'sanitize_text_field',
+                ),
+            ),
+
+            /**
+             * Setting for site instagram username
+             */
+            array(
+
+                'id'    => 'htsa_instagram_slug',
+
+                'args'  => array(
+
+                    'transport'         => 'refresh', //postMessage
+
+                    'validate_callback' => '_social_links_validate_callback',
+
+                    'sanitize_callback' => 'sanitize_text_field',
+                ),
+            ),
+
+            /**
+             * Setting for site youtube channel id
+             */
+            array(
+
+                'id'    => 'htsa_youtube_slug',
+
+                'args'  => array(
+
+                    'transport'         => 'refresh', //postMessage
+
+                    'validate_callback' => '_social_links_validate_callback',
+
+                    'sanitize_callback' => 'sanitize_text_field',
+                ),
+            ),
+        ),
+
+        'controls'  => array(
+
+            /**
+             * Control for site facebook username
+             */
+           array(
+
+               'id'    => 'htsa_facebook_slug_control',
+
+               'args'  => array(
+
+                   'settings'          => 'htsa_facebook_slug',
+
+                   'section'           => 'title_tagline',
+
+                   'label'             => esc_html__( 'Site Facebook username or full link', 'htsa' ),
+
+                   'type'              => 'text',
+
+                   'active_callback'   => '_control_active_callback',
+               ),
+           ),
+
+            /**
+             * Control for site twitter username
+             */
+           array(
+
+               'id'    => 'htsa_twitter_slug_control',
+
+               'args'  => array(
+
+                   'settings'          => 'htsa_twitter_slug',
+
+                   'section'           => 'title_tagline',
+
+                   'label'             => esc_html__( 'Site Twitter username or full link', 'htsa' ),
+
+                   'type'              => 'text',
+
+                   'active_callback'   => '_control_active_callback',
+               ),
+           ),
+
+            /**
+             * Control for site instagram username
+             */
+           array(
+
+               'id'    => 'htsa_instagram_slug_control',
+
+               'args'  => array(
+
+                   'settings'          => 'htsa_instagram_slug',
+
+                   'section'           => 'title_tagline',
+
+                   'label'             => esc_html__( 'Site Instagram username or full link', 'htsa' ),
+
+                   'type'              => 'text',
+
+                   'active_callback'   => '_control_active_callback',
+               ),
+           ),
+
+            /**
+             * Control for site youtube channel ID
+             */
+           array(
+
+               'id'    => 'htsa_youtube_slug_control',
+
+               'args'  => array(
+
+                   'settings'          => 'htsa_youtube_slug',
+
+                   'section'           => 'title_tagline',
+
+                   'label'             => esc_html__( 'Site Youtube channel ID or full link', 'htsa' ),
+
+                   'type'              => 'text',
+
+                   'active_callback'   => '_control_active_callback',
+               ),
+           ),
+        ),
+
+    ),
+
 );
