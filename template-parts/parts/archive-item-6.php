@@ -17,7 +17,12 @@
                 <small class="text-muted text-uppercase"> <?php echo get_post_type_object( get_post_type() )->labels->singular_name; ?> </small>
                 <p> <?php echo wts_get_the_excerpt( null, 26 ); ?> </p>
                 <div>
+                    <?php if ( in_array( get_post_type(), array( HTSA_BRANCHES_POST_TYPE, HTSA_PENALTIES_POST_TYPE ), true ) ) : ?>
+                    <a href="<?php echo get_post_type_archive_link( get_post_type() ) . '#' . get_post_type() . get_the_ID(); ?>"
+                        class="btn btn-sm btn-outline-dark text-capitalize rounded-0">
+                    <?php else : ?>
                     <a href="<?php the_permalink(); ?>" class="btn btn-sm btn-outline-dark text-capitalize rounded-0">
+                    <?php endif; ?>
                         <?php esc_html_e( 'see post', 'htsa' ); ?>
                     </a>
                 </div>

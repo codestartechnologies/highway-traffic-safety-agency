@@ -43,8 +43,8 @@ get_header();
     get_template_part( 'template-parts/parts/widget', 'call-to-action', array(
         'header'        => get_theme_mod( 'htsa_frontpage_contact_banner_header', esc_html__( 'Have a safety problem?', 'htsa' ) ),
         'description'   => get_theme_mod( 'htsa_frontpage_contact_banner_text', esc_html__( 'Report a problem with your vehicle, tires, car seats or other equipment. We review every problem as we work to keep our roads safe.', 'htsa' ) ),
-        'action_text'   => 'contact us',
-        'action_url'    => site_url( 'page-contact' ),
+        'action_text'   => esc_html__( 'contact us', 'htsa' ),
+        'action_url'    => site_url( 'contact-us' ),
         'image_url'     => ( $attachment_id = get_theme_mod( 'htsa_frontpage_contact_banner_image' ) ) ? wp_get_attachment_image_url( $attachment_id, 'large' ) : null,
     ) );
 

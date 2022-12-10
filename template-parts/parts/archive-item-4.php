@@ -1,6 +1,6 @@
 <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 g-4 justify-content-lg-center">
     <?php while( have_posts() ) : the_post(); ?>
-        <div>
+        <div id="<?php echo HTSA_BRANCHES_POST_TYPE . get_the_id() ?>">
             <div class="ui fluid raised- card">
                 <div class="ui slide masked reveal image">
                     <?php if ( has_post_thumbnail() ) : ?>

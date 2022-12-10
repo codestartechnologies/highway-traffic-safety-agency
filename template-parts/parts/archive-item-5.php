@@ -26,7 +26,7 @@
                     the_post();
                     $index++;
             ?>
-                <tr>
+                <tr id="<?php echo HTSA_PENALTIES_POST_TYPE . get_the_id() ?>">
                     <td> <?php echo $index; ?> </td>
                     <td class="fw-bolder"> <?php the_title(); ?> </td>
                     <td> <?php echo $post->{HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY}['cars'] ?? null; ?> </td>

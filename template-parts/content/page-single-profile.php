@@ -29,25 +29,25 @@
                     <div class="list-group list-group-horizontal">
 
                         <?php if ( $facebook_handle = $post->{HTSA_PROFILE_SOCIAL_HANDLES_META_KEY}['facebook'] ?? null ) : ?>
-                        <a href="<?php echo wts_get_social_link( $facebook_handle, 'facebook' ); ?>" class="list-group-item p-1 link-primary">
+                        <a href="<?php echo wts_get_social_link( $facebook_handle, 'facebook' ); ?>" class="list-group-item p-1 link-primary" target="_blank">
                             <i class="facebook icon align-middle h-auto fs-4"></i>
                         </a>
                         <?php endif; ?>
 
                         <?php if ( $twitter_handle = $post->{HTSA_PROFILE_SOCIAL_HANDLES_META_KEY}['twitter'] ?? null ) : ?>
-                        <a href="<?php echo wts_get_social_link( $twitter_handle, 'twitter' ); ?>" class="list-group-item p-1 link-info">
+                        <a href="<?php echo wts_get_social_link( $twitter_handle, 'twitter' ); ?>" class="list-group-item p-1 link-info" target="_blank">
                             <i class="twitter icon align-middle h-auto fs-4"></i>
                         </a>
                         <?php endif; ?>
 
                         <?php if ( $instagram_handle = $post->{HTSA_PROFILE_SOCIAL_HANDLES_META_KEY}['instagram'] ?? null ) : ?>
-                        <a href="<?php echo wts_get_social_link( $instagram_handle, 'instagram' ); ?>" class="list-group-item p-1 htsa-link-brown">
+                        <a href="<?php echo wts_get_social_link( $instagram_handle, 'instagram' ); ?>" class="list-group-item p-1 htsa-link-brown" target="_blank">
                             <i class="instagram icon align-middle h-auto fs-4"></i>
                         </a>
                         <?php endif; ?>
 
                         <?php if ( $linkedin_handle = $post->{HTSA_PROFILE_SOCIAL_HANDLES_META_KEY}['linkedin'] ?? null ) : ?>
-                        <a href="<?php echo wts_get_social_link( $linkedin_handle ); ?>" class="list-group-item p-1 link-primary">
+                        <a href="<?php echo wts_get_social_link( $linkedin_handle ); ?>" class="list-group-item p-1 link-primary" target="_blank">
                             <i class="linkedin icon align-middle h-auto fs-4"></i>
                         </a>
                         <?php endif; ?>
