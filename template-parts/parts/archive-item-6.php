@@ -1,8 +1,13 @@
 <div class="htsa-vertical-posts">
     <?php while( have_posts() ) : the_post(); ?>
+        <?php
+            $post_link = ( in_array( get_post_type(), array( HTSA_BRANCHES_POST_TYPE, HTSA_PENALTIES_POST_TYPE, HTSA_OFFICERS_POST_TYPE ), true ) )
+                ? get_post_type_archive_link( get_post_type() ) . '#' . get_post_type() . get_the_ID()
+                : get_the_permalink();
+        ?>
         <div class="row flex-column flex-md-row align-items-center pb-3 mb-5 g-3 g-lg-5">
             <div class="col-md-4">
-                <a href="<?php the_permalink(); ?>">
+                <a href="<?php echo $post_link; ?>">
                     <?php if ( has_post_thumbnail() ) : ?>
                     <img src="<?php the_post_thumbnail_url( 'medium' ); ?>" alt="" class="img-fluid" />
                     <?php else : ?>
@@ -17,12 +22,7 @@
                 <small class="text-muted text-uppercase"> <?php echo get_post_type_object( get_post_type() )->labels->singular_name; ?> </small>
                 <p> <?php echo wts_get_the_excerpt( null, 26 ); ?> </p>
                 <div>
-                    <?php if ( in_array( get_post_type(), array( HTSA_BRANCHES_POST_TYPE, HTSA_PENALTIES_POST_TYPE ), true ) ) : ?>
-                    <a href="<?php echo get_post_type_archive_link( get_post_type() ) . '#' . get_post_type() . get_the_ID(); ?>"
-                        class="btn btn-sm btn-outline-dark text-capitalize rounded-0">
-                    <?php else : ?>
-                    <a href="<?php the_permalink(); ?>" class="btn btn-sm btn-outline-dark text-capitalize rounded-0">
-                    <?php endif; ?>
+                    <a href="<?php echo $post_link; ?>" class="btn btn-sm btn-outline-dark text-capitalize rounded-0">
                         <?php esc_html_e( 'see post', 'htsa' ); ?>
                     </a>
                 </div>

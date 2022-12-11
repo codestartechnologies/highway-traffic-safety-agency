@@ -17,12 +17,12 @@
                 the_post();
                 $index++;
             ?>
-                <tr>
+                <tr id="<?php echo HTSA_OFFICERS_POST_TYPE . get_the_id() ?>">
                     <td> <?php echo $index; ?> </td>
                     <td>
                         <?php if ( has_post_thumbnail() ) : ?>
-                        <a href="<?php the_permalink(); ?>">
-                            <img src="<?php the_post_thumbnail_url( 'htsa-small' ); ?>" alt="" class="img-fluid img-thumbnail" />
+                        <a href="<?php the_post_thumbnail_url( 'large' ); ?>">
+                            <img src="<?php the_post_thumbnail_url( 'htsa-small' ); ?>" alt="<?php the_title(); ?>" class="img-fluid img-thumbnail" />
                         </a>
                         <?php else : ?>
                         <img src="<?php echo WTS_THEME_URI . 'assets/images/man-76x76.png'; ?>" alt="" class="img-fluid" />
