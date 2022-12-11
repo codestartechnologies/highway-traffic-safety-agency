@@ -12,12 +12,14 @@
         </thead>
         <tbody class="text-center">
             <?php
+
                 $index = 0;
+
                 while( have_posts() ) :
                 the_post();
                 $index++;
             ?>
-                <tr id="<?php echo HTSA_OFFICERS_POST_TYPE . get_the_id() ?>">
+                <tr id="<?php echo HTSA_OFFICERS_POST_TYPE . get_the_ID() ?>">
                     <td> <?php echo $index; ?> </td>
                     <td>
                         <?php if ( has_post_thumbnail() ) : ?>
