@@ -17,6 +17,7 @@
                 <?php if ( has_nav_menu( 'wts_footer_menu_1' ) ) : ?>
                 <!-- Menu Links -->
                 <div class="col-md-7 mb-5">
+                    <h5 class="fw-normal text-capitalize htsa-text-yellow mb-2"> <?php echo wp_get_nav_menu_name( 'wts_footer_menu_1' ); ?> </h5>
                     <ul class="nav justify-content-center text-capitalize htsa-footer-menu" data-htsa-id="footerMenu">
                         <?php
                             wp_nav_menu( array(
@@ -36,6 +37,7 @@
                 ?>
                 <!-- Social Link Icons -->
                 <div class="col-md-2 mb-4">
+                    <h5 class="fw-normal text-capitalize htsa-text-yellow mb-2"> <?php esc_html_e( 'Social handles', 'htsa' ); ?> </h5>
                     <ul class="list-group d-inline-flex list-group-horizontal htsa-footer-social-menu">
                         <li class="list-group-item">
                             <a <?php echo ( $facebook_link ) ? 'href="' . wts_get_social_link( $facebook_link, 'facebook' ) . '"  target="_blank"' : null; ?>
