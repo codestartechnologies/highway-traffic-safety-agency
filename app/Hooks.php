@@ -326,30 +326,30 @@ if ( ! class_exists( 'Hooks' ) ) {
              * Enqueue semantic UI CSS files
              */
 
-            wp_enqueue_style( 'htsa-semantic-ui-ad', HTSA_SEMATIC_UI_AD_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-button', HTSA_SEMATIC_UI_BUTTON_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-card', HTSA_SEMATIC_UI_CARD_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-checkbox', HTSA_SEMATIC_UI_CHECKBOX_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-comment', HTSA_SEMATIC_UI_COMMENT_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-dimmer', HTSA_SEMATIC_UI_DIMMER_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-divider', HTSA_SEMATIC_UI_DIVIDER_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-dropdown', HTSA_SEMATIC_UI_DROPDOWN_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-embed', HTSA_SEMATIC_UI_EMBED_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-feed', HTSA_SEMATIC_UI_FEED_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-form', HTSA_SEMATIC_UI_FORM_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-header', HTSA_SEMATIC_UI_HEADER_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-icon', HTSA_SEMATIC_UI_ICON_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-image', HTSA_SEMATIC_UI_IMAGE_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-input', HTSA_SEMATIC_UI_INPUT_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-label', HTSA_SEMATIC_UI_LABEL_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-list', HTSA_SEMATIC_UI_LIST_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-loader', HTSA_SEMATIC_UI_LOADER_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-menu', HTSA_SEMATIC_UI_MENU_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-modal', HTSA_SEMATIC_UI_MODAL_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-reveal', HTSA_SEMATIC_UI_REVEAL_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-search', HTSA_SEMATIC_UI_SEARCH_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-sidebar', HTSA_SEMATIC_UI_SIDEBAR_CSS, array(), HTSA_THEME_VERSION );
-            wp_enqueue_style( 'htsa-semantic-ui-transition', HTSA_SEMATIC_UI_TRANSITION_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-ad', HTSA_SEMANTIC_UI_AD_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-button', HTSA_SEMANTIC_UI_BUTTON_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-card', HTSA_SEMANTIC_UI_CARD_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-checkbox', HTSA_SEMANTIC_UI_CHECKBOX_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-comment', HTSA_SEMANTIC_UI_COMMENT_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-dimmer', HTSA_SEMANTIC_UI_DIMMER_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-divider', HTSA_SEMANTIC_UI_DIVIDER_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-dropdown', HTSA_SEMANTIC_UI_DROPDOWN_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-embed', HTSA_SEMANTIC_UI_EMBED_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-feed', HTSA_SEMANTIC_UI_FEED_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-form', HTSA_SEMANTIC_UI_FORM_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-header', HTSA_SEMANTIC_UI_HEADER_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-icon', HTSA_SEMANTIC_UI_ICON_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-image', HTSA_SEMANTIC_UI_IMAGE_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-input', HTSA_SEMANTIC_UI_INPUT_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-label', HTSA_SEMANTIC_UI_LABEL_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-list', HTSA_SEMANTIC_UI_LIST_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-loader', HTSA_SEMANTIC_UI_LOADER_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-menu', HTSA_SEMANTIC_UI_MENU_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-modal', HTSA_SEMANTIC_UI_MODAL_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-reveal', HTSA_SEMANTIC_UI_REVEAL_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-search', HTSA_SEMANTIC_UI_SEARCH_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-sidebar', HTSA_SEMANTIC_UI_SIDEBAR_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-transition', HTSA_SEMANTIC_UI_TRANSITION_CSS, array(), HTSA_THEME_VERSION );
 
             /**
              * Enqueue Bootstrap CSS files
@@ -388,19 +388,19 @@ if ( ! class_exists( 'Hooks' ) ) {
              * Enqueue jQuery JS files
              */
 
-            wp_enqueue_script( 'htsa-jquery', HTSA_JQUERY_JS, array(), HTSA_THEME_VERSION, true );
+            // wp_enqueue_script( 'htsa-jquery', HTSA_JQUERY_JS, array(), HTSA_THEME_VERSION, true );
 
             /**
              * Enqueue Semantic UI JS files
              */
 
-            wp_enqueue_script( 'htsa-semantic-ui', HTSA_SEMANTIC_UI_JS, array( 'htsa-jquery' ), HTSA_THEME_VERSION, true );
+            wp_enqueue_script( 'htsa-semantic-ui', HTSA_SEMANTIC_UI_JS, array( 'jquery' ), HTSA_THEME_VERSION, true );
 
             /**
              * Enqueue MetisMenu JS files
              */
 
-            wp_enqueue_script( 'htsa-metismenu', HTSA_METISMENU_JS, array(), HTSA_THEME_VERSION, true );
+            wp_enqueue_script( 'htsa-metismenu', HTSA_METISMENU_JS, array( 'jquery' ), HTSA_THEME_VERSION, true );
 
             /**
              * Enqueue Waypoint JS files
@@ -418,7 +418,7 @@ if ( ! class_exists( 'Hooks' ) ) {
              * Enqueue Tiny Slider JS files
              */
 
-            wp_enqueue_script( 'htsa-tiny-slider', HTSA_TINY_SLIDER_JS, array(), HTSA_THEME_VERSION, true );
+            wp_enqueue_script( 'htsa-tiny-slider', HTSA_TINY_SLIDER_JS, array( 'jquery' ), HTSA_THEME_VERSION, true );
 
             /**
              * Enqueue ScrollUp JS files
@@ -430,8 +430,8 @@ if ( ! class_exists( 'Hooks' ) ) {
              * Enqueue HTSA JS files
              */
 
-            wp_enqueue_script( 'htsa-bootstrap-components', HTSA_BOOTSTRAP_COMPONENTS_JS, array( 'htsa-jquery' ), HTSA_THEME_VERSION, true );
-            wp_enqueue_script( 'htsa', HTSA_JS, array( 'htsa-jquery' ), HTSA_THEME_VERSION, true );
+            wp_enqueue_script( 'htsa-bootstrap-components', HTSA_BOOTSTRAP_COMPONENTS_JS, array( 'jquery' ), HTSA_THEME_VERSION, true );
+            wp_enqueue_script( 'htsa', HTSA_JS, array( 'jquery' ), HTSA_THEME_VERSION, true );
 
         }
 

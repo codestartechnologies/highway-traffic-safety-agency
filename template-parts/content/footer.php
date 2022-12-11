@@ -9,7 +9,7 @@
                 <div class="col-md-3 mb-3">
                     <p>
                         <span class="text-muted">2022 &copy; Copyrights</span>
-                        <span class="htsa-text-yellow">HTSA</span>
+                        <span class="htsa-text-yellow"> <?php bloginfo( 'name' ); ?> </span>
                     </p>
                 </div>
                 <!-- End Copyrights -->

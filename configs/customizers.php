@@ -724,6 +724,21 @@ return array(
             ),
 
             /**
+             * Settings for openstreetmap data url
+             */
+            array(
+
+                'id'    => 'htsa_openstreetmap_dataurl',
+
+                'args'  => array(
+
+                    'default'           => 'https://www.openstreetmap.org/export/embed.html?bbox=6.767621040344239%2C6.1420908684318505%2C6.81551456451416%2C6.165984967926472&amp;layer=mapnik&amp;marker=6.154038052480665%2C6.791567802429199',
+
+                    'sanitize_callback' => 'esc_url',
+                ),
+            ),
+
+            /**
              * Settings for front page about section title
              */
             array(
@@ -1453,6 +1468,29 @@ return array(
                     'label'             => esc_html__( 'Statistics Value: Three', 'htsa' ),
 
                     'type'              => 'number',
+
+                    'active_callback'   => 'is_front_page',
+                ),
+            ),
+
+            /**
+             * Control for openstreetmap data url
+             */
+            array(
+
+                'id'    => 'htsa_openstreetmap_dataurl_control',
+
+                'args'  => array(
+
+                    'settings'          => 'htsa_openstreetmap_dataurl',
+
+                    'section'           => 'static_front_page',
+
+                    'label'             => esc_html__( 'Openstreetmap data url', 'htsa' ),
+
+                    'description'       => esc_html__( 'Url link generated from https://www.openstreetmap.org/', 'htsa' ),
+
+                    'type'              => 'url',
 
                     'active_callback'   => 'is_front_page',
                 ),
