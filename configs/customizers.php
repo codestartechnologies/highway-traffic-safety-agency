@@ -1717,7 +1717,7 @@ return array(
 
                    'section'           => 'title_tagline',
 
-                   'label'             => esc_html__( 'Site Facebook username or full link', 'htsa' ),
+                   'label'             => esc_html__( 'Site Facebook page username', 'htsa' ),
 
                    'type'              => 'text',
 
@@ -1738,7 +1738,7 @@ return array(
 
                    'section'           => 'title_tagline',
 
-                   'label'             => esc_html__( 'Site Twitter username or full link', 'htsa' ),
+                   'label'             => esc_html__( 'Site Twitter username', 'htsa' ),
 
                    'type'              => 'text',
 
@@ -1759,7 +1759,7 @@ return array(
 
                    'section'           => 'title_tagline',
 
-                   'label'             => esc_html__( 'Site Instagram username or full link', 'htsa' ),
+                   'label'             => esc_html__( 'Site Instagram username', 'htsa' ),
 
                    'type'              => 'text',
 
@@ -1780,7 +1780,7 @@ return array(
 
                    'section'           => 'title_tagline',
 
-                   'label'             => esc_html__( 'Site Youtube channel ID or full link', 'htsa' ),
+                   'label'             => esc_html__( 'Site Youtube channel link', 'htsa' ),
 
                    'type'              => 'text',
 

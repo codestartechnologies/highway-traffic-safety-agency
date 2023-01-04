@@ -58,7 +58,7 @@
                             </a>
                         </li>
                         <li class="list-group-item">
-                            <a <?php echo ( $youtube_link ) ? 'href="' . wts_get_social_link( $youtube_link, 'youtube' ) . '"  target="_blank"' : null; ?>
+                            <a <?php echo ( $youtube_link ) ? 'href="' . wts_get_social_link( $youtube_link ) . '"  target="_blank"' : null; ?>
                                 class="bg-danger">
                                 <i class="youtube icon fs-5 text-white"></i>
                             </a>

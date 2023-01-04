@@ -146,7 +146,7 @@ if ( ! function_exists( 'wts_get_social_link' ) ) {
                 $url = "https://instagram.com/{$clean_handle}";
                 break;
             case 'youtube':
-                $url = "https://www.youtube.com/c/{$clean_handle}";
+                $url = "https://www.youtube.com/{$clean_handle}";
                 break;
             case 'whatsapp':
                 $url = "https://api.whatsapp.com/send?phone={$clean_handle}";
