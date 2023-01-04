@@ -32,7 +32,6 @@ use WTS_Theme\App\Public\Widgets\HTSAPostsCarouselWidget;
 use WTS_Theme\App\Public\Widgets\HTSARecentPostsWidget;
 use WTS_Theme\App\Public\Widgets\HTSASearchWidget;
 use WTS_Theme\App\Public\Widgets\HTSATagCloudWidget;
-use WTS_Theme\App\Public\Widgets\HTSAVideoWidget;
 use WTS_Theme\App\Public\Widgets\WTSWidget;
 
 /**
@@ -132,7 +131,6 @@ if ( ! class_exists( 'Bindings' ) ) {
             HTSATagCloudWidget::class,
             HTSARecentPostsWidget::class,
             HTSAPostsCarouselWidget::class,
-            HTSAVideoWidget::class,
         );
 
         /**
