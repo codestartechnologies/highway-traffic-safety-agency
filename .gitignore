@@ -27,3 +27,9 @@ bower_components/
 
 # ignore package-lock.json
 package-lock.json
+
+# ignore composer.lock
+composer.lock
+
+# ignore .env
+.env

@@ -14,6 +14,7 @@
 
 use Codestartechnologies\WordpressThemeStarter\Core\Constants as CoreConstants;
 use Codestartechnologies\WordpressThemeStarter\Core\Bootstrap;
+use Dotenv\Dotenv;
 use WTS_Theme\App\Bindings;
 use WTS_Theme\App\Constants;
 use WTS_Theme\App\Hooks;
@@ -72,6 +73,12 @@ final class WTSTheme {
          */
         require_once get_template_directory() . '/vendor/autoload.php';
         require_once get_template_directory() . '/autoload.php';
+
+        /**
+         * Load .env inside the application
+         */
+        $dotenv = Dotenv::createUnsafeImmutable( __DIR__ );
+        $dotenv->safeLoad();
 
         /**
          * Define core constants

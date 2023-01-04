@@ -7,12 +7,33 @@ namespace Composer\Autoload;
 class ComposerStaticInit1544251c497eeb8d2de05de0755efd22
 {
     public static $files = array (
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         'd2d0766ea75b047d946a448b9ae59dfc' => __DIR__ . '/../..' . '/helpers/helpers.php',
         'cb950b35647faa8508a0cbc8ffc14dd7' => __DIR__ . '/../..' . '/helpers/pagination.php',
         'df3cacaad25bfb982a8eee475fdbf2a3' => __DIR__ . '/../..' . '/helpers/posts.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Php80\\' => 23,
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+        ),
+        'P' => 
+        array (
+            'PhpOption\\' => 10,
+        ),
+        'G' => 
+        array (
+            'GrahamCampbell\\ResultType\\' => 26,
+        ),
+        'D' => 
+        array (
+            'Dotenv\\' => 7,
+        ),
         'C' => 
         array (
             'Codestartechnologies\\WordpressThemeStarter\\' => 43,
@@ -20,6 +41,30 @@ class ComposerStaticInit1544251c497eeb8d2de05de0755efd22
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Polyfill\\Php80\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'PhpOption\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
+        ),
+        'GrahamCampbell\\ResultType\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/graham-campbell/result-type/src',
+        ),
+        'Dotenv\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
         'Codestartechnologies\\WordpressThemeStarter\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -27,20 +72,12 @@ class ComposerStaticInit1544251c497eeb8d2de05de0755efd22
     );
 
     public static $classMap = array (
-        'Codestartechnologies\\WordpressThemeStarter\\Abstracts\\AdminNotice' => __DIR__ . '/../..' . '/src/Abstracts/AdminNotice.php',
-        'Codestartechnologies\\WordpressThemeStarter\\Abstracts\\Customizer' => __DIR__ . '/../..' . '/src/Abstracts/Customizer.php',
-        'Codestartechnologies\\WordpressThemeStarter\\Abstracts\\MenuPage' => __DIR__ . '/../..' . '/src/Abstracts/MenuPage.php',
-        'Codestartechnologies\\WordpressThemeStarter\\Abstracts\\OptionsPage' => __DIR__ . '/../..' . '/src/Abstracts/OptionsPage.php',
-        'Codestartechnologies\\WordpressThemeStarter\\Abstracts\\Settings' => __DIR__ . '/../..' . '/src/Abstracts/Settings.php',
-        'Codestartechnologies\\WordpressThemeStarter\\Abstracts\\Sidebar' => __DIR__ . '/../..' . '/src/Abstracts/Sidebar.php',
-        'Codestartechnologies\\WordpressThemeStarter\\Abstracts\\ThemePage' => __DIR__ . '/../..' . '/src/Abstracts/ThemePage.php',
-        'Codestartechnologies\\WordpressThemeStarter\\Core\\Bootstrap' => __DIR__ . '/../..' . '/src/Core/Bootstrap.php',
-        'Codestartechnologies\\WordpressThemeStarter\\Core\\Constants' => __DIR__ . '/../..' . '/src/Core/Constants.php',
-        'Codestartechnologies\\WordpressThemeStarter\\Interfaces\\ActionHooks' => __DIR__ . '/../..' . '/src/Interfaces/ActionHooks.php',
-        'Codestartechnologies\\WordpressThemeStarter\\Interfaces\\FilterHooks' => __DIR__ . '/../..' . '/src/Interfaces/FilterHooks.php',
-        'Codestartechnologies\\WordpressThemeStarter\\Traits\\PageViewLoader' => __DIR__ . '/../..' . '/src/Traits/PageViewLoader.php',
-        'Codestartechnologies\\WordpressThemeStarter\\Traits\\Validator' => __DIR__ . '/../..' . '/src/Traits/Validator.php',
+        'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
+        'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
+        'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
+        'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

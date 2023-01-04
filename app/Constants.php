@@ -53,14 +53,7 @@ if ( ! class_exists( 'Constants' ) ) {
                 define( 'HTSA_THEME_VERSION', '0.1.0' );
             }
 
-            /**
-             * Specify theme environment
-             */
-            if ( ! defined( 'HTSA_ENV' ) ) {
-                define( 'HTSA_ENV', 'production' );
-            }
-
-            if ( 'production' === HTSA_ENV ) {
+            if ( 'production' === $_ENV['HTSA_ENV'] ) {
 
                 /**
                  * Specify links to Semantic UI CSS
