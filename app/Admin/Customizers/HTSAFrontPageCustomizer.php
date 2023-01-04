@@ -104,7 +104,7 @@ if ( ! class_exists( 'HTSAFrontPageCustomizer' ) ) {
          */
         public function htsa_resources_logo_visible_control_active_cb() : bool
         {
-            $index = wts_config( 'sidebars.htsa_front_page_resources_sidebar' )['id'] ?? null;
+            $index = wts_config( 'sidebars.front_page_cards_sidebar' )['id'] ?? null;
             return ( is_active_sidebar( $index ) && is_front_page() );
         }
     }
