@@ -16,10 +16,12 @@ use WTS_Theme\App\Admin\Customizers\HTSACommentsCustomizer;
 use WTS_Theme\App\Admin\Customizers\HTSAFrontPageCustomizer;
 use WTS_Theme\App\Admin\Customizers\HTSASiteIdentityCustomizer;
 use WTS_Theme\App\Admin\Customizers\WTSCustomizer;
+use WTS_Theme\App\Admin\Menus\HTSALicenseSettingsPage;
 use WTS_Theme\App\Admin\Menus\WTSMenuPage;
 use WTS_Theme\App\Admin\Menus\WTSOptionsPage;
 use WTS_Theme\App\Admin\Menus\WTSThemePage;
 use WTS_Theme\App\Admin\Notices\WTSAdminNotice;
+use WTS_Theme\App\Admin\Settings\HTSALicenseSetting;
 use WTS_Theme\App\Admin\Settings\WTSSettings;
 use WTS_Theme\App\Public\Sidebars\HTSAArchiveSidebar;
 use WTS_Theme\App\Public\Sidebars\HTSAFrontpageResourcesSidebar;
@@ -85,6 +87,7 @@ if ( ! class_exists( 'Bindings' ) ) {
          */
         public static array $setting_menus = array(
             // WTSOptionsPage::class => 'admin-menus.wts_options_page',
+            HTSALicenseSettingsPage::class => 'admin-menus.license_settings',
         );
 
         /**
@@ -158,6 +161,7 @@ if ( ! class_exists( 'Bindings' ) ) {
          */
         public static array $settings = array(
             // WTSSettings::class => 'settings.wts_sidebar_settings',
+            HTSALicenseSetting::class => 'settings.htsa_license_settings',
         );
 
         /**

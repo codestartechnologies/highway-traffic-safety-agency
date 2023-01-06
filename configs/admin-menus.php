@@ -60,5 +60,24 @@ return array(
         'view'          => 'menus.theme-page',
 
         'position'      => null,
-    )
+    ),
+
+    /**
+     * Initial values to create "WTS Options Page" menu page in the admin dashboard.
+     */
+    'license_settings'  => array(
+
+        'page_title'    => esc_html__( 'License Settings - Highway Traffic Security Agency WordPress Theme', 'htsa' ),
+
+        'menu_title'    => esc_html__( 'HTSA Theme License', 'htsa' ),
+
+        'capability'    => 'manage_options',
+
+        'menu_slug'     => 'htsa-license-settings',
+
+        'view'          => 'menus.options-page',
+
+        'position'      => null,
+    ),
+
 );

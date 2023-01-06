@@ -23,6 +23,7 @@ use Codestartechnologies\WordpressThemeStarter\Abstracts\ThemePage;
 use Codestartechnologies\WordpressThemeStarter\Interfaces\ActionHooks;
 use Codestartechnologies\WordpressThemeStarter\Traits\Validator;
 use WTS_Theme\App\Hooks;
+use WTS_Theme\App\HTSA\ThemeUpdate;
 
 /**
  * Prevent direct access to this file.
@@ -51,6 +52,15 @@ if ( ! class_exists( 'Bootstrap') ) {
          * @since 1.0.0
          */
         protected Hooks $hooks;
+
+        /**
+         * Theme update
+         *
+         * @access protected
+         * @var ThemeUpdate
+         * @since 1.0.0
+         */
+        protected ThemeUpdate $theme_update;
 
         /**
          * Admin menu pages
@@ -138,6 +148,7 @@ if ( ! class_exists( 'Bootstrap') ) {
          *
          * @access public
          * @param Hooks $hooks
+         * @param ThemeUpdate $theme_update
          * @param array $menu_pages
          * @param array $theme_pages
          * @param array $options_pages
@@ -152,6 +163,7 @@ if ( ! class_exists( 'Bootstrap') ) {
          */
         public function __construct(
             Hooks $hooks,
+            ThemeUpdate $theme_update,
             array $menu_pages = array(),
             array $theme_pages = array(),
             array $options_pages = array(),
@@ -164,6 +176,7 @@ if ( ! class_exists( 'Bootstrap') ) {
         )
         {
             $this->hooks = $hooks;
+            $this->theme_update = $theme_update;
             $this->menu_pages = $this->check_objects_parent_type( $menu_pages, MenuPage::class )['valid'];
             $this->theme_pages = $this->check_objects_parent_type( $theme_pages, ThemePage::class )['valid'];
             $this->options_pages = $this->check_objects_parent_type( $options_pages, OptionsPage::class )['valid'];
@@ -190,6 +203,9 @@ if ( ! class_exists( 'Bootstrap') ) {
 
             // Set up theme features
             $this->register_actions();
+
+            // Register filter hook for updating theme
+            $this->theme_update->register_filters();
         }
 
         /**

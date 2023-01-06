@@ -60,4 +60,57 @@ return array(
             ),
         ),
     ),
+
+    /**
+     * Initial values to create 'Theme License' setting page.
+     */
+    'htsa_license_settings'  => array(
+
+        'section'   => array(
+
+            'id'        => 'htsa_license',
+
+            'title'     => esc_html__( 'License Settings', 'htsa' ),
+
+            'page'      => 'htsa-license-settings',
+        ),
+
+        'settings'  => array(
+
+            'license_settings' => array(
+
+                'option_name'   => 'htsa_license_setting',
+
+                'args'          => array(
+
+                    'description'   => esc_html__( 'Highway Traffic Security Agency Theme License Settings', 'htsa' ),
+                ),
+
+                'update_cb'     => 'update_license_setting_cb',
+            ),
+        ),
+
+        'fields'    => array(
+            array(
+
+                'id'            => 'license_key',
+
+                'title'         => esc_html__( 'Theme license key', 'htsa' ),
+
+                'callback'      => 'license_key_field_cb',
+
+                'setting_key'   => 'license_settings',
+            ),
+            array(
+
+                'id'            => 'access_key',
+
+                'title'         => esc_html__( 'Theme access key', 'htsa' ),
+
+                'callback'      => 'access_key_field_cb',
+
+                'setting_key'   => 'license_settings',
+            ),
+        ),
+    ),
 );

@@ -18,6 +18,7 @@ use Dotenv\Dotenv;
 use WTS_Theme\App\Bindings;
 use WTS_Theme\App\Constants;
 use WTS_Theme\App\Hooks;
+use WTS_Theme\App\HTSA\ThemeUpdate;
 
 /**
  * Prevent direct access to this file from url
@@ -125,6 +126,7 @@ final class WTSTheme {
     {
         $this->bootstrap = new Bootstrap(
             new Hooks(),
+            new ThemeUpdate(),
             self::boot_with_configs( Bindings::$menus ),
             self::boot_with_configs( Bindings::$themes_menus ),
             self::boot_with_configs( Bindings::$setting_menus ),
