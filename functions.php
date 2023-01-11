@@ -78,7 +78,7 @@ final class WTSTheme {
         /**
          * Load .env inside the application
          */
-        $dotenv = Dotenv::createUnsafeImmutable( __DIR__ );
+        $dotenv = Dotenv::createImmutable( __DIR__ );
         $dotenv->safeLoad();
 
         /**
