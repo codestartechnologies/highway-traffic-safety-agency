@@ -20,7 +20,8 @@
         "files": [
             "helpers/helpers.php",
             "helpers/pagination.php",
-            "helpers/posts.php"
+            "helpers/posts.php",
+            "app/helpers.php"
         ]
     },
     "authors": [

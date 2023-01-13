@@ -12,4 +12,5 @@ return array(
     'd2d0766ea75b047d946a448b9ae59dfc' => $baseDir . '/helpers/helpers.php',
     'cb950b35647faa8508a0cbc8ffc14dd7' => $baseDir . '/helpers/pagination.php',
     'df3cacaad25bfb982a8eee475fdbf2a3' => $baseDir . '/helpers/posts.php',
+    '57b8d431e9dcaae7256988564dfe34e0' => $baseDir . '/app/helpers.php',
 );
