@@ -4,7 +4,7 @@
  *
  * @author      Chijindu Nzeako <chijindunzeako517@gmail.com>
  * @license     https://www.gnu.org/licenses/agpl-3.0.txt GNU/AGPLv3
- * @link        https://codestar.com.ng
+ * @link        https://github.com/codestartechnologies/wordpress-theme-starter
  */
 
 return array(
@@ -256,7 +256,7 @@ return array(
     ),
 
     /**
-     * Initial values to create customizer settings for "Homepage Settings".
+     * Initial values to create site front page customizer settings.
      */
     'frontpage'  => array(
 
@@ -1622,7 +1622,7 @@ return array(
     ),
 
     /**
-     * Initial values to create customizer settings for "Site Identity".
+     * Initial values to create "Site Identity" customizer settings.
      */
 
     'site_identity' => array(
@@ -1787,6 +1787,246 @@ return array(
                    'active_callback'   => '_control_active_callback',
                ),
            ),
+        ),
+
+    ),
+
+    /**
+     * Initial values to create contact page customizer settings.
+     */
+
+    'contactpage' => array(
+
+        'sections'  => array(
+
+            /**
+             * Contact Page customizer section
+             */
+            array(
+
+                'id'    => 'htsa_contactpage_section',
+
+                'args'  => array(
+
+                    'title'                 => esc_html__( 'Contact Page', 'htsa' ),
+
+                    'description'           => esc_html__( 'Customize the site contact page.', 'htsa' ),
+
+                    'active_callback'       => '_section_active_callback',
+
+                    'description_hidden'    => false,
+                ),
+            ),
+
+        ),
+
+        'settings'  => array(
+
+            /**
+             * Setting for site adddress
+             */
+            array(
+
+                'id'    => 'htsa_contactpage_address',
+
+                'args'  => array(
+
+                    'transport'         => 'refresh', //postMessage
+
+                    'validate_callback' => '_setting_validate_callback',
+
+                    'sanitize_callback' => 'sanitize_text_field',
+
+                    'default'           => '1200 New Jersey Avenue SE, Washington, DC 20590',
+                ),
+            ),
+
+            /**
+             * Setting for site email address
+             */
+            array(
+
+                'id'    => 'htsa_contactpage_email',
+
+                'args'  => array(
+
+                    'transport'         => 'refresh', //postMessage
+
+                    'validate_callback' => '_setting_validate_callback',
+
+                    'sanitize_callback' => 'sanitize_text_field',
+
+                    'default'           => 'HTSAgov@htsa.com',
+                ),
+            ),
+
+            /**
+             * Setting for site phone contact number
+             */
+            array(
+
+                'id'    => 'htsa_contactpage_phone',
+
+                'args'  => array(
+
+                    'transport'         => 'refresh', //postMessage
+
+                    'validate_callback' => '_setting_validate_callback',
+
+                    'sanitize_callback' => 'sanitize_text_field',
+
+                    'default'           => '+234 888-327-4236',
+                ),
+            ),
+
+            /**
+             * Setting for site contact page image
+             */
+            array(
+
+                'id'    => 'htsa_contactpage_image',
+
+                'args'  => array(
+
+                    'transport'         => 'refresh', //postMessage
+
+                    'validate_callback' => '_setting_validate_callback',
+
+                    'sanitize_callback' => 'sanitize_text_field',
+                ),
+            ),
+
+            /**
+             * Setting for site contact page image description
+             */
+            array(
+
+                'id'    => 'htsa_contactpage_image_caption',
+
+                'args'  => array(
+
+                    'transport'         => 'refresh', //postMessage
+
+                    'validate_callback' => '_setting_validate_callback',
+
+                    'sanitize_callback' => 'sanitize_text_field',
+
+                    'default'           => esc_html__( 'Our headquarters at Washington, DC', 'htsa' ),
+                ),
+            ),
+
+        ),
+
+        'controls'  => array(
+
+            /**
+             * control for site address
+             */
+            array(
+
+                'id'    => 'htsa_contactpage_address_control',
+
+                'args'  => array(
+
+                    'settings'          => 'htsa_contactpage_address',
+
+                    'section'           => 'htsa_contactpage_section',
+
+                    'label'             => esc_html__( 'Address', 'htsa' ),
+
+                    'type'              => 'text',
+
+                    'active_callback'   => '_control_active_callback',
+                ),
+            ),
+
+            /**
+             * control for site email address
+             */
+            array(
+
+                'id'    => 'htsa_contactpage_email_control',
+
+                'args'  => array(
+
+                    'settings'          => 'htsa_contactpage_email',
+
+                    'section'           => 'htsa_contactpage_section',
+
+                    'label'             => esc_html__( 'Email Addess', 'htsa' ),
+
+                    'type'              => 'email',
+
+                    'active_callback'   => '_control_active_callback',
+                ),
+            ),
+
+            /**
+             * control for site phone contact number
+             */
+            array(
+
+                'id'    => 'htsa_contactpage_phone_control',
+
+                'args'  => array(
+
+                    'settings'          => 'htsa_contactpage_phone',
+
+                    'section'           => 'htsa_contactpage_section',
+
+                    'label'             => esc_html__( 'Phone Number', 'htsa' ),
+
+                    'type'              => 'text',
+
+                    'active_callback'   => '_control_active_callback',
+                ),
+            ),
+
+            /**
+             * control for site contact page image
+             */
+            array(
+
+                'id'    => 'htsa_contactpage_image_control',
+
+                'args'  => array(
+
+                    'settings'          => 'htsa_contactpage_image',
+
+                    'section'           => 'htsa_contactpage_section',
+
+                    'label'             => esc_html__( 'Contact Page Image', 'htsa' ),
+
+                    'active_callback'   => '_control_active_callback',
+
+                    'mime_type'         => 'image',
+
+                ),
+
+                'control_customizer'    => 'media_control',
+            ),
+
+            /**
+             * control for site contact page image description
+             */
+            array(
+
+                'id'    => 'htsa_contactpage_image_caption_control',
+
+                'args'  => array(
+
+                    'settings'          => 'htsa_contactpage_image_caption',
+
+                    'section'           => 'htsa_contactpage_section',
+
+                    'label'             => esc_html__( 'Contact Page Image description', 'htsa' ),
+
+                    'type'              => 'text',
+
+                    'active_callback'   => '_control_active_callback',
+                ),
+            ),
+
         ),
 
     ),

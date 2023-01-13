@@ -23,7 +23,7 @@
                 <p> <?php echo wts_get_the_excerpt( null, 26 ); ?> </p>
                 <div>
                     <a href="<?php echo $post_link; ?>" class="btn btn-sm btn-outline-dark text-capitalize rounded-0">
-                        <?php esc_html_e( 'see post', 'htsa' ); ?>
+                        <?php esc_html_e( 'read more', 'htsa' ); ?>
                     </a>
                 </div>
             </div>

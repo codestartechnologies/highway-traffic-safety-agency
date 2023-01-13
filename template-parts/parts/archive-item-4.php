@@ -1,23 +1,18 @@
-<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3 g-4 justify-content-lg-center">
+<div class="row flex-column gy-4">
     <?php while( have_posts() ) : the_post(); ?>
         <div id="<?php echo HTSA_BRANCHES_POST_TYPE . get_the_id() ?>">
-            <div class="ui fluid raised- card">
-                <div class="ui slide masked reveal image">
-                    <?php if ( has_post_thumbnail() ) : ?>
-                    <img src="<?php the_post_thumbnail_url( 'medium' ); ?>" class="visible content" />
-                    <?php else : ?>
-                    <img src="<?php echo WTS_THEME_URI . 'assets/images/image.png' ?>" class="visible content" />
-                    <?php endif; ?>
-                    <div class="hidden content p-2 text-center">
-                        <h5 class="fw-bolder"> <?php esc_html_e( 'Direction:', 'htsa' ); ?> </h5>
-                        <p> <?php echo $post->{HTSA_BRANCH_DIRECTION_META_KEY} ?> </p>
+            <div class="border">
+                <div class="d-flex flex-wrap">
+                    <div class="col-12 col-lg-6 order-last">
+                        <?php if ( has_post_thumbnail() ) : ?>
+                            <div class="htsa-background-image htsa-background-image-scroll" style="background-image: url('<?php the_post_thumbnail_url( 'medium_large' ); ?>');"></div>
+                        <?php endif; ?>
                     </div>
-                </div>
-                <div class="content">
-                    <h4 class="text-capitalize"> <?php the_title(); ?> </h4>
-                    <div>
-                        <span class="text-muted"> <?php esc_html_e( 'Location:', 'htsa' ); ?> </span>
-                        <span class="text-capitalize"> <?php echo $post->{HTSA_BRANCH_LOCATION_META_KEY} ?> </span>
+                    <div class="col-12 col-lg-6 p-3">
+                        <h1 class="text-capitalize h3"> <?php the_title(); ?> </h1>
+                        <span class="text-primary">Location: </span> <span class="text-capitalize"> <?php echo $post->{HTSA_BRANCH_LOCATION_META_KEY} ?> </span>
+                        <div class="ui hidden divider"></div>
+                        <p> <?php echo $post->{HTSA_BRANCH_DIRECTION_META_KEY} ?> </p>
                     </div>
                 </div>
             </div>

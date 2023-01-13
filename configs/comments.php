@@ -1,10 +1,10 @@
 <?php
 /**
- * This file contains configuration settings for filtering comments
+ * This file contains configuration settings for filtering comments lista and comment form
  *
  * @author      Chijindu Nzeako <chijindunzeako517@gmail.com>
  * @license     https://www.gnu.org/licenses/agpl-3.0.txt GNU/AGPLv3
- * @link        https://codestar.com.ng
+ * @link        https://github.com/codestartechnologies/wordpress-theme-starter
  */
 
 return array(
@@ -179,7 +179,7 @@ return array(
          *
          * Default: <p><label>Fullname</label><input type="text" name="%1$s" value="%2$s" /></p><br />
          */
-        'author'    => '<div class="fields"><div class="required field"><label>Full name</label><input type="text" name="%1$s" placeholder="Full name" value="%2$s" /></div>',
+        'author'    => '<div class="fields"><div class="required field"><label>Full name</label><input type="text" name="%1$s" id="htsaCommentFormName" placeholder="Full name" value="%2$s" /></div>',
 
         /**
          * Markup to display email field
@@ -188,7 +188,7 @@ return array(
          *
          * Default: <p><label>Email Address</label><input type="email" name="%1$s" value="%2$s" /></p><br />
          */
-        'email'     => '<div class="required field"><label>Email address</label><input type="email" name="%1$s" placeholder="Email address" value="%2$s" /></div></div>',
+        'email'     => '<div class="required field"><label>Email address</label><input type="email" name="%1$s" id="htsaCommentFormEmail" placeholder="Email address" value="%2$s" /></div></div>',
 
         /**
          * Markup to display comment field
@@ -197,7 +197,7 @@ return array(
          *
          * Default: <p><label>Your Comment</label><textarea name="%s"></textarea></p><br />
          */
-        'comment'   => '<div class="required field"><label>Your comment</label><textarea name="%s"></textarea></div>',
+        'comment'   => '<div class="required field"><label>Your comment</label><textarea name="%s" id="htsaCommentFormComment"></textarea></div>',
 
         /**
          * Markup to display cookie consent field

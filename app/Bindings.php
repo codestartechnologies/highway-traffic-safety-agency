@@ -13,6 +13,7 @@ namespace WTS_Theme\App;
 
 use WP_Widget_Calendar;
 use WTS_Theme\App\Admin\Customizers\HTSACommentsCustomizer;
+use WTS_Theme\App\Admin\Customizers\HTSAContactPageCustomizer;
 use WTS_Theme\App\Admin\Customizers\HTSAFrontPageCustomizer;
 use WTS_Theme\App\Admin\Customizers\HTSASiteIdentityCustomizer;
 use WTS_Theme\App\Admin\Customizers\WTSCustomizer;
@@ -149,6 +150,7 @@ if ( ! class_exists( 'Bindings' ) ) {
             HTSAFrontPageCustomizer::class => 'customizers.frontpage',
             HTSACommentsCustomizer::class => 'customizers.comments',
             HTSASiteIdentityCustomizer::class => 'customizers.site_identity',
+            HTSAContactPageCustomizer::class => 'customizers.contactpage',
         );
 
         /**
