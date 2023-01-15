@@ -22,3 +22,20 @@ if ( ! function_exists( 'htsa_money_format' ) ) {
         return $symbol . $fine;
     }
 }
+
+if ( ! function_exists( 'htsa_trim_string' ) ) {
+    /**
+     * Trims a string according to a maximum length
+     *
+     * @param string|null $string   The string to trim
+     * @param int $length           The maximum string length
+     * @param string $more          Value to appended to string when it is trimmed
+     * @return string
+     * @since 1.0.0
+     */
+    function htsa_trim_string( ?string $string, int $length, string $more = '...' ) : string
+    {
+        $more = ( strlen( $string ) > $length ) ? $more : null;
+        return substr( $string, 0, $length ) . $more;
+    }
+}

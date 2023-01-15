@@ -2,10 +2,10 @@
 /**
  * HTSARecentPostsWidget class file.
  *
- * This is file contains HTSARecentPostsWidget class for registering recent posts widgets.
+ * This is file contains HTSARecentPostsWidget class for registering widgets to display recent posts.
  *
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
@@ -82,6 +82,7 @@ if ( ! class_exists( 'HTSARecentPostsWidget' ) ) {
                 'title'         => null,
                 'post_type'     => null,
                 'post_count'    => null,
+                'show_image'    => 'yes',
             ) );
 
             $recent_posts = wp_get_recent_posts( array(
@@ -95,6 +96,7 @@ if ( ! class_exists( 'HTSARecentPostsWidget' ) ) {
             $this->load_view( 'widgets.recent-posts', array(
                 'title'         => $instance['title'],
                 'recent_posts'  => $recent_posts,
+                'show_image'    => $instance['show_image'],
             ), 'public', false );
 
             echo ob_get_clean();
@@ -115,6 +117,7 @@ if ( ! class_exists( 'HTSARecentPostsWidget' ) ) {
                 'title'         => sprintf( __( '%s', 'htsa' ), self::NAME ),
                 'post_type'     => 'post',
                 'post_count'    => 5,
+                'show_image'    => null,
             ) );
 
             $post_types = get_post_types( array(), 'objects' );
@@ -176,6 +179,19 @@ if ( ! class_exists( 'HTSARecentPostsWidget' ) ) {
                 esc_html__( 'Count:', 'htsa' ),
             );
 
+            printf(
+                '
+                    <p>
+                        <label for="%1$s"> %3$s </label>
+                        <input type="checkbox" class="widefat" id="%1$s" name="%2$s" value="yes" %4$s />
+                    </p>
+                ',
+                $this->get_field_id( 'show_image' ),
+                $this->get_field_name( 'show_image' ),
+                esc_html__( 'Show post image?', 'htsa' ),
+                checked( $instance['show_image'], 'yes', false )
+            );
+
             echo ob_get_clean();
         }
 
@@ -196,11 +212,13 @@ if ( ! class_exists( 'HTSARecentPostsWidget' ) ) {
                 'title'         => sprintf( __( '%s', 'htsa' ), self::NAME ),
                 'post_type'     => 'post',
                 'post_count'    => 5,
+                'show_image'    => null,
             ) );
 
             $instance['title'] = sanitize_text_field( $new_instance['title'] );
             $instance['post_type'] = sanitize_text_field( $new_instance['post_type'] );
             $instance['post_count'] = filter_var( $new_instance['post_count'], FILTER_SANITIZE_NUMBER_INT );
+            $instance['show_image'] = sanitize_text_field( $new_instance['show_image'] );
             return $instance;
         }
     }
