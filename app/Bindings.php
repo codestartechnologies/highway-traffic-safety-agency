@@ -15,6 +15,7 @@ use WP_Widget_Calendar;
 use WTS_Theme\App\Admin\Customizers\HTSACommentsCustomizer;
 use WTS_Theme\App\Admin\Customizers\HTSAContactPageCustomizer;
 use WTS_Theme\App\Admin\Customizers\HTSAFrontPageCustomizer;
+use WTS_Theme\App\Admin\Customizers\HTSAPenaltiesPageCustomizer;
 use WTS_Theme\App\Admin\Customizers\HTSASiteIdentityCustomizer;
 use WTS_Theme\App\Admin\Customizers\WTSCustomizer;
 use WTS_Theme\App\Admin\Menus\HTSALicenseSettingsPage;
@@ -151,6 +152,7 @@ if ( ! class_exists( 'Bindings' ) ) {
             HTSACommentsCustomizer::class => 'customizers.comments',
             HTSASiteIdentityCustomizer::class => 'customizers.site_identity',
             HTSAContactPageCustomizer::class => 'customizers.contactpage',
+            HTSAPenaltiesPageCustomizer::class => 'customizers.penaltiesarchive',
         );
 
         /**

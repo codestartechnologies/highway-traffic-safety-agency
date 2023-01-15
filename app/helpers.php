@@ -17,7 +17,7 @@ if ( ! function_exists( 'htsa_money_format' ) ) {
      */
     function htsa_money_format( int $value ) : string
     {
-        $symbol = ( ! empty( $value ) ) ? HTSA_PENALTY_CURRENCY_SYMBOL : null;
+        $symbol = ( ! empty( $value ) ) ? get_theme_mod( 'htsa_penaltiespage_currency_symbol', '₦' ) : null;
         $fine = ( ! empty( $value ) ) ? number_format_i18n( $value, 2 ) : null;
         return $symbol . $fine;
     }

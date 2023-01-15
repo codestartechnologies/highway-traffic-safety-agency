@@ -2031,4 +2031,82 @@ return array(
 
     ),
 
+    /**
+     * Initial values to create customizer settings on penalties archive page.
+     */
+
+    'penaltiesarchive'  => array(
+
+        'sections'  => array(
+
+            /**
+             * Penalties archive page customizer section
+             */
+            array(
+
+                'id'    => 'htsa_penaltiespage_section',
+
+                'args'  => array(
+
+                    'title'                 => esc_html__( 'Penalties Archive Page', 'htsa' ),
+
+                    'description'           => esc_html__( 'Customize the archive page for displaying penalties.', 'htsa' ),
+
+                    'active_callback'       => '_section_active_callback',
+
+                    'description_hidden'    => false,
+                ),
+            ),
+
+        ),
+
+        'settings'  => array(
+
+            /**
+             * Setting for currency symbol
+             */
+            array(
+
+                'id'    => 'htsa_penaltiespage_currency_symbol',
+
+                'args'  => array(
+
+                    'transport'         => 'refresh', //postMessage
+
+                    'validate_callback' => '_setting_validate_callback',
+
+                    'sanitize_callback' => 'sanitize_text_field',
+
+                    'default'           => '₦',
+                ),
+            ),
+
+        ),
+
+        'controls'  => array(
+
+            /**
+             * control for currency symbol
+             */
+            array(
+
+                'id'    => 'htsa_penaltiespage_currency_symbol_control',
+
+                'args'  => array(
+
+                    'settings'          => 'htsa_penaltiespage_currency_symbol',
+
+                    'section'           => 'htsa_penaltiespage_section',
+
+                    'label'             => esc_html__( 'Currency Symbol', 'htsa' ),
+
+                    'type'              => 'text',
+
+                    'active_callback'   => '_control_active_callback',
+                ),
+            ),
+
+        ),
+
+    ),
 );
