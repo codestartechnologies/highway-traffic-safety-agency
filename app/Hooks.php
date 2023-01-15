@@ -346,6 +346,7 @@ if ( ! class_exists( 'Hooks' ) ) {
             wp_enqueue_style( 'htsa-semantic-ui-loader', HTSA_SEMANTIC_UI_LOADER_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-menu', HTSA_SEMANTIC_UI_MENU_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-modal', HTSA_SEMANTIC_UI_MODAL_CSS, array(), HTSA_THEME_VERSION );
+            wp_enqueue_style( 'htsa-semantic-ui-rating', HTSA_SEMANTIC_UI_RATING_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-reveal', HTSA_SEMANTIC_UI_REVEAL_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-search', HTSA_SEMANTIC_UI_SEARCH_CSS, array(), HTSA_THEME_VERSION );
             wp_enqueue_style( 'htsa-semantic-ui-sidebar', HTSA_SEMANTIC_UI_SIDEBAR_CSS, array(), HTSA_THEME_VERSION );

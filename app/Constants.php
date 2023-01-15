@@ -79,6 +79,7 @@ if ( ! class_exists( 'Constants' ) ) {
                 define( 'HTSA_SEMANTIC_UI_LOADER_CSS', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/loader.min.css' );
                 define( 'HTSA_SEMANTIC_UI_MENU_CSS', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/menu.min.css' );
                 define( 'HTSA_SEMANTIC_UI_MODAL_CSS', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/modal.min.css' );
+                define( 'HTSA_SEMANTIC_UI_RATING_CSS', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/rating.min.css' );
                 define( 'HTSA_SEMANTIC_UI_REVEAL_CSS', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/reveal.min.css' );
                 define( 'HTSA_SEMANTIC_UI_SEARCH_CSS', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/search.min.css' );
                 define( 'HTSA_SEMANTIC_UI_SIDEBAR_CSS', 'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/sidebar.min.css' );
@@ -180,6 +181,7 @@ if ( ! class_exists( 'Constants' ) ) {
                 define( 'HTSA_SEMANTIC_UI_LOADER_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/loader.min.css' );
                 define( 'HTSA_SEMANTIC_UI_MENU_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/menu.min.css' );
                 define( 'HTSA_SEMANTIC_UI_MODAL_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/modal.min.css' );
+                define( 'HTSA_SEMANTIC_UI_RATING_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/rating.min.css' );
                 define( 'HTSA_SEMANTIC_UI_REVEAL_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/reveal.min.css' );
                 define( 'HTSA_SEMANTIC_UI_SEARCH_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/search.min.css' );
                 define( 'HTSA_SEMANTIC_UI_SIDEBAR_CSS', WTS_THEME_URI . 'bower_components/semantic/dist/components/sidebar.min.css' );
@@ -311,6 +313,10 @@ if ( ! class_exists( 'Constants' ) ) {
                 define( 'HTSA_PENALTIES_POST_TYPE', 'htsa_penalty' );
             }
 
+            if ( ! defined( 'HTSA_REVIEWS_POST_TYPE' ) ) {
+                define( 'HTSA_REVIEWS_POST_TYPE', 'htsa_reviews' );
+            }
+
 
             /**
              * Define post meta keys
@@ -346,6 +352,18 @@ if ( ! class_exists( 'Constants' ) ) {
 
             if ( ! defined( 'HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY' ) ) {
                 define( 'HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY', 'htsa_penalty_vehicle_categories' );
+            }
+
+            if ( ! defined( 'HTSA_REVIEW_NAME_META_KEY' ) ) {
+                define( 'HTSA_REVIEW_NAME_META_KEY', 'htsa_review_name' );
+            }
+
+            if ( ! defined( 'HTSA_REVIEW_RATING_META_KEY' ) ) {
+                define( 'HTSA_REVIEW_RATING_META_KEY', 'htsa_review_rating' );
+            }
+
+            if ( ! defined( 'HTSA_REVIEW_CONTENT_META_KEY' ) ) {
+                define( 'HTSA_REVIEW_CONTENT_META_KEY', 'htsa_review_content' );
             }
 
             /**
