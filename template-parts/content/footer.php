@@ -5,10 +5,11 @@
     <section class="htsa-bg-dark pt-5">
         <div class="container">
             <div class="row flex-column flex-md-row align-items-md-start justify-content-md-center text-center gx-md-2 gy-5">
+
                 <!-- Copyrights -->
                 <div class="col-12 order-last">
                     <p>
-                        <span class="text-muted">2022 &copy; Copyrights</span>
+                        <span class="text-muted"> <?php echo date( 'Y' ); ?> &copy; <?php esc_html_e( 'Copyrights', 'htsa' ); ?> </span>
                         <span class="htsa-text-yellow"> <?php bloginfo( 'name' ); ?> </span>
                     </p>
                 </div>
@@ -66,6 +67,13 @@
                     </ul>
                 </div>
                 <!-- End Social Link Icons -->
+
+                <?php
+                    if ( shortcode_exists( HTSA_NEWSLETTER_FORM_SHORTCODE ) ) {
+                        echo do_shortcode( '[' . HTSA_NEWSLETTER_FORM_SHORTCODE . ']' );
+                    }
+                ?>
+
             </div>
         </div>
     </section>

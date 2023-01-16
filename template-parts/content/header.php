@@ -7,7 +7,7 @@
             <div class="row flex-column flex-lg-row justify-content-lg-between align-items-lg-center gx-3">
                 <!-- Description -->
                 <div class="col-lg-6 text-center text-lg-start">
-                    <span class="fs-5 fw-lighter lh-sm"> <?php bloginfo( 'description' ); ?> </span>
+                    <span class="fs-5 fw-lighter lh-sm"> <?php bloginfo( 'name' ); ?> </span>
                 </div>
                 <!-- End Description -->
                 <!-- ADs -->

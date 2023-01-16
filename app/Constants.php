@@ -373,6 +373,10 @@ if ( ! class_exists( 'Constants' ) ) {
             if ( ! defined( 'HTSA_CONTACT_FORM_SHORTCODE' ) ) {
                 define( 'HTSA_CONTACT_FORM_SHORTCODE', 'htsa_contact_form' );
             }
+
+            if ( ! defined( 'HTSA_NEWSLETTER_FORM_SHORTCODE' ) ) {
+                define( 'HTSA_NEWSLETTER_FORM_SHORTCODE', 'htsa_newsletter_form' );
+            }
         }
     }
 }
