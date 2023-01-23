@@ -6,7 +6,7 @@
                 <th>S/N</th>
                 <th> <?php esc_html_e( 'Photograph', 'htsa' ); ?> </th>
                 <th> <?php esc_html_e( 'Name', 'htsa' ); ?> </th>
-                <th> <?php esc_html_e( 'Zone', 'htsa' ); ?> </th>
+                <th> <?php esc_html_e( 'Zone/Department', 'htsa' ); ?> </th>
                 <th> <?php esc_html_e( 'Contact', 'htsa' ); ?> </th>
             </tr>
         </thead>
@@ -31,7 +31,7 @@
                         <?php endif; ?>
                     </td>
                     <td class="fw-bold text-uppercase"> <?php the_title(); ?> </td>
-                    <td> <?php echo $post->{HTSA_OFFICER_ZONE_META_KEY} ?> </td>
+                    <td> <?php echo wts_get_post_terms( get_the_ID(), HTSA_DEPARTMENT_TAXONOMY, '%2$s' ); ?> </td>
                     <td>
                         <span class="d-inline-flex flex-column gap-3">
                             <span>
