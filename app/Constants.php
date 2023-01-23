@@ -338,14 +338,6 @@ if ( ! class_exists( 'Constants' ) ) {
                 define( 'HTSA_OFFICER_CONTACT_META_KEY', 'htsa_officer_contact' );
             }
 
-            if ( ! defined( 'HTSA_OFFICER_ZONE_META_KEY' ) ) {
-                define( 'HTSA_OFFICER_ZONE_META_KEY', 'htsa_officer_zone' );
-            }
-
-            if ( ! defined( 'HTSA_BRANCH_LOCATION_META_KEY' ) ) {
-                define( 'HTSA_BRANCH_LOCATION_META_KEY', 'htsa_branch_location' );
-            }
-
             if ( ! defined( 'HTSA_BRANCH_DIRECTION_META_KEY' ) ) {
                 define( 'HTSA_BRANCH_DIRECTION_META_KEY', 'htsa_branch_direction' );
             }
