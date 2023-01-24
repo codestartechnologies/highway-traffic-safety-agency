@@ -6,7 +6,7 @@
  *
  * @package     WordpressThemeStarter
  * @author      Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link        https://codestar.com.ng
+ * @link        https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since       1.0.0
  */
 
@@ -40,11 +40,37 @@ if ( ! class_exists( 'AdminNotice' ) ) {
          */
         public function register_actions(): void
         {
-            add_action( 'admin_notices', array( $this, 'notification' ) );
+            add_action( 'admin_notices', array( $this, 'show_notice' ) );
+        }
+
+        /**
+         * Check before the admin notice is printed
+         *
+         * @access protected
+         * @return bool
+         * @since 1.0.0
+         */
+        protected function can_show_notice() : bool
+        {
+            return true;
         }
 
         /**
          * "admin_notices" action hook callback
+         *
+         * @final
+         * @return void
+         * @since 1.0.0
+         */
+        final public function show_notice() : void
+        {
+            if ( $this->can_show_notice() ) {
+                $this->notification();
+            }
+        }
+
+        /**
+         * Notification message
          *
          * @access public
          * @abstract

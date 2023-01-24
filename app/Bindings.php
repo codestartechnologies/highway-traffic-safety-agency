@@ -6,6 +6,7 @@
  *
  * @package    WordpressPluginStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
+ * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
@@ -22,6 +23,7 @@ use WTS_Theme\App\Admin\Menus\HTSALicenseSettingsPage;
 use WTS_Theme\App\Admin\Menus\WTSMenuPage;
 use WTS_Theme\App\Admin\Menus\WTSOptionsPage;
 use WTS_Theme\App\Admin\Menus\WTSThemePage;
+use WTS_Theme\App\Admin\Notices\StickyPostsNotice;
 use WTS_Theme\App\Admin\Notices\WTSAdminNotice;
 use WTS_Theme\App\Admin\Settings\HTSALicenseSetting;
 use WTS_Theme\App\Admin\Settings\WTSSettings;
@@ -178,6 +180,7 @@ if ( ! class_exists( 'Bindings' ) ) {
          */
         public static array $admin_notices = array(
             // WTSAdminNotice::class,
+            StickyPostsNotice::class,
         );
     }
 }
