@@ -252,6 +252,38 @@ return array(
                     'active_callback'   => '',
                 ),
             ),
+
+            /**
+             * Select control
+             */
+            array(
+
+                'id'    => '',
+
+                'args'  => array(
+
+                    'settings'          => '',
+
+                    'section'           => '',
+
+                    'label'             => '',
+
+                    'description'       => '',
+
+                    'choices'           => array(
+
+                        'option_one' => esc_html__( 'Option One', 'wts' ),
+
+                        'option_two' => esc_html__( 'Option Two', 'wts' ),
+
+                    ),
+
+                    'type'              => 'select',
+
+                    'active_callback'   => '',
+                ),
+            ),
+
         ),
     ),
 
@@ -265,6 +297,23 @@ return array(
         ),
 
         'settings'  => array(
+
+            /**
+             * Settings for front page template
+             */
+            array(
+
+                'id'    => 'htsa_frontpage_template',
+
+                'args'  => array(
+
+                    'default'           => 'template_one',
+
+                    'validate_callback' => null,
+
+                    'sanitize_callback' => 'sanitize_text_field',
+                ),
+            ),
 
             /**
              * Settings for header ADS custom html
@@ -772,6 +821,37 @@ return array(
         ),
 
         'controls'  => array(
+
+            /**
+             * control for front page template
+             */
+            array(
+
+                'id'    => 'htsa_frontpage_template_control',
+
+                'args'  => array(
+
+                    'settings'          => 'htsa_frontpage_template',
+
+                    'section'           => 'static_front_page',
+
+                    'label'             => esc_html__( 'Homepage Template', 'htsa' ),
+
+                    'description'       => esc_html__( 'Select the default template for this page.', 'htsa' ),
+
+                    'choices'           => array(
+
+                        'template_one' => esc_html__( 'Template One', 'htsa' ),
+
+                        'template_two' => esc_html__( 'Template Two', 'htsa' ),
+
+                    ),
+
+                    'type'              => 'select',
+
+                    'active_callback'   => 'is_front_page',
+                ),
+            ),
 
             /**
              * Control for header ADS custom html

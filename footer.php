@@ -5,7 +5,7 @@
  */
 
 ?>
-            <?php get_template_part( 'template-parts/content/footer' ); ?>
+            <?php get_template_part( 'template-parts/content/' . 'footer-' . get_theme_mod( 'htsa_frontpage_template', 'template_one' ) ); ?>
 
         </div>
         <!-- End Page Content -->
