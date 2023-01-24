@@ -91,21 +91,39 @@ get_header();
                 <main class="order-first order-lg-last col-lg-8 col-xl-9">
                     <?php
 
-                        if ( ! empty( $data = wts_get_posts_by_key_value( 'post', HTSA_FEATURED_META_KEY, '1', 5 ) ) ) {
+                        if ( ! empty( $featured_posts = wts_get_posts_by_key_value( 'post', HTSA_FEATURED_META_KEY, '1', 5 ) ) ) {
                             get_template_part( 'template-parts/parts/carousel', 'posts', array(
-                                'data' => $data,
+                                'data' => $featured_posts,
                             ) );
                         }
 
-                        if ( ! empty( $data = get_posts( array(
-                                'numberposts'   => 4,
-                                'post_type'     => 'post',
-                        ) ) ) ) {
+                        $featured = array_map( fn( $value ) : int => $value->ID, $featured_posts );
+
+                        $sticky_posts = get_option( 'sticky_posts' );
+
+                        $nonsticky_posts = get_posts( array(
+                            'numberposts'   => 4,
+                            'fields'        => 'ids',
+                            'exclude'       => array_merge( $sticky_posts, $featured ),
+                        ) );
+
+                        $latest = array_slice( array_values( array_filter(
+                            array_merge( $sticky_posts, $nonsticky_posts ),
+                            fn( $value ) : int => ( ! in_array( $value, $featured, true ) )
+                        ) ), 0, 4 );
+
+                        $posts = get_posts( array(
+                            'include'       => $latest,
+                            'orderby'       => 'post__in',
+                        ) );
+                        var_dump( '<pre>', $latest, '</pre>' );
+
+                        if ( ! empty( $posts  ) ) {
                             get_template_part( 'template-parts/parts/title', null, array(
                                 'title' => esc_html__( 'Latest Articles', 'htsa' ),
                             ) );
                             get_template_part( 'template-parts/parts/frontpage', 'latest-posts', array(
-                                'data' => $data,
+                                'data' => $posts,
                             ) );
                         }
                     ?>
