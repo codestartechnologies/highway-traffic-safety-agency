@@ -1,11 +1,12 @@
 <?php
 /**
- * HTSALicenseSetting class file
+ * LicenseSetting class file
  *
- * This is file contains HTSALicenseSetting class for creating theme license setting section.
+ * This is file contains LicenseSetting class for creating theme license setting section.
  *
  * @package    HighwayTrafficSecurityAgency
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
+ * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
@@ -21,20 +22,20 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if ( ! class_exists( 'HTSALicenseSetting' ) ) {
+if ( ! class_exists( 'LicenseSetting' ) ) {
     /**
-     * HTSALicenseSetting Class
+     * LicenseSetting Class
      *
      * Creates theme license setting section.
      *
      * @package HighwayTrafficSecurityAgency
      * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
-    final class HTSALicenseSetting extends AbstractsSettings {
+    final class LicenseSetting extends AbstractsSettings {
         use PageViewLoader;
 
         /**
-         * HTSALicenseSetting Constructor
+         * LicenseSetting Constructor
          *
          * @access public
          * @param array $parameters     An array of parameters for register_setting(), add_settings_section(), and add_settings_field().

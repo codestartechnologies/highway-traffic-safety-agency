@@ -6,6 +6,7 @@
  *
  * @package    HighwayTrafficSecurityAgency
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
+ * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
@@ -41,6 +42,19 @@ if ( ! class_exists( 'ThemeUpdate' ) ) {
         }
 
         /**
+         * Fetch details for latest version of plugin from Codestar API
+         *
+         * @access private
+         * @return mixed
+         * @since 1.0.0
+         */
+        private function get_product_info() : mixed
+        {
+            $product_info = CodestarAPI::get_product_info();
+            return ( CodestarAPI::is_api_error( $product_info ) ) ? false : $product_info;
+        }
+
+        /**
          * Check if there is an available update for the theme
          *
          * @return false|object
@@ -48,14 +62,12 @@ if ( ! class_exists( 'ThemeUpdate' ) ) {
          */
         private function is_update_available() : false|object
         {
-            $product_info = CodestarAPI::get_product_info();
-            $local_version = wp_get_theme()->get( 'Version' );
-
-            if ( CodestarAPI::is_api_error( $product_info ) ) {
-                return false;
+            if ( $product_info = $this->get_product_info() ) {
+                $local_version = wp_get_theme()->get( 'Version' );
+                return ( version_compare( $product_info->version, $local_version ) === 1 ) ? $product_info : false;
             }
 
-            return ( version_compare( $product_info->version, $local_version ) === 1 ) ? $product_info : false;
+            return false;
         }
 
         /**

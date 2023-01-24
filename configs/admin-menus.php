@@ -75,7 +75,7 @@ return array(
 
         'menu_slug'     => 'htsa-license-settings',
 
-        'view'          => 'menus.options-page',
+        'view'          => 'menus.license-setting-menu',
 
         'position'      => null,
     ),

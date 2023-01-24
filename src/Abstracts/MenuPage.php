@@ -6,7 +6,7 @@
  *
  * @package    WordpressThemeStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  * @since      1.0.0
  */
 
@@ -135,8 +135,9 @@ if ( ! class_exists( 'MenuPage' ) ) {
          */
         final public function register_actions() : void
         {
+            $hook_suffix = $this->get_menu_hookname();
             add_action( 'admin_menu', array( $this, 'menu_page' ) );
-            add_action( "load-{$this->page_hook}", array( $this, 'load_page_hook' ) );
+            add_action( "load-{$hook_suffix}", array( $this, 'load_page_hook' ) );
         }
 
         /**
@@ -177,6 +178,18 @@ if ( ! class_exists( 'MenuPage' ) ) {
             }
 
             $this->load_view( $this->view, $this->view_args() );
+        }
+
+        /**
+         * The menu page hook name
+         *
+         * @access protected
+         * @return string
+         * @since 1.0.0
+         */
+        protected function get_menu_hookname() : string
+        {
+            return $this->page_hook ?? 'toplevel_page_' . $this->menu_slug;
         }
 
         /**

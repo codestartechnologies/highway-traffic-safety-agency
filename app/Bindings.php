@@ -6,7 +6,7 @@
  *
  * @package    WordpressPluginStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  * @since      1.0.0
  */
 
@@ -19,13 +19,13 @@ use WTS_Theme\App\Admin\Customizers\HTSAFrontPageCustomizer;
 use WTS_Theme\App\Admin\Customizers\HTSAPenaltiesPageCustomizer;
 use WTS_Theme\App\Admin\Customizers\HTSASiteIdentityCustomizer;
 use WTS_Theme\App\Admin\Customizers\WTSCustomizer;
-use WTS_Theme\App\Admin\Menus\HTSALicenseSettingsPage;
+use WTS_Theme\App\Admin\Menus\LicenseSettingsPage;
 use WTS_Theme\App\Admin\Menus\WTSMenuPage;
 use WTS_Theme\App\Admin\Menus\WTSOptionsPage;
 use WTS_Theme\App\Admin\Menus\WTSThemePage;
 use WTS_Theme\App\Admin\Notices\StickyPostsNotice;
 use WTS_Theme\App\Admin\Notices\WTSAdminNotice;
-use WTS_Theme\App\Admin\Settings\HTSALicenseSetting;
+use WTS_Theme\App\Admin\Settings\LicenseSetting;
 use WTS_Theme\App\Admin\Settings\WTSSettings;
 use WTS_Theme\App\Public\Sidebars\HTSAArchiveSidebar;
 use WTS_Theme\App\Public\Sidebars\HTSAFrontpageResourcesSidebar;
@@ -91,7 +91,7 @@ if ( ! class_exists( 'Bindings' ) ) {
          */
         public static array $setting_menus = array(
             // WTSOptionsPage::class => 'admin-menus.wts_options_page',
-            HTSALicenseSettingsPage::class => 'admin-menus.license_settings',
+            LicenseSettingsPage::class => 'admin-menus.license_settings',
         );
 
         /**
@@ -167,7 +167,7 @@ if ( ! class_exists( 'Bindings' ) ) {
          */
         public static array $settings = array(
             // WTSSettings::class => 'settings.wts_sidebar_settings',
-            HTSALicenseSetting::class => 'settings.htsa_license_settings',
+            LicenseSetting::class => 'settings.htsa_license_settings',
         );
 
         /**

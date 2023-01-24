@@ -6,7 +6,7 @@
  *
  * @package    WordpressThemeStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  * @since      1.0.0
  */
 
@@ -29,6 +29,18 @@ if ( ! class_exists( 'OptionsPage' ) ) {
      * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     abstract class OptionsPage extends MenuPage {
+        /**
+         * The menu page hook name
+         *
+         * @access protected
+         * @return string
+         * @since 1.0.0
+         */
+        protected function get_menu_hookname() : string
+        {
+            return $this->page_hook ?? 'settings_page_' . $this->menu_slug;
+        }
+
         /**
          * "admin_menu" action hook callback
          *

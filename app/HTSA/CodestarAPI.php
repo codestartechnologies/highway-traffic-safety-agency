@@ -6,6 +6,7 @@
  *
  * @package    HighwayTrafficSecurityAgency
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
+ * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
@@ -72,7 +73,7 @@ if ( ! class_exists( 'CodestarAPI' ) ) {
                 return "invalid license setting";
             }
 
-            $url = trailingslashit( $_ENV['API_ENDPOINT'] ) . $action;
+            $url = trailingslashit( $_ENV['HTSA_API_ENDPOINT'] ) . $action;
             $setting = self::get_license_setting();
             $access_key = $setting['access_key'];
 
@@ -126,16 +127,17 @@ if ( ! class_exists( 'CodestarAPI' ) ) {
         }
 
         /**
-         * API call for getting theme license information
+         * API call for getting product license information
          *
+         * @static
          * @return mixed
          * @since 1.0.0
          */
-        public function get_license_info() : mixed
+        public static function get_license_info() : mixed
         {
             if ( false === ( $response = get_transient( 'htsa_license_key_info' ) ) ) {
-                $response = $this->call_api( 'info', array( 'license_key' => $this->get_license_setting()['license_key'] ), 'GET' );
-                if ( ! $this->is_api_error( $response ) ) {
+                $response = self::call_api( 'info', array( 'license_key' => self::get_license_setting()['license_key'] ), 'GET' );
+                if ( ! self::is_api_error( $response ) ) {
                     set_transient( 'htsa_license_key_info', $response, 5 * HOUR_IN_SECONDS );
                 }
             }
@@ -144,18 +146,19 @@ if ( ! class_exists( 'CodestarAPI' ) ) {
         }
 
         /**
-         * API call for activating theme license
+         * API call for activating product license
          *
+         * @static
          * @return mixed
          * @since 1.0.0
          */
-        public function activate_license() : mixed
+        public static function activate_license() : mixed
         {
-            return $this->call_api(
+            return self::call_api(
                 'activate',
                 array(
-                    'product_id'    => $_ENV['API_PRODUCT_ID'],
-                    'license_key'   => $this->get_license_setting()['license_key'],
+                    'product_id'    => $_ENV['HTSA_API_PRODUCT_ID'],
+                    'license_key'   => self::get_license_setting()['license_key'],
                     'domain'        => str_replace( ['https://', 'http://'], "", home_url() ),
                 ),
                 'POST'
@@ -163,18 +166,19 @@ if ( ! class_exists( 'CodestarAPI' ) ) {
         }
 
         /**
-         * API call for deactivating theme license
+         * API call for deactivating product license
          *
+         * @static
          * @return mixed
          * @since 1.0.0
          */
-        public function deactivate_license() : mixed
+        public static function deactivate_license() : mixed
         {
-            return $this->call_api(
+            return self::call_api(
                 'deactivate',
                 array(
-                    'product_id'    => $_ENV['API_PRODUCT_ID'],
-                    'license_key'   => $this->get_license_setting()['license_key'],
+                    'product_id'    => $_ENV['HTSA_API_PRODUCT_ID'],
+                    'license_key'   => self::get_license_setting()['license_key'],
                     'domain'        => str_replace( ['https://', 'http://'], "", home_url() ),
                 ),
                 'POST'
@@ -184,7 +188,6 @@ if ( ! class_exists( 'CodestarAPI' ) ) {
         /**
          * API call for getting information related to the theme
          *
-         * @access public
          * @static
          * @return mixed
          * @since 1.0.0
@@ -194,7 +197,7 @@ if ( ! class_exists( 'CodestarAPI' ) ) {
             return self::call_api(
                 'product-info',
                 array(
-                    'product_id'    => $_ENV['API_PRODUCT_ID'],
+                    'product_id'    => $_ENV['HTSA_API_PRODUCT_ID'],
                     'license_key'   => self::get_license_setting()['license_key'],
                     'domain'        => str_replace( ['https://', 'http://'], "", home_url() ),
                 ),

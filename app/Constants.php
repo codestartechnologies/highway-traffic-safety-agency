@@ -6,7 +6,7 @@
  *
  * @package    WordpressThemeStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  * @since      1.0.0
  */
 
@@ -43,7 +43,7 @@ if ( ! class_exists( 'Constants' ) ) {
              * Specify theme name
              */
             if ( ! defined( 'HTSA_THEME_NAME' ) ) {
-                define( 'HTSA_THEME_NAME', 'Rome' );
+                define( 'HTSA_THEME_NAME', 'Highway Traffic Security Agency' );
             }
 
             /**
