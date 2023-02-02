@@ -4,7 +4,7 @@
  *
  * @author      Chijindu Nzeako <chijindunzeako517@gmail.com>
  * @license     https://www.gnu.org/licenses/agpl-3.0.txt GNU/AGPLv3
- * @link        https://codestar.com.ng
+ * @link        https://github.com/codestartechnologies/wordpress-theme-starter
  */
 
 return array(
@@ -70,7 +70,7 @@ return array(
 
             'id'        => 'htsa_license',
 
-            'title'     => esc_html__( 'License Settings', 'htsa' ),
+            'title'     => esc_html__( 'Enter the license key associated with this theme in the Theme License Key field, and the access key you generated from your account inside the User Access Key field.', 'htsa' ),
 
             'page'      => 'htsa-license-settings',
         ),
@@ -95,7 +95,7 @@ return array(
 
                 'id'            => 'license_key',
 
-                'title'         => esc_html__( 'Theme license key', 'htsa' ),
+                'title'         => esc_html__( 'Theme License Key', 'htsa' ),
 
                 'callback'      => 'license_key_field_cb',
 
@@ -105,7 +105,7 @@ return array(
 
                 'id'            => 'access_key',
 
-                'title'         => esc_html__( 'Theme access key', 'htsa' ),
+                'title'         => esc_html__( 'User Access Key', 'htsa' ),
 
                 'callback'      => 'access_key_field_cb',
 
