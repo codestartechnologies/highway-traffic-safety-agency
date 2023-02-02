@@ -190,7 +190,8 @@ if ( ! class_exists( 'HTSANavMenuWalker' ) ) {
              */
             if ( in_array( $args->theme_location, array( 'wts_mobile_menu', 'wts_pc_menu', ), true ) ) {
                 if ( in_array( 'menu-item-has-children', $menu_item->classes ) && ( in_array( $depth, array( 0, 1, ), true ) ) ) {
-                    $output .= $indent . '<div' . $id . $class_names . '>';
+                    $output .= (  'wts_pc_menu' === $args->theme_location && $depth >= 1 ) ? null : $indent . '<div' . $id . $class_names . '>';
+                    // $output .= $indent . '<div' . $id . $class_names . '>';
                 }
             } else {
                 $output .= $indent . '<li' . $id . $class_names . '>';
@@ -303,8 +304,9 @@ if ( ! class_exists( 'HTSANavMenuWalker' ) ) {
              * Start HTSA
              */
             if ( in_array( $args->theme_location, array( 'wts_mobile_menu', 'wts_pc_menu', ), true ) ) {
-                if ( in_array( 'menu-item-has-children', $data_object->classes ) && ( 0 === $depth ) ) {
-                    $output .= "</div>{$n}";
+                if ( in_array( 'menu-item-has-children', $data_object->classes ) && ( in_array( $depth, array( 0, 1, ), true ) ) ) {
+                    $output .= (  'wts_pc_menu' === $args->theme_location && $depth >= 1 ) ? null : "</div>{$n}";
+                    // $output .= "</div>{$n}";
                 }
             } else {
                 $output .= "</li>{$n}";
