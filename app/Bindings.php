@@ -23,6 +23,7 @@ use WTS_Theme\App\Admin\Menus\LicenseSettingsPage;
 use WTS_Theme\App\Admin\Menus\WTSMenuPage;
 use WTS_Theme\App\Admin\Menus\WTSOptionsPage;
 use WTS_Theme\App\Admin\Menus\WTSThemePage;
+use WTS_Theme\App\Admin\Notices\LicenseKeyNotice;
 use WTS_Theme\App\Admin\Notices\StickyPostsNotice;
 use WTS_Theme\App\Admin\Notices\WTSAdminNotice;
 use WTS_Theme\App\Admin\Settings\LicenseSetting;
@@ -185,6 +186,7 @@ if ( ! class_exists( 'Bindings' ) ) {
         public static array $admin_notices = array(
             // WTSAdminNotice::class,
             StickyPostsNotice::class,
+            LicenseKeyNotice::class,
         );
     }
 }
