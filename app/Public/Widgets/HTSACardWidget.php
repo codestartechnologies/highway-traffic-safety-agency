@@ -5,7 +5,7 @@
  * This is file contains HTSACardWidget class for registering card widgets.
  *
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
@@ -178,19 +178,27 @@ if ( ! class_exists( 'HTSACardWidget' ) ) {
 
             printf(
                 '
-                    <p>
-                        <label for="%1$s"> %4$s </label>
-                        <p data-htsa-id="wp_media_upload_image">%6$s</p>
+                <div data-htsa-id="card-media-wrap" class="media-widget-control">
+                    <input data-htsa-id="wp_media_upload_image_input" type="hidden" id="%1$s" name="%2$s" value="%3$s" />
+                    <div data-htsa-id="wp_media_upload_image" class="media-widget-preview media_image">%6$s</div>
+                    <br />
+                    <div class="attachment-media-view %7$s">
+                        <p>
+                            <button type="button" class="select-media button-add-media not-selected" data-htsa-id="wp_media_upload">%4$s</button>
+                        </p>
+                    </div>
+                    <p class="htsa-media-button-wrapper %7$s">
                         <button type="button" class="button" data-htsa-id="wp_media_upload">%5$s</button>
-                        <input type="hidden" class="widefat" id="%1$s" name="%2$s" value="%3$s" />
                     </p>
+                </div>
                 ',
                 $this->get_field_id( 'image_url' ),
                 $this->get_field_name( 'image_url' ),
                 $instance['image_url'],
-                esc_html__( 'Image:', 'htsa' ),
-                esc_html__( 'Select Thumbnail Image', 'htsa' ),
-                ( $instance['image_url'] ) ? wp_get_attachment_image( $instance['image_url'] ) : null
+                esc_html__( 'Add Image', 'htsa' ),
+                esc_html__( 'Replace Image', 'htsa' ),
+                ( $instance['image_url'] ) ? wp_get_attachment_image( $instance['image_url'] ) : null,
+                ( $instance['image_url'] ) ? 'htsa-hidden-1' : 'htsa-hidden-2'
             );
 
             echo ob_get_clean();

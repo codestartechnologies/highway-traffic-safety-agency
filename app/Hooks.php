@@ -304,9 +304,33 @@ if ( ! class_exists( 'Hooks' ) ) {
         public function enqueue_admin_scripts( string $hook_suffix ) : void
         {
             if ( $hook_suffix === 'widgets.php' ) {
+                /**
+                 * Add media js file
+                 */
                 wp_enqueue_media();
+
+                /**
+                 * Add htsa-admin js file
+                 */
                 wp_enqueue_script( 'htsa-admin', HTSA_ADMIN_JS, array( 'jquery', 'wp-i18n', 'media' ), HTSA_THEME_VERSION, true );
+
+                /**
+                 * Set translated strings for htsa-admin js file
+                 */
                 wp_set_script_translations( 'htsa-admin', 'htsa' );
+
+                /**
+                 * Add inline css
+                 */
+                $style = '
+                    .attachment-media-view.htsa-hidden-1 {
+                        display: none;
+                    }
+                    .htsa-media-button-wrapper.htsa-hidden-2 {
+                        display: none;
+                    }
+                ';
+                wp_add_inline_style( 'media', $style );
             }
         }
 
