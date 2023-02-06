@@ -1,4 +1,9 @@
 <?php
+/**
+ * Front page template one file
+ *
+ * @link https://github.com/codestartechnologies/highway-traffic-security-agency
+ */
 
 $carousel_settings = array(
     'htsa_frontpage_carousel_image_1',
@@ -25,7 +30,7 @@ if ( ! empty( $carousel ) ) {
     ) );
 }
 
-get_sidebar( 'resources' );
+get_sidebar( 'front-page-resources' );
 
 get_template_part( 'template-parts/parts/widget', 'call-to-action', array(
     'header'        => get_theme_mod( 'htsa_frontpage_contact_banner_header', esc_html__( 'Have a safety problem?', 'htsa' ) ),
@@ -69,12 +74,14 @@ get_template_part( 'template-parts/parts/frontpage', 'statistics', array(
     ),
 ) );
 
+get_sidebar( 'front-page' );
+
 ?>
 
 <section class="bg-light pt-5 pb-lg-5">
     <div class="container">
         <div class="row flex-column flex-lg-row gy-5">
-            <?php get_sidebar( 'front-page' ); ?>
+            <?php get_sidebar( 'front-page-aside' ); ?>
             <main class="order-first order-lg-last col-lg-8 col-xl-9">
                 <?php
 

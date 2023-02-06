@@ -4,7 +4,7 @@
  *
  * @author      Chijindu Nzeako <chijindunzeako517@gmail.com>
  * @license     https://www.gnu.org/licenses/agpl-3.0.txt GNU/AGPLv3
- * @link        https://codestar.com.ng
+ * @link        https://github.com/codestartechnologies/wordpress-theme-starter
  */
 
 return array(
@@ -68,6 +68,32 @@ return array(
         'name'              => esc_html__( 'Front Page', 'htsa' ),
 
         'id'                => HTSA_FRONT_PAGE_SIDEBAR_ID,
+
+        'description'       => esc_html__( 'Widgets in this area are shown in the front page, before the blog/news section', 'htsa' ),
+
+        'class'             => '',
+
+        'before_widget'     => '',
+
+        'after_widget'      => '',
+
+        'before_title'      => '',
+
+        'after_title'       => '',
+
+        'before_sidebar'    => '',
+
+        'after_sidebar'     => '',
+    ),
+
+    /**
+     * Configuration values for 'Front Page Aside' sidebar area
+     */
+    'front_page_aside_sidebar'  => array(
+
+        'name'              => esc_html__( 'Front Page Aside', 'htsa' ),
+
+        'id'                => HTSA_FRONT_PAGE_ASIDE_SIDEBAR_ID,
 
         'description'       => esc_html__( 'Widgets in this area are shown in the front page, beside the featured and latest blog section', 'htsa' ),
 

@@ -284,6 +284,10 @@ if ( ! class_exists( 'Constants' ) ) {
                 define( 'HTSA_FRONT_PAGE_SIDEBAR_ID', 'htsa-front-page-sidebar' );
             }
 
+            if ( ! defined( 'HTSA_FRONT_PAGE_ASIDE_SIDEBAR_ID' ) ) {
+                define( 'HTSA_FRONT_PAGE_ASIDE_SIDEBAR_ID', 'htsa-front-page-aside-sidebar' );
+            }
+
             if ( ! defined( 'HTSA_ARCHIVES_SIDEBAR_ID' ) ) {
                 define( 'HTSA_ARCHIVES_SIDEBAR_ID', 'htsa-archives-sidebar' );
             }

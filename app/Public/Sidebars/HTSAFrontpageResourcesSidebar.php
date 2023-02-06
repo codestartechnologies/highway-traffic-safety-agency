@@ -5,7 +5,7 @@
  * This file contains HTSAFrontpageResourcesSidebar class for registering "Front Page Resources" sidebar area.
  *
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 

@@ -28,12 +28,14 @@ use WTS_Theme\App\Admin\Notices\WTSAdminNotice;
 use WTS_Theme\App\Admin\Settings\LicenseSetting;
 use WTS_Theme\App\Admin\Settings\WTSSettings;
 use WTS_Theme\App\Public\Sidebars\HTSAArchiveSidebar;
+use WTS_Theme\App\Public\Sidebars\HTSAFrontpageAsideSidebar;
 use WTS_Theme\App\Public\Sidebars\HTSAFrontpageResourcesSidebar;
 use WTS_Theme\App\Public\Sidebars\HTSAFrontpageSidebar;
 use WTS_Theme\App\Public\Sidebars\HTSASingleSidebar;
 use WTS_Theme\App\Public\Sidebars\WTSSidebar;
 use WTS_Theme\App\Public\Widgets\HTSACallToActionWidget;
 use WTS_Theme\App\Public\Widgets\HTSACardWidget;
+use WTS_Theme\App\Public\Widgets\HTSAImageBackgroundWithContentWidget;
 use WTS_Theme\App\Public\Widgets\HTSAPostsCarouselWidget;
 use WTS_Theme\App\Public\Widgets\HTSARecentPostsWidget;
 use WTS_Theme\App\Public\Widgets\HTSASearchWidget;
@@ -106,6 +108,7 @@ if ( ! class_exists( 'Bindings' ) ) {
             // WTSSidebar::class => 'sidebars.wts_sidebar',
             HTSAFrontpageResourcesSidebar::class => 'sidebars.front_page_cards_sidebar',
             HTSAFrontpageSidebar::class => 'sidebars.front_page_sidebar',
+            HTSAFrontpageAsideSidebar::class => 'sidebars.front_page_aside_sidebar',
             HTSAArchiveSidebar::class => 'sidebars.archive_sidebar',
             HTSASingleSidebar::class => 'sidebars.single_sidebar',
         );
@@ -134,6 +137,7 @@ if ( ! class_exists( 'Bindings' ) ) {
             // WTSWidget::class,
             HTSACardWidget::class,
             HTSACallToActionWidget::class,
+            HTSAImageBackgroundWithContentWidget::class,
             HTSASearchWidget::class,
             HTSATagCloudWidget::class,
             HTSARecentPostsWidget::class,

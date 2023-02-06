@@ -1,8 +1,8 @@
 <?php
 /**
- * HTSACallToActionWidget class file.
+ * HTSAImageBackgroundWithContentWidget class file.
  *
- * This is file contains HTSACallToActionWidget class for registering call to action widgets.
+ * This is file contains HTSAImageBackgroundWithContentWidget class for registering image background with contents widgets.
  *
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
  * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
@@ -14,13 +14,13 @@ namespace WTS_Theme\App\Public\Widgets;
 use Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
 use WP_Widget;
 
-if ( ! class_exists( 'HTSACallToActionWidget' ) ) {
+if ( ! class_exists( 'HTSAImageBackgroundWithContentWidget' ) ) {
     /**
-     * HTSACallToActionWidget Class
+     * HTSAImageBackgroundWithContentWidget Class
      *
      * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
-    final class HTSACallToActionWidget extends WP_Widget
+    final class HTSAImageBackgroundWithContentWidget extends WP_Widget
     {
         use PageViewLoader;
 
@@ -28,13 +28,13 @@ if ( ! class_exists( 'HTSACallToActionWidget' ) ) {
          * Widget ID
          * @since 1.0.0
          */
-        public const ID_BASE = 'htsa_call_to_action_widget';
+        public const ID_BASE = 'htsa_image_background_with_content_widget';
 
         /**
          * Widget Name
          * @since 1.0.0
          */
-        public const NAME = 'HTSA Call To Action';
+        public const NAME = 'HTSA Image Background With Content';
 
         /**
          * Support for wordpress versions less than 5.8
@@ -59,7 +59,7 @@ if ( ! class_exists( 'HTSACallToActionWidget' ) ) {
                 self::ID_BASE,
                 sprintf( __( '%s', 'htsa' ), self::NAME ),
                 array(
-                    'description'                   => __( 'A widget to display text and image, along with an action link' ),
+                    'description'                   => __( 'A widget to display text with an image background' ),
                     'customize_selective_refresh'   => true,
                     'show_instance_in_rest'         => true,
                 )
@@ -90,12 +90,12 @@ if ( ! class_exists( 'HTSACallToActionWidget' ) ) {
 
             echo $args['before_widget'];
 
-            get_template_part( 'template-parts/parts/widget', 'call-to-action', array(
-                'header'        => $instance['header'],
-                'description'   => $instance['description'],
-                'action_text'   => $instance['action_text'],
-                'action_url'    => $instance['action_url'],
-                'image_url'     => ( $instance['image_url'] ) ? wp_get_attachment_image_url( $instance['image_url'], 'large' ) : null,
+            get_template_part( 'template-parts/parts/widget', 'image-background-with-content', array(
+                'small_header'          => $instance['header'],
+                'big_header'            => $instance['description'],
+                'action_text'           => $instance['action_text'],
+                'action_url'            => $instance['action_url'],
+                'background_image_url'  => ( $instance['image_url'] ) ? wp_get_attachment_image_url( $instance['image_url'], 'large' ) : null,
             ) );
 
             echo $args['after_widget'];

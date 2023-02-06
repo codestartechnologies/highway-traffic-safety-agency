@@ -18,5 +18,5 @@
         </div>
     </div>
 </section>
-<div class="ui hidden divider"></div>
+<!-- <div class="ui hidden divider"></div> -->
 <!-- End Call To Action Widget -->

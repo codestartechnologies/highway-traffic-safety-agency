@@ -1,8 +1,8 @@
 <?php
 /**
- * HTSAFrontpageSidebar class file.
+ * HTSAFrontpageAsideSidebar class file.
  *
- * This file contains HTSAFrontpageSidebar class for registering "Front Page" sidebar area.
+ * This file contains HTSAFrontpageAsideSidebar class for registering "Front Page Aside" sidebar area.
  *
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
  * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
@@ -20,15 +20,15 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if ( ! class_exists( 'HTSAFrontpageSidebar' ) ) {
+if ( ! class_exists( 'HTSAFrontpageAsideSidebar' ) ) {
     /**
-     * Class HTSAFrontpageSidebar
+     * Class HTSAFrontpageAsideSidebar
      *
      * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
-    final class HTSAFrontpageSidebar extends AbstractsSidebar {
+    final class HTSAFrontpageAsideSidebar extends AbstractsSidebar {
         /**
-         * HTSAFrontpageSidebar constructor
+         * HTSAFrontpageAsideSidebar constructor
          *
          * @access public
          * @param array $parameters     Initial parameters passed to register_sidebar()

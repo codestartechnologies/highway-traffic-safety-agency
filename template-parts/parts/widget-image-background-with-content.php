@@ -16,5 +16,5 @@
         </div>
     </div>
 </section>
-<div class="ui hidden divider"></div>
+<!-- <div class="ui hidden divider"></div> -->
 <!-- Image Background With Content Widget -->
