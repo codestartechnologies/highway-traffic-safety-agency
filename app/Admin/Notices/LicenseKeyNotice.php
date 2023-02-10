@@ -40,7 +40,7 @@ if ( ! class_exists( 'LicenseKeyNotice' ) ) {
          */
         protected function can_show_notice(): bool
         {
-            return ( '1' !== get_option( 'htsa_license_valid' ) );
+            return ( '0' === get_option( 'htsa_license_valid' ) );
         }
 
         /**
@@ -52,7 +52,7 @@ if ( ! class_exists( 'LicenseKeyNotice' ) ) {
          */
         public function notification() : void
         {
-            $message = __( 'Your license key is invalid/expired. Update license key to enable updates for this theme.', 'htsa' );
+            $message = sprintf( __( 'Your license key is invalid/expired. <a href="%s">Update license key</a> to enable updates for this theme.', 'htsa' ), admin_url( 'options-general.php?page=htsa-license-settings' ) );
             printf( '<div class="notice notice-error"><p><b>%1$s:</b> %2$s</p></div>', HTSA_THEME_NAME, $message );
         }
     }
