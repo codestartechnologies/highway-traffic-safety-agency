@@ -1,0 +1,114 @@
+mark {
+    background-color: #1f98fa;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 2px 5px;
+    margin: 1px auto;
+}
+
+.htsa-main-title {
+    font-size: 3rem;
+    font-weight: 200;
+    color: #3b3b3b;
+}
+
+.htsa-main-content {
+    font-size: 1.6rem;
+    font-weight: 300;
+    background-color: #ffffff;
+    padding: 8px;
+}
+
+.htsa-section-title {
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.htsa-section-title i {
+    margin-right: 7px;
+}
+
+.htsa-inline-grid {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.htsa-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.htsa-grid > div {
+    width: 100%;
+    margin: 0.8rem auto;
+}
+
+.htsa-grid-item {
+    background-color: #ffffff;
+}
+
+.htsa-grid-item .htsa-grid-item-title {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.htsa-grid-item .htsa-grid-content,
+.htsa-grid-item p {
+    font-size: 17px !important;
+}
+
+.htsa-grid-item .htsa-grid-item-link {
+    text-decoration: none;
+    display: inline-block;
+    background-color: #2271b1;
+    border: 1px solid #2271b1;
+    color: #ffffff;
+    padding: 5px 8px;
+    transition: background-color .2s ease-in-out;
+    font-size: 15px;
+}
+
+.htsa-grid-item .htsa-grid-item-link:hover {
+    background-color: #ffffff;
+    color: #2271b1;
+}
+
+.htsa-section-features .htsa-grid-item {
+    border-radius: 5px;
+    padding: 9px;
+}
+
+.htsa-grid.htsa-section-suggestions {
+    flex-direction: column;
+}
+
+.htsa-section-suggestions .htsa-grid-item {
+    padding: 9px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .htsa-grid.htsa-section-features > div {
+        width: 45%;
+    }
+
+}
+
+@media screen and (min-width: 965px) {
+
+    .htsa-grid.htsa-section-features > div {
+        width: 30%;
+    }
+
+}

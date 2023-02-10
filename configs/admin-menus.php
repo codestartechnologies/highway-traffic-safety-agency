@@ -4,7 +4,7 @@
  *
  * @author      Chijindu Nzeako <chijindunzeako517@gmail.com>
  * @license     https://www.gnu.org/licenses/agpl-3.0.txt GNU/AGPLv3
- * @link        https://codestar.com.ng
+ * @link        https://github.com/codestartechnologies/wordpress-theme-starter
  */
 
 return array(
@@ -63,7 +63,7 @@ return array(
     ),
 
     /**
-     * Initial values to create "WTS Options Page" menu page in the admin dashboard.
+     * Initial values to create "HTSA Theme License" menu page in the admin dashboard.
      */
     'license_settings'  => array(
 
@@ -76,6 +76,24 @@ return array(
         'menu_slug'     => 'htsa-license-settings',
 
         'view'          => 'menus.license-setting-menu',
+
+        'position'      => null,
+    ),
+
+    /**
+     * Initial values to create "WTS Theme Page" menu page in the admin dashboard.
+     */
+    'theme_menu'  => array(
+
+        'page_title'    => sprintf( esc_html__( '%s - WordPress Theme', 'htsa' ), HTSA_THEME_NAME ),
+
+        'menu_title'    => sprintf( '%s', HTSA_THEME_NAME ),
+
+        'capability'    => 'manage_options',
+
+        'menu_slug'     => 'htsa-theme-page',
+
+        'view'          => 'menus.theme-menu',
 
         'position'      => null,
     ),

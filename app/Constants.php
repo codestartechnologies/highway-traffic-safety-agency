@@ -53,6 +53,24 @@ if ( ! class_exists( 'Constants' ) ) {
                 define( 'HTSA_THEME_VERSION', '0.1.0' );
             }
 
+            /**
+             * Specify theme support plan link
+             */
+            if ( ! defined( 'HTSA_THEME_SUPPORT_PLANS' ) ) {
+                define( 'HTSA_THEME_SUPPORT_PLANS', 'https://codestar.com.ng/support-plans' );
+            }
+
+            /**
+             * Specify theme recommended plugins
+             */
+            if ( ! defined( 'HTSA_THEME_RP_HTSA_PLUGIN_NAME' ) ) {
+                define( 'HTSA_THEME_RP_HTSA_PLUGIN_NAME', 'Highway Traffic Security Agency Plugin' );
+            }
+
+            if ( ! defined( 'HTSA_THEME_RP_HTSA_PLUGIN_URL' ) ) {
+                define( 'HTSA_THEME_RP_HTSA_PLUGIN_URL', 'https://codestar.com.ng/shop/highway-traffic-security-agency-plugin' );
+            }
+
             if ( 'production' === $_ENV['HTSA_ENV'] ) {
 
                 /**
@@ -270,6 +288,11 @@ if ( ! class_exists( 'Constants' ) ) {
 
             define( 'HTSA_BOOTSTRAP_COMPONENTS_JS', WTS_THEME_JS_URI . 'bootstrap_components_js.min.js' );
             define( 'HTSA_JS', WTS_THEME_JS_URI . 'htsa_js.min.js' );
+
+            /**
+             * Define links to theme main CSS and JS files
+             */
+            define( 'HTSA_THEME_MENU_CSS', WTS_THEME_CSS_URI . 'htsa_theme_menu.css' );
             define( 'HTSA_ADMIN_JS', WTS_THEME_JS_URI . 'htsa_admin.js' );
 
             /**

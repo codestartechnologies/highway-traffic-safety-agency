@@ -6,8 +6,8 @@
  *
  * @package    WordpressThemeStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
- * @license     https://www.gnu.org/licenses/agpl-3.0.txt GNU/AGPLv3
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
+ * @license    https://www.gnu.org/licenses/agpl-3.0.txt GNU/AGPLv3
  * @since      1.0.0
  */
 
@@ -331,6 +331,10 @@ if ( ! class_exists( 'Hooks' ) ) {
                     }
                 ';
                 wp_add_inline_style( 'media', $style );
+            }
+
+            if ( $hook_suffix === 'appearance_page_htsa-theme-page' ) {
+                wp_enqueue_style( 'htsa-theme-menu', HTSA_THEME_MENU_CSS, array(), HTSA_THEME_VERSION );
             }
         }
 

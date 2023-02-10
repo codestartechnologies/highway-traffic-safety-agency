@@ -19,6 +19,7 @@ use WTS_Theme\App\Admin\Customizers\HTSAFrontPageCustomizer;
 use WTS_Theme\App\Admin\Customizers\HTSAPenaltiesPageCustomizer;
 use WTS_Theme\App\Admin\Customizers\HTSASiteIdentityCustomizer;
 use WTS_Theme\App\Admin\Customizers\WTSCustomizer;
+use WTS_Theme\App\Admin\Menus\HTSAMenuPage;
 use WTS_Theme\App\Admin\Menus\LicenseSettingsPage;
 use WTS_Theme\App\Admin\Menus\WTSMenuPage;
 use WTS_Theme\App\Admin\Menus\WTSOptionsPage;
@@ -82,6 +83,7 @@ if ( ! class_exists( 'Bindings' ) ) {
          */
         public static array $themes_menus = array(
             // WTSThemePage::class => 'admin-menus.wts_theme_page',
+            HTSAMenuPage::class => 'admin-menus.theme_menu',
         );
 
         /**
