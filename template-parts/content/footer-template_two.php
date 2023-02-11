@@ -81,6 +81,7 @@
 
                 <?php if ( shortcode_exists( HTSA_NEWSLETTER_FORM_SHORTCODE ) ) : ?>
                     <div class="col-md-5 col-lg-4 order-1">
+                        <h5 class="fw-normal text-capitalize htsa-text-yellow mb-2"> <?php esc_html_e( 'Newsletter form', 'htsa' ); ?> </h5>
                         <?php echo do_shortcode( '[' . HTSA_NEWSLETTER_FORM_SHORTCODE . ']' ); ?>
                     </div>
                 <?php endif; ?>

@@ -67,11 +67,15 @@ get_header();
         </div>
         <!-- End Contact Section -->
 
-        <?php
-            if ( shortcode_exists( HTSA_CONTACT_FORM_SHORTCODE ) ) {
-                echo do_shortcode( '[' . HTSA_CONTACT_FORM_SHORTCODE . ']' );
-            }
-        ?>
+        <?php if ( shortcode_exists( HTSA_CONTACT_FORM_SHORTCODE ) ) : ?>
+            <!-- Contact Form ShortCode -->
+            <div class="ui section divider"></div>
+            <h4 class="text-uppercase mb-3"> <?php esc_html_e( 'Contact us and we will reply you as soon as possible', 'htsa' ); ?> </h4>
+            <div class="col-lg-6 mx-auto-">
+                <?php echo do_shortcode( '[' . HTSA_CONTACT_FORM_SHORTCODE . ']' ); ?>
+            </div>
+            <!-- End Contact Form ShortCode -->
+        <?php endif; ?>
 
     </div>
 
