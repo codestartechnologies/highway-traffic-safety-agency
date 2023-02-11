@@ -849,7 +849,6 @@ return array(
 
                     'type'              => 'select',
 
-                    'active_callback'   => 'is_front_page',
                 ),
             ),
 
