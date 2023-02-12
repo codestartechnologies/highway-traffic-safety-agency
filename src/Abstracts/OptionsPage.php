@@ -10,7 +10,7 @@
  * @since      1.0.0
  */
 
-namespace Codestartechnologies\WordpressThemeStarter\Abstracts;
+namespace HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts;
 
 /**
  * Prevent direct access to this file.

@@ -4,14 +4,15 @@
  *
  * This file contains HTSAFrontpageAsideSidebar class for registering "Front Page Aside" sidebar area.
  *
+ * @package    HighwayTrafficSecurityAgency
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
  * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Public\Sidebars;
+namespace HTSA\WTS_Theme\App\Public\Sidebars;
 
-use Codestartechnologies\WordpressThemeStarter\Abstracts\Sidebar as AbstractsSidebar;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\Sidebar as AbstractsSidebar;
 
 /**
  * Prevent direct access to this file.
@@ -24,7 +25,8 @@ if ( ! class_exists( 'HTSAFrontpageAsideSidebar' ) ) {
     /**
      * Class HTSAFrontpageAsideSidebar
      *
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @package HighwayTrafficSecurityAgency
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class HTSAFrontpageAsideSidebar extends AbstractsSidebar {
         /**

@@ -10,10 +10,10 @@
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Admin\Menus;
+namespace HTSA\WTS_Theme\App\Admin\Menus;
 
-use Codestartechnologies\WordpressThemeStarter\Abstracts\OptionsPage as AbstractsOptionsPage;
-use WTS_Theme\App\HTSA\CodestarAPI;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\OptionsPage as AbstractsOptionsPage;
+use HTSA\WTS_Theme\App\HTSA\CodestarAPI;
 
 /**
  * Prevent direct access to this file.
@@ -29,7 +29,7 @@ if ( ! class_exists( 'LicenseSettingsPage' ) ) {
      * This class creates "HTSA License Settings" menu page in admin area.
      *
      * @package HighwayTrafficSecurityAgency
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class LicenseSettingsPage extends AbstractsOptionsPage {
 

@@ -11,13 +11,13 @@
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App;
+namespace HTSA\WTS_Theme\App;
 
-use Codestartechnologies\WordpressThemeStarter\Interfaces\ActionHooks;
-use Codestartechnologies\WordpressThemeStarter\Interfaces\FilterHooks;
-use WTS_Theme\App\Public\Walkers\HTSACommentWalker;
-use WTS_Theme\App\Public\Walkers\HTSACommentWalker2;
-use WTS_Theme\App\Public\Walkers\HTSANavMenuWalker;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Interfaces\ActionHooks;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Interfaces\FilterHooks;
+use HTSA\WTS_Theme\App\Public\Walkers\HTSACommentWalker;
+use HTSA\WTS_Theme\App\Public\Walkers\HTSACommentWalker2;
+use HTSA\WTS_Theme\App\Public\Walkers\HTSANavMenuWalker;
 
 /**
  * Prevent direct access to this file.
@@ -33,7 +33,7 @@ if ( ! class_exists( 'Hooks' ) ) {
      * This file contains Hooks class which handles WordPress hooks in Your theme.
      *
      * @package WordpressThemeStarter
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     class Hooks implements ActionHooks, FilterHooks {
         /**

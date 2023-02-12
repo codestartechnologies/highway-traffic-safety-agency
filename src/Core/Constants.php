@@ -6,12 +6,12 @@
  *
  * @package    WordpressThemeStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  * @license    https://www.gnu.org/licenses/agpl-3.0.txt GNU/AGPLv3
  * @since      1.0.0
  */
 
-namespace Codestartechnologies\WordpressThemeStarter\Core;
+namespace HTSA\Codestartechnologies\WordpressThemeStarter\Core;
 
 /**
  * Prevent direct access to this file.

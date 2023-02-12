@@ -9,16 +9,16 @@
  * @version    1.0.0
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
  * @license    https://www.gnu.org/licenses/agpl-3.0.txt GNU/AGPLv3
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  */
 
-use Codestartechnologies\WordpressThemeStarter\Core\Constants as CoreConstants;
-use Codestartechnologies\WordpressThemeStarter\Core\Bootstrap;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Core\Constants as CoreConstants;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Core\Bootstrap;
 use Dotenv\Dotenv;
-use WTS_Theme\App\Bindings;
-use WTS_Theme\App\Constants;
-use WTS_Theme\App\Hooks;
-use WTS_Theme\App\HTSA\ThemeUpdate;
+use HTSA\WTS_Theme\App\Bindings;
+use HTSA\WTS_Theme\App\Constants;
+use HTSA\WTS_Theme\App\Hooks;
+use HTSA\WTS_Theme\App\HTSA\ThemeUpdate;
 
 /**
  * Prevent direct access to this file from url
@@ -70,9 +70,8 @@ final class WTSTheme {
     private function __construct()
     {
         /**
-         * Include autoloader class that will load required classes for this theme.
+         * Include file that will load required classes for this theme.
          */
-        require_once get_template_directory() . '/vendor/autoload.php';
         require_once get_template_directory() . '/autoload.php';
 
         /**

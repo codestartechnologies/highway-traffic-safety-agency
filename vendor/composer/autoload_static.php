@@ -10,10 +10,6 @@ class ComposerStaticInit1544251c497eeb8d2de05de0755efd22
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        'd2d0766ea75b047d946a448b9ae59dfc' => __DIR__ . '/../..' . '/helpers/helpers.php',
-        'cb950b35647faa8508a0cbc8ffc14dd7' => __DIR__ . '/../..' . '/helpers/pagination.php',
-        'df3cacaad25bfb982a8eee475fdbf2a3' => __DIR__ . '/../..' . '/helpers/posts.php',
-        '57b8d431e9dcaae7256988564dfe34e0' => __DIR__ . '/../..' . '/app/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -34,10 +30,6 @@ class ComposerStaticInit1544251c497eeb8d2de05de0755efd22
         'D' => 
         array (
             'Dotenv\\' => 7,
-        ),
-        'C' => 
-        array (
-            'Codestartechnologies\\WordpressThemeStarter\\' => 43,
         ),
     );
 
@@ -65,10 +57,6 @@ class ComposerStaticInit1544251c497eeb8d2de05de0755efd22
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
-        ),
-        'Codestartechnologies\\WordpressThemeStarter\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

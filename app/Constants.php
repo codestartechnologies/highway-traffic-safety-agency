@@ -10,7 +10,7 @@
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App;
+namespace HTSA\WTS_Theme\App;
 
 /**
  * Prevent direct access to this file.
@@ -23,8 +23,8 @@ if ( ! class_exists( 'Constants' ) ) {
     /**
      * Constants Class
      *
-     * @package     WordpressThemeStarter
-     * @author      Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @package WordpressThemeStarter
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class Constants
     {

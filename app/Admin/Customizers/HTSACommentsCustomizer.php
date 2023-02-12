@@ -4,14 +4,15 @@
  *
  * This is an example class file for creating customizer sections, settings and controls.
  *
+ * @package    HighwayTrafficSecurityAgency
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Admin\Customizers;
+namespace HTSA\WTS_Theme\App\Admin\Customizers;
 
-use Codestartechnologies\WordpressThemeStarter\Abstracts\Customizer as AbstractsCustomizer;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\Customizer as AbstractsCustomizer;
 
 /**
  * Prevent direct access to this file.
@@ -27,7 +28,7 @@ if ( ! class_exists( 'HTSACommentsCustomizer' ) ) {
      * Registers customizer sections, settings and controls. This class needs to define methods that will be passed as callbacks to
      * WP_Customize_Manager::add_section(), WP_Customize_Manager::add_setting(), and WP_Customize_Manager::add_control().
      *
-     * @package WordpressThemeStarter
+     * @package HighwayTrafficSecurityAgency
      * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class HTSACommentsCustomizer extends AbstractsCustomizer {

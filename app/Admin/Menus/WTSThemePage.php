@@ -6,13 +6,13 @@
  *
  * @package    WordpressThemeStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Admin\Menus;
+namespace HTSA\WTS_Theme\App\Admin\Menus;
 
-use Codestartechnologies\WordpressThemeStarter\Abstracts\ThemePage as AbstractsThemePage;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\ThemePage as AbstractsThemePage;
 
 /**
  * Prevent direct access to this file.
@@ -28,7 +28,7 @@ if ( ! class_exists( 'WTSThemePage' ) ) {
      * This class registers admin menus using add_theme_page(). This class must implement view_args() and load_page_hook() methods.
      *
      * @package WordpressThemeStarter
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class WTSThemePage extends AbstractsThemePage {
         /**

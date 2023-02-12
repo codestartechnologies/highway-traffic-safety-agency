@@ -10,10 +10,10 @@
  * @since      1.0.0
  */
 
-namespace Codestartechnologies\WordpressThemeStarter\Abstracts;
+namespace HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts;
 
-use Codestartechnologies\WordpressThemeStarter\Interfaces\ActionHooks;
-use Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Interfaces\ActionHooks;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
 
 /**
  * Prevent direct access to this file.

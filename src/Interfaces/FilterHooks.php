@@ -7,11 +7,11 @@
  *
  * @package     WordpressThemeStarter
  * @author      Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link        https://codestar.com.ng
+ * @link        https://github.com/codestartechnologies/wordpress-theme-starter
  * @since       1.0.0
  */
 
-namespace Codestartechnologies\WordpressThemeStarter\Interfaces;
+namespace HTSA\Codestartechnologies\WordpressThemeStarter\Interfaces;
 
 /**
  * Prevent direct access to this file.

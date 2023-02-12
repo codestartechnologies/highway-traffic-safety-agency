@@ -10,9 +10,9 @@
  * @since       1.0.0
  */
 
-namespace WTS_Theme\App\Admin\Notices;
+namespace HTSA\WTS_Theme\App\Admin\Notices;
 
-use Codestartechnologies\WordpressThemeStarter\Abstracts\AdminNotice as AbstractsAdminNotice;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\AdminNotice as AbstractsAdminNotice;
 
 /**
  * Prevent direct access to this file.

@@ -6,21 +6,21 @@
  *
  * @package    WordpressThemeStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Public\Widgets;
+namespace HTSA\WTS_Theme\App\Public\Widgets;
 
-use Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
 use WP_Widget;
 
 if ( ! class_exists( 'WTSWidget' ) ) {
     /**
      * WTSWidget Class
      *
-     * @package     WordpressThemeStarter
-     * @author      Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @package WordpressThemeStarter
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class WTSWidget extends WP_Widget
     {

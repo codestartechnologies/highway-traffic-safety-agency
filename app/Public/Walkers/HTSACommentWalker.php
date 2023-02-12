@@ -4,12 +4,13 @@
  *
  * This is file contains HTSACommentWalker class for creating comment walker.
  *
+ * @package    HighwayTrafficSecurityAgency
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Public\Walkers;
+namespace HTSA\WTS_Theme\App\Public\Walkers;
 
 use Walker_Comment;
 
@@ -26,8 +27,8 @@ if ( ! class_exists( 'HTSACommentWalker' ) ) {
      *
      * This file contains HTSANavMenuWalker class for creating comment walker.
      *
-     * @package WordpressThemeStarter
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @package HighwayTrafficSecurityAgency
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class HTSACommentWalker extends Walker_Comment {
         /**

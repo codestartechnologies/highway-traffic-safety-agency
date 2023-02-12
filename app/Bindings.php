@@ -4,45 +4,45 @@
  *
  * This file contains Bindings class which returns classes that will be registered with the plugin.
  *
- * @package    WordpressPluginStarter
+ * @package    WordpressThemeStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
  * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App;
+namespace HTSA\WTS_Theme\App;
 
 use WP_Widget_Calendar;
-use WTS_Theme\App\Admin\Customizers\HTSACommentsCustomizer;
-use WTS_Theme\App\Admin\Customizers\HTSAContactPageCustomizer;
-use WTS_Theme\App\Admin\Customizers\HTSAFrontPageCustomizer;
-use WTS_Theme\App\Admin\Customizers\HTSAPenaltiesPageCustomizer;
-use WTS_Theme\App\Admin\Customizers\HTSASiteIdentityCustomizer;
-use WTS_Theme\App\Admin\Customizers\WTSCustomizer;
-use WTS_Theme\App\Admin\Menus\HTSAMenuPage;
-use WTS_Theme\App\Admin\Menus\LicenseSettingsPage;
-use WTS_Theme\App\Admin\Menus\WTSMenuPage;
-use WTS_Theme\App\Admin\Menus\WTSOptionsPage;
-use WTS_Theme\App\Admin\Menus\WTSThemePage;
-use WTS_Theme\App\Admin\Notices\LicenseKeyNotice;
-use WTS_Theme\App\Admin\Notices\StickyPostsNotice;
-use WTS_Theme\App\Admin\Notices\WTSAdminNotice;
-use WTS_Theme\App\Admin\Settings\LicenseSetting;
-use WTS_Theme\App\Admin\Settings\WTSSettings;
-use WTS_Theme\App\Public\Sidebars\HTSAArchiveSidebar;
-use WTS_Theme\App\Public\Sidebars\HTSAFrontpageAsideSidebar;
-use WTS_Theme\App\Public\Sidebars\HTSAFrontpageResourcesSidebar;
-use WTS_Theme\App\Public\Sidebars\HTSAFrontpageSidebar;
-use WTS_Theme\App\Public\Sidebars\HTSASingleSidebar;
-use WTS_Theme\App\Public\Sidebars\WTSSidebar;
-use WTS_Theme\App\Public\Widgets\HTSACallToActionWidget;
-use WTS_Theme\App\Public\Widgets\HTSACardWidget;
-use WTS_Theme\App\Public\Widgets\HTSAImageBackgroundWithContentWidget;
-use WTS_Theme\App\Public\Widgets\HTSAPostsCarouselWidget;
-use WTS_Theme\App\Public\Widgets\HTSARecentPostsWidget;
-use WTS_Theme\App\Public\Widgets\HTSASearchWidget;
-use WTS_Theme\App\Public\Widgets\HTSATagCloudWidget;
-use WTS_Theme\App\Public\Widgets\WTSWidget;
+use HTSA\WTS_Theme\App\Admin\Customizers\HTSACommentsCustomizer;
+use HTSA\WTS_Theme\App\Admin\Customizers\HTSAContactPageCustomizer;
+use HTSA\WTS_Theme\App\Admin\Customizers\HTSAFrontPageCustomizer;
+use HTSA\WTS_Theme\App\Admin\Customizers\HTSAPenaltiesPageCustomizer;
+use HTSA\WTS_Theme\App\Admin\Customizers\HTSASiteIdentityCustomizer;
+use HTSA\WTS_Theme\App\Admin\Customizers\WTSCustomizer;
+use HTSA\WTS_Theme\App\Admin\Menus\HTSAMenuPage;
+use HTSA\WTS_Theme\App\Admin\Menus\LicenseSettingsPage;
+use HTSA\WTS_Theme\App\Admin\Menus\WTSMenuPage;
+use HTSA\WTS_Theme\App\Admin\Menus\WTSOptionsPage;
+use HTSA\WTS_Theme\App\Admin\Menus\WTSThemePage;
+use HTSA\WTS_Theme\App\Admin\Notices\LicenseKeyNotice;
+use HTSA\WTS_Theme\App\Admin\Notices\StickyPostsNotice;
+use HTSA\WTS_Theme\App\Admin\Notices\WTSAdminNotice;
+use HTSA\WTS_Theme\App\Admin\Settings\LicenseSetting;
+use HTSA\WTS_Theme\App\Admin\Settings\WTSSettings;
+use HTSA\WTS_Theme\App\Public\Sidebars\HTSAArchiveSidebar;
+use HTSA\WTS_Theme\App\Public\Sidebars\HTSAFrontpageAsideSidebar;
+use HTSA\WTS_Theme\App\Public\Sidebars\HTSAFrontpageResourcesSidebar;
+use HTSA\WTS_Theme\App\Public\Sidebars\HTSAFrontpageSidebar;
+use HTSA\WTS_Theme\App\Public\Sidebars\HTSASingleSidebar;
+use HTSA\WTS_Theme\App\Public\Sidebars\WTSSidebar;
+use HTSA\WTS_Theme\App\Public\Widgets\HTSACallToActionWidget;
+use HTSA\WTS_Theme\App\Public\Widgets\HTSACardWidget;
+use HTSA\WTS_Theme\App\Public\Widgets\HTSAImageBackgroundWithContentWidget;
+use HTSA\WTS_Theme\App\Public\Widgets\HTSAPostsCarouselWidget;
+use HTSA\WTS_Theme\App\Public\Widgets\HTSARecentPostsWidget;
+use HTSA\WTS_Theme\App\Public\Widgets\HTSASearchWidget;
+use HTSA\WTS_Theme\App\Public\Widgets\HTSATagCloudWidget;
+use HTSA\WTS_Theme\App\Public\Widgets\WTSWidget;
 
 /**
  * Prevent direct access to this file.
@@ -57,8 +57,8 @@ if ( ! class_exists( 'Bindings' ) ) {
      *
      * This class returns classes that will be registered with the plugin.
      *
-     * @package WordpressPluginStarter
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @package WordpressThemeStarter
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class Bindings {
         /**

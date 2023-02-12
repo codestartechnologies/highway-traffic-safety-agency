@@ -10,10 +10,10 @@
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Admin\Settings;
+namespace HTSA\WTS_Theme\App\Admin\Settings;
 
-use Codestartechnologies\WordpressThemeStarter\Abstracts\Settings as AbstractsSettings;
-use Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\Settings as AbstractsSettings;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
 
 /**
  * Prevent direct access to this file.
@@ -29,7 +29,7 @@ if ( ! class_exists( 'LicenseSetting' ) ) {
      * Creates theme license setting section.
      *
      * @package HighwayTrafficSecurityAgency
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class LicenseSetting extends AbstractsSettings {
         use PageViewLoader;

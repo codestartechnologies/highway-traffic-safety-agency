@@ -4,21 +4,23 @@
  *
  * This is file contains HTSASearchWidget class for registering search form widgets.
  *
+ * @package    HighwayTrafficSecurityAgency
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Public\Widgets;
+namespace HTSA\WTS_Theme\App\Public\Widgets;
 
-use Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
 use WP_Widget;
 
 if ( ! class_exists( 'HTSASearchWidget' ) ) {
     /**
      * HTSASearchWidget Class
      *
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @package HighwayTrafficSecurityAgency
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class HTSASearchWidget extends WP_Widget
     {

@@ -10,9 +10,9 @@
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\HTSA;
+namespace HTSA\WTS_Theme\App\HTSA;
 
-use Codestartechnologies\WordpressThemeStarter\Interfaces\FilterHooks;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Interfaces\FilterHooks;
 
 /**
  * Prevent direct access to this file.
@@ -25,8 +25,8 @@ if ( ! class_exists( 'ThemeUpdate' ) ) {
     /**
      * ThemeUpdate Class
      *
-     * @package     HighwayTrafficSecurityAgency
-     * @author      Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @package HighwayTrafficSecurityAgency
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class ThemeUpdate implements FilterHooks
     {

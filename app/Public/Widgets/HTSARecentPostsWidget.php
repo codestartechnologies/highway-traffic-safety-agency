@@ -4,21 +4,23 @@
  *
  * This is file contains HTSARecentPostsWidget class for registering widgets to display recent posts.
  *
+ * @package    HighwayTrafficSecurityAgency
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
  * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Public\Widgets;
+namespace HTSA\WTS_Theme\App\Public\Widgets;
 
-use Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
 use WP_Widget;
 
 if ( ! class_exists( 'HTSARecentPostsWidget' ) ) {
     /**
      * HTSARecentPostsWidget Class
      *
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @package HighwayTrafficSecurityAgency
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class HTSARecentPostsWidget extends WP_Widget
     {

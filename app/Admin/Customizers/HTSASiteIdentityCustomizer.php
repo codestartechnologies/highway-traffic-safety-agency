@@ -2,14 +2,15 @@
 /**
  * HTSASiteIdentityCustomizer class file
  *
+ * @package    HighwayTrafficSecurityAgency
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Admin\Customizers;
+namespace HTSA\WTS_Theme\App\Admin\Customizers;
 
-use Codestartechnologies\WordpressThemeStarter\Abstracts\Customizer as AbstractsCustomizer;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\Customizer as AbstractsCustomizer;
 
 /**
  * Prevent direct access to this file.
@@ -26,7 +27,7 @@ if ( ! class_exists( 'HTSASiteIdentityCustomizer' ) ) {
      * WP_Customize_Manager::add_section(), WP_Customize_Manager::add_setting(), and WP_Customize_Manager::add_control().
      *
      * @package WordpressThemeStarter
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class HTSASiteIdentityCustomizer extends AbstractsCustomizer {
         /**

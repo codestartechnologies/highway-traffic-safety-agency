@@ -6,13 +6,13 @@
  *
  * @package    WordpressThemeStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Public\Sidebars;
+namespace HTSA\WTS_Theme\App\Public\Sidebars;
 
-use Codestartechnologies\WordpressThemeStarter\Abstracts\Sidebar as AbstractsSidebar;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\Sidebar as AbstractsSidebar;
 
 /**
  * Prevent direct access to this file.
@@ -28,7 +28,7 @@ if ( ! class_exists( 'WTSSidebar' ) ) {
      * This file contains Sidebar class for registering theme sidebar areas.
      *
      * @package WordpressThemeStarter
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class WTSSidebar extends AbstractsSidebar {
         /**

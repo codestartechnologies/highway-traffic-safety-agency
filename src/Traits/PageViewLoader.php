@@ -7,11 +7,11 @@
  * @package    WordpressThemeStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
  * @license    https://www.gnu.org/licenses/agpl-3.0.txt GNU/AGPLv3
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  * @since      1.0.0
  */
 
-namespace Codestartechnologies\WordpressThemeStarter\Traits;
+namespace HTSA\Codestartechnologies\WordpressThemeStarter\Traits;
 
 /**
  * Prevent direct access to this file.
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( ! trait_exists( 'PageViewLoader' ) ) {
     /**
-     * Trait PageViewLoader
+     * PageViewLoader Trait
      *
      * This trait contains methods for loading views in the admin area or public area of the site.
      *

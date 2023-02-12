@@ -6,24 +6,24 @@
  *
  * @package    WordpressThemeStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  * @license    https://www.gnu.org/licenses/agpl-3.0.txt GNU/AGPLv3
  * @since      1.0.0
  */
 
-namespace Codestartechnologies\WordpressThemeStarter\Core;
+namespace HTSA\Codestartechnologies\WordpressThemeStarter\Core;
 
-use Codestartechnologies\WordpressThemeStarter\Abstracts\AdminNotice;
-use Codestartechnologies\WordpressThemeStarter\Abstracts\Customizer;
-use Codestartechnologies\WordpressThemeStarter\Abstracts\MenuPage;
-use Codestartechnologies\WordpressThemeStarter\Abstracts\OptionsPage;
-use Codestartechnologies\WordpressThemeStarter\Abstracts\Settings;
-use Codestartechnologies\WordpressThemeStarter\Abstracts\Sidebar;
-use Codestartechnologies\WordpressThemeStarter\Abstracts\ThemePage;
-use Codestartechnologies\WordpressThemeStarter\Interfaces\ActionHooks;
-use Codestartechnologies\WordpressThemeStarter\Traits\Validator;
-use WTS_Theme\App\Hooks;
-use WTS_Theme\App\HTSA\ThemeUpdate;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\AdminNotice;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\Customizer;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\MenuPage;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\OptionsPage;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\Settings;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\Sidebar;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\ThemePage;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Interfaces\ActionHooks;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Traits\Validator;
+use HTSA\WTS_Theme\App\Hooks;
+use HTSA\WTS_Theme\App\HTSA\ThemeUpdate;
 
 /**
  * Prevent direct access to this file.

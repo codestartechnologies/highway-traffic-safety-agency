@@ -4,12 +4,13 @@
  *
  * This is file contains HTSANavMenuWalker class for creating nav menu walker.
  *
+ * @package    HighwayTrafficSecurityAgency
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/highway-traffic-security-agency
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Public\Walkers;
+namespace HTSA\WTS_Theme\App\Public\Walkers;
 
 use Walker_Nav_Menu;
 
@@ -26,8 +27,8 @@ if ( ! class_exists( 'HTSANavMenuWalker' ) ) {
      *
      * This file contains HTSANavMenuWalker class for creating nav menu walker.
      *
-     * @package WordpressThemeStarter
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @package HighwayTrafficSecurityAgency
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class HTSANavMenuWalker extends Walker_Nav_Menu {
         /**

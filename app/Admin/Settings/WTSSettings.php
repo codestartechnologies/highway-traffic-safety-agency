@@ -6,14 +6,14 @@
  *
  * @package    WordpressThemeStarter
  * @author     Chijindu Nzeako <chijindunzeako517@gmail.com>
- * @link       https://codestar.com.ng
+ * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\Admin\Settings;
+namespace HTSA\WTS_Theme\App\Admin\Settings;
 
-use Codestartechnologies\WordpressThemeStarter\Abstracts\Settings as AbstractsSettings;
-use Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Abstracts\Settings as AbstractsSettings;
+use HTSA\Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
 
 /**
  * Prevent direct access to this file.
@@ -31,7 +31,7 @@ if ( ! class_exists( 'WTSSettings' ) ) {
      * methods that will run when settings are updated.
      *
      * @package WordpressThemeStarter
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class WTSSettings extends AbstractsSettings {
         use PageViewLoader;

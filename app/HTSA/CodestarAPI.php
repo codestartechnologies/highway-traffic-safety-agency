@@ -10,7 +10,7 @@
  * @since      1.0.0
  */
 
-namespace WTS_Theme\App\HTSA;
+namespace HTSA\WTS_Theme\App\HTSA;
 
 /**
  * Prevent direct access to this file.
@@ -23,8 +23,8 @@ if ( ! class_exists( 'CodestarAPI' ) ) {
     /**
      * CodestarAPI Class
      *
-     * @package     HighwayTrafficSecurityAgency
-     * @author      Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @package HighwayTrafficSecurityAgency
+     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
      */
     final class CodestarAPI
     {
