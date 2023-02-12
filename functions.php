@@ -70,9 +70,12 @@ final class WTSTheme {
     private function __construct()
     {
         /**
-         * Include file that will load required classes for this theme.
+         * Require autoloader files.
          */
-        require_once get_template_directory() . '/autoload.php';
+
+        require_once trailingslashit( get_template_directory() ) . 'vendor/autoload.php';
+
+        require_once trailingslashit( get_template_directory() ) . 'autoload.php';
 
         /**
          * Load .env inside the application
