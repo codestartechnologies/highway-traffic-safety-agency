@@ -50,7 +50,7 @@ if ( ! class_exists( 'Constants' ) ) {
              * Specify theme version
              */
             if ( ! defined( 'HTSA_THEME_VERSION' ) ) {
-                define( 'HTSA_THEME_VERSION', '0.1.0' );
+                define( 'HTSA_THEME_VERSION', '0.3.0' );
             }
 
             /**

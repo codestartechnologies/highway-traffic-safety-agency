@@ -86,7 +86,7 @@ if ( ! class_exists( 'HTSACommentsCustomizer' ) ) {
          */
         public function _control_active_callback() : bool
         {
-            return comments_open();
+            return ( version_compare( get_bloginfo( 'version' ), '5.9', '>=' ) ) ? ( is_single() && comments_open() ) : true;
         }
     }
 }
