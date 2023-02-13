@@ -31,14 +31,14 @@
                 <tr id="<?php echo HTSA_PENALTIES_POST_TYPE . get_the_ID() ?>">
                     <td> <?php echo $index; ?> </td>
                     <td class="fw-bolder"> <?php the_title(); ?> </td>
-                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY}['cars'] ?? null ); ?> </td>
-                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY}['bus_shuttle'] ?? null ); ?> </td>
-                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY}['mini_bus'] ?? null ); ?> </td>
-                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY}['luxury_bus'] ?? null ); ?> </td>
-                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY}['trailer'] ?? null ); ?> </td>
-                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY}['lorry'] ?? null ); ?> </td>
-                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY}['tricycle'] ?? null ); ?> </td>
-                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATRGORIES_META_KEY}['motorcycle'] ?? null ); ?> </td>
+                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATEGORIES_META_KEY}['cars'] ?? null ); ?> </td>
+                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATEGORIES_META_KEY}['bus_shuttle'] ?? null ); ?> </td>
+                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATEGORIES_META_KEY}['mini_bus'] ?? null ); ?> </td>
+                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATEGORIES_META_KEY}['luxury_bus'] ?? null ); ?> </td>
+                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATEGORIES_META_KEY}['trailer'] ?? null ); ?> </td>
+                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATEGORIES_META_KEY}['lorry'] ?? null ); ?> </td>
+                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATEGORIES_META_KEY}['tricycle'] ?? null ); ?> </td>
+                    <td> <?php echo htsa_money_format( ( int ) $post->{HTSA_PENALTY_VEHICLE_CATEGORIES_META_KEY}['motorcycle'] ?? null ); ?> </td>
                 </tr>
             <?php endwhile?>
         </tbody>
