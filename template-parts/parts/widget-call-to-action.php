@@ -6,8 +6,10 @@
                 <div class="col-lg-6">
                     <h1 class="fs-3 fw-bold text-capitalize lh-sm text-primary"> <?php echo $args['header']; ?> </h1>
                     <p class="fw-light"> <?php echo $args['description']; ?> </p>
+                    <?php if ( ! empty( $args['action_text'] ) ) : ?>
                     <br>
                     <a href="<?php echo $args['action_url']; ?>" class="btn btn-primary text-capitalize"> <?php echo $args['action_text']; ?> </a>
+                    <?php endif; ?>
                 </div>
                 <?php if ( ! empty( $args['image_url'] ) ) : ?>
                 <div class="col-lg-3">
@@ -18,5 +20,4 @@
         </div>
     </div>
 </section>
-<!-- <div class="ui hidden divider"></div> -->
 <!-- End Call To Action Widget -->

@@ -7,14 +7,15 @@
                     <span class="text-white text-lowercase"> <?php echo $args['small_header']; ?> </span>
                     <h1 class="lh-sm text-white text-capitalize htsa-ff-roboto-slab fw-bold"> <?php echo $args['big_header']; ?> </h1>
                 </div>
+                <?php if ( ! empty( $args['action_text'] ) ) : ?>
                 <div>
                     <a href="<?php echo $args['action_url']; ?>" class="btn btn-warning rounded-0 text-capitalize htsa-fs-md-5 fw-normal">
                         <?php echo $args['action_text']; ?>
                     </a>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
 </section>
-<!-- <div class="ui hidden divider"></div> -->
 <!-- Image Background With Content Widget -->
