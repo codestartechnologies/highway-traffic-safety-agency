@@ -12,6 +12,8 @@
  * @link       https://github.com/codestartechnologies/wordpress-theme-starter
  */
 
+namespace HTSA\Codestartechnologies\WordpressThemeStarter;
+
 use HTSA\Codestartechnologies\WordpressThemeStarter\Core\Constants as CoreConstants;
 use HTSA\Codestartechnologies\WordpressThemeStarter\Core\Bootstrap;
 use Dotenv\Dotenv;
@@ -35,7 +37,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @package WordpressThemeStarter
  * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
  */
-final class WTSTheme {
+final class WTSTheme
+{
     /**
      * Instance property of Rome class.
      *
@@ -148,6 +151,7 @@ final class WTSTheme {
      *
      * @param array $classes
      * @return array
+     * @since 1.0.0
      */
     private static function boot( array $classes = array() ) : array
     {
@@ -169,6 +173,7 @@ final class WTSTheme {
      *
      * @param array $classes
      * @return array
+     * @since 1.0.0
      */
     private static function boot_with_configs( array $classes = array() ) : array
     {
@@ -186,5 +191,5 @@ final class WTSTheme {
     }
 }
 
-$theme = WTSTheme::instance();
+$theme = \HTSA\Codestartechnologies\WordpressThemeStarter\WTSTheme::instance();
 $theme->init();

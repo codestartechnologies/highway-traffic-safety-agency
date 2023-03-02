@@ -15,9 +15,9 @@ namespace HTSA\WTS_Theme\App;
 
 use HTSA\Codestartechnologies\WordpressThemeStarter\Interfaces\ActionHooks;
 use HTSA\Codestartechnologies\WordpressThemeStarter\Interfaces\FilterHooks;
-use HTSA\WTS_Theme\App\Public\Walkers\HTSACommentWalker;
-use HTSA\WTS_Theme\App\Public\Walkers\HTSACommentWalker2;
-use HTSA\WTS_Theme\App\Public\Walkers\HTSANavMenuWalker;
+use HTSA\WTS_Theme\App\HTSA\Walkers\HTSACommentWalker;
+use HTSA\WTS_Theme\App\HTSA\Walkers\HTSACommentWalker2;
+use HTSA\WTS_Theme\App\HTSA\Walkers\HTSANavMenuWalker;
 
 /**
  * Prevent direct access to this file.
