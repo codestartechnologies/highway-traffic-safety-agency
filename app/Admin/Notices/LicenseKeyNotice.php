@@ -21,39 +21,38 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if ( ! class_exists( 'LicenseKeyNotice' ) ) {
+/**
+ * Class LicenseKeyNotice
+ *
+ * This class contains methods for printing admin notifications for theme license status.
+ *
+ * @package HighwayTrafficSecurityAgency
+ * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
+ */
+final class LicenseKeyNotice extends AbstractsAdminNotice
+{
     /**
-     * Class LicenseKeyNotice
+     * Check before the admin notice is printed
      *
-     * This class contains methods for printing admin notifications for theme license status.
-     *
-     * @package HighwayTrafficSecurityAgency
-     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @access protected
+     * @return boolean
+     * @since 1.0.0
      */
-    final class LicenseKeyNotice extends AbstractsAdminNotice {
-        /**
-         * Check before the admin notice is printed
-         *
-         * @access protected
-         * @return boolean
-         * @since 1.0.0
-         */
-        protected function can_show_notice(): bool
-        {
-            return ( '0' === get_option( 'htsa_license_valid' ) );
-        }
+    protected function can_show_notice(): bool
+    {
+        return ( '0' === get_option( 'htsa_license_valid' ) );
+    }
 
-        /**
-         * "admin_notices" action hook callback
-         *
-         * @access public
-         * @return void
-         * @since 1.0.0
-         */
-        public function notification() : void
-        {
-            $message = sprintf( __( 'Your license key is invalid/expired. <a href="%s">Update license key</a> to enable updates for this theme.', 'htsa' ), admin_url( 'options-general.php?page=htsa-license-settings' ) );
-            printf( '<div class="notice notice-error"><p><b>%1$s:</b> %2$s</p></div>', HTSA_THEME_NAME, $message );
-        }
+    /**
+     * "admin_notices" action hook callback
+     *
+     * @access public
+     * @return void
+     * @since 1.0.0
+     */
+    public function notification() : void
+    {
+        $message = sprintf( __( 'Your license key is invalid/expired. <a href="%s">Update license key</a> to enable updates for this theme.', 'htsa' ), admin_url( 'options-general.php?page=htsa-license-settings' ) );
+        printf( '<div class="notice notice-error"><p><b>%1$s:</b> %2$s</p></div>', HTSA_THEME_NAME, $message );
     }
 }

@@ -21,27 +21,26 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if ( ! class_exists( 'WTSSidebar' ) ) {
+/**
+ * Class WTSSidebar
+ *
+ * This file contains Sidebar class for registering theme sidebar areas.
+ *
+ * @package WordpressThemeStarter
+ * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
+ */
+final class WTSSidebar extends AbstractsSidebar
+{
     /**
-     * Class WTSSidebar
+     * WTSSidebar constructor
      *
-     * This file contains Sidebar class for registering theme sidebar areas.
-     *
-     * @package WordpressThemeStarter
-     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @access public
+     * @param array $parameters     Initial parameters passed to register_sidebar()
+     * @return void
+     * @since 1.0.0
      */
-    final class WTSSidebar extends AbstractsSidebar {
-        /**
-         * WTSSidebar constructor
-         *
-         * @access public
-         * @param array $parameters     Initial parameters passed to register_sidebar()
-         * @return void
-         * @since 1.0.0
-         */
-        public function __construct( array $parameters )
-        {
-            parent::__construct( $parameters );
-        }
+    public function __construct( array $parameters )
+    {
+        parent::__construct( $parameters );
     }
 }

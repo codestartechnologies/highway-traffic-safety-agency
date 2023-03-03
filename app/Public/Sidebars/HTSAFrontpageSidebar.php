@@ -21,25 +21,24 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if ( ! class_exists( 'HTSAFrontpageSidebar' ) ) {
+/**
+ * Class HTSAFrontpageSidebar
+ *
+ * @package HighwayTrafficSecurityAgency
+ * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
+ */
+final class HTSAFrontpageSidebar extends AbstractsSidebar
+{
     /**
-     * Class HTSAFrontpageSidebar
+     * HTSAFrontpageSidebar constructor
      *
-     * @package HighwayTrafficSecurityAgency
-     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @access public
+     * @param array $parameters     Initial parameters passed to register_sidebar()
+     * @return void
+     * @since 1.0.0
      */
-    final class HTSAFrontpageSidebar extends AbstractsSidebar {
-        /**
-         * HTSAFrontpageSidebar constructor
-         *
-         * @access public
-         * @param array $parameters     Initial parameters passed to register_sidebar()
-         * @return void
-         * @since 1.0.0
-         */
-        public function __construct( array $parameters )
-        {
-            parent::__construct( $parameters );
-        }
+    public function __construct( array $parameters )
+    {
+        parent::__construct( $parameters );
     }
 }

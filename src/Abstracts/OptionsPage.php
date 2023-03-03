@@ -19,46 +19,45 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if ( ! class_exists( 'OptionsPage' ) ) {
+/**
+ * Class OptionsPage
+ *
+ * This class contains contracts that will be used to create admin menu pages with add-options_page().
+ *
+ * @package WordpressThemeStarter
+ * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+ */
+abstract class OptionsPage extends MenuPage
+{
     /**
-     * Class OptionsPage
+     * The menu page hook name
      *
-     * This class contains contracts that will be used to create admin menu pages with add-options_page().
-     *
-     * @package WordpressThemeStarter
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @access protected
+     * @return string
+     * @since 1.0.0
      */
-    abstract class OptionsPage extends MenuPage {
-        /**
-         * The menu page hook name
-         *
-         * @access protected
-         * @return string
-         * @since 1.0.0
-         */
-        protected function get_menu_hookname() : string
-        {
-            return $this->page_hook ?? 'settings_page_' . $this->menu_slug;
-        }
+    protected function get_menu_hookname() : string
+    {
+        return $this->page_hook ?? 'settings_page_' . $this->menu_slug;
+    }
 
-        /**
-         * "admin_menu" action hook callback
-         *
-         * @access public
-         * @final
-         * @return void
-         * @since 1.0.0
-         */
-        final public function menu_page() : void
-        {
-            $this->page_hook = add_options_page(
-                $this->page_title,
-                $this->menu_title,
-                $this->capability,
-                $this->menu_slug,
-                array( $this, 'menu_page_cb' ),
-                $this->position
-            );
-        }
+    /**
+     * "admin_menu" action hook callback
+     *
+     * @access public
+     * @final
+     * @return void
+     * @since 1.0.0
+     */
+    final public function menu_page() : void
+    {
+        $this->page_hook = add_options_page(
+            $this->page_title,
+            $this->menu_title,
+            $this->capability,
+            $this->menu_slug,
+            array( $this, 'menu_page_cb' ),
+            $this->position
+        );
     }
 }

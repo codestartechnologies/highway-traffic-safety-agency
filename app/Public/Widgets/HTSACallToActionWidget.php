@@ -15,224 +15,223 @@ namespace HTSA\WTS_Theme\App\Public\Widgets;
 use HTSA\Codestartechnologies\WordpressThemeStarter\Traits\PageViewLoader;
 use WP_Widget;
 
-if ( ! class_exists( 'HTSACallToActionWidget' ) ) {
+/**
+ * HTSACallToActionWidget Class
+ *
+ * @package HighwayTrafficSecurityAgency
+ * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
+ */
+final class HTSACallToActionWidget extends WP_Widget
+{
+
+    use PageViewLoader;
+
     /**
-     * HTSACallToActionWidget Class
-     *
-     * @package HighwayTrafficSecurityAgency
-     * @author  Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * Widget ID
+     * @since 1.0.0
      */
-    final class HTSACallToActionWidget extends WP_Widget
+    public const ID_BASE = 'htsa_call_to_action_widget';
+
+    /**
+     * Widget Name
+     * @since 1.0.0
+     */
+    public const NAME = 'HTSA Call To Action';
+
+    /**
+     * Support for wordpress versions less than 5.8
+     *
+     * @var boolean
+     * @since 1.0.0
+     */
+    public $show_instance_in_rest = true;
+
+    /**
+     * Widget constructor
+     *
+     * Register widget with WordPress.
+     *
+     * @access public
+     * @return void
+     * @since 1.0.0
+     */
+    public function __construct()
     {
-        use PageViewLoader;
+        parent::__construct(
+            self::ID_BASE,
+            sprintf( __( '%s', 'htsa' ), self::NAME ),
+            array(
+                'description'                   => __( 'A widget to display text and image, along with an action link' ),
+                'customize_selective_refresh'   => true,
+                'show_instance_in_rest'         => true,
+            )
+        );
+    }
 
-        /**
-         * Widget ID
-         * @since 1.0.0
-         */
-        public const ID_BASE = 'htsa_call_to_action_widget';
+    /**
+     * Front-end display of widget.
+     *
+     * @see WP_Widget::widget()
+     * @access public
+     * @param array $args Widget arguments.
+     * @param array $instance Saved values from database.
+     * @return void
+     * @since 1.0.0
+     */
+    public function widget( $args, $instance )
+    {
+        $instance = wp_parse_args( (array) $instance, array(
+            'header'        => null,
+            'description'   => null,
+            'action_text'   => null,
+            'action_url'    => null,
+            'image_url'     => null,
+        ) );
 
-        /**
-         * Widget Name
-         * @since 1.0.0
-         */
-        public const NAME = 'HTSA Call To Action';
+        ob_start();
 
-        /**
-         * Support for wordpress versions less than 5.8
-         *
-         * @var boolean
-         * @since 1.0.0
-         */
-        public $show_instance_in_rest = true;
+        echo $args['before_widget'];
 
-        /**
-         * Widget constructor
-         *
-         * Register widget with WordPress.
-         *
-         * @access public
-         * @return void
-         * @since 1.0.0
-         */
-        public function __construct()
-        {
-            parent::__construct(
-                self::ID_BASE,
-                sprintf( __( '%s', 'htsa' ), self::NAME ),
-                array(
-                    'description'                   => __( 'A widget to display text and image, along with an action link' ),
-                    'customize_selective_refresh'   => true,
-                    'show_instance_in_rest'         => true,
-                )
-            );
-        }
+        get_template_part( 'template-parts/parts/widget', 'call-to-action', array(
+            'header'        => $instance['header'],
+            'description'   => $instance['description'],
+            'action_text'   => $instance['action_text'],
+            'action_url'    => $instance['action_url'],
+            'image_url'     => ( $instance['image_url'] ) ? wp_get_attachment_image_url( $instance['image_url'], 'large' ) : null,
+        ) );
 
-        /**
-         * Front-end display of widget.
-         *
-         * @see WP_Widget::widget()
-         * @access public
-         * @param array $args Widget arguments.
-         * @param array $instance Saved values from database.
-         * @return void
-         * @since 1.0.0
-         */
-        public function widget( $args, $instance )
-        {
-            $instance = wp_parse_args( (array) $instance, array(
-                'header'        => null,
-                'description'   => null,
-                'action_text'   => null,
-                'action_url'    => null,
-                'image_url'     => null,
-            ) );
+        echo $args['after_widget'];
 
-            ob_start();
+        echo ob_get_clean();
+    }
 
-            echo $args['before_widget'];
+    /**
+     * Back-end widget form.
+     *
+     * @see WP_Widget::form()
+     * @access public
+     * @param array $instance Previously saved values from database.
+     * @return void
+     * @since 1.0.0
+     */
+    public function form( $instance )
+    {
+        $instance = wp_parse_args( (array) $instance, array(
+            'header'        => sprintf( __( '%s', 'htsa' ), self::NAME ),
+            'description'   => null,
+            'action_text'   => null,
+            'action_url'    => null,
+            'image_url'     => null,
+        ) );
 
-            get_template_part( 'template-parts/parts/widget', 'call-to-action', array(
-                'header'        => $instance['header'],
-                'description'   => $instance['description'],
-                'action_text'   => $instance['action_text'],
-                'action_url'    => $instance['action_url'],
-                'image_url'     => ( $instance['image_url'] ) ? wp_get_attachment_image_url( $instance['image_url'], 'large' ) : null,
-            ) );
+        ob_start();
 
-            echo $args['after_widget'];
+        printf(
+            '
+                <p>
+                    <label for="%1$s"> %4$s </label>
+                    <input type="text" class="widefat" id="%1$s" name="%2$s" value="%3$s" />
+                </p>
+            ',
+            $this->get_field_id( 'header' ),
+            $this->get_field_name( 'header' ),
+            esc_attr( $instance['header'] ),
+            esc_html__( 'Header:', 'htsa' ),
+        );
 
-            echo ob_get_clean();
-        }
+        printf(
+            '
+                <p>
+                    <label for="%1$s"> %4$s </label>
+                    <textarea class="widefat" id="%1$s" name="%2$s">%3$s</textarea>
+                </p>
+            ',
+            $this->get_field_id( 'description' ),
+            $this->get_field_name( 'description' ),
+            esc_html( $instance['description'] ),
+            esc_html__( 'Description:', 'htsa' ),
+        );
 
-        /**
-         * Back-end widget form.
-         *
-         * @see WP_Widget::form()
-         * @access public
-         * @param array $instance Previously saved values from database.
-         * @return void
-         * @since 1.0.0
-         */
-        public function form( $instance )
-        {
-            $instance = wp_parse_args( (array) $instance, array(
-                'header'        => sprintf( __( '%s', 'htsa' ), self::NAME ),
-                'description'   => null,
-                'action_text'   => null,
-                'action_url'    => null,
-                'image_url'     => null,
-            ) );
+        printf(
+            '
+                <p>
+                    <label for="%1$s"> %4$s </label>
+                    <input type="text" class="widefat" id="%1$s" name="%2$s" value="%3$s" />
+                </p>
+            ',
+            $this->get_field_id( 'action_text' ),
+            $this->get_field_name( 'action_text' ),
+            esc_attr( $instance['action_text'] ),
+            esc_html__( 'Link Label:', 'htsa' ),
+        );
 
-            ob_start();
+        printf(
+            '
+                <p>
+                    <label for="%1$s"> %4$s </label>
+                    <input type="url" class="widefat" id="%1$s" name="%2$s" value="%3$s" />
+                </p>
+            ',
+            $this->get_field_id( 'action_url' ),
+            $this->get_field_name( 'action_url' ),
+            esc_attr( $instance['action_url'] ),
+            esc_html__( 'Link URL:', 'htsa' ),
+        );
 
-            printf(
-                '
+        printf(
+            '
+            <div data-htsa-id="card-media-wrap" class="media-widget-control">
+                <input data-htsa-id="wp_media_upload_image_input" type="hidden" id="%1$s" name="%2$s" value="%3$s" />
+                <div data-htsa-id="wp_media_upload_image" class="media-widget-preview media_image">%6$s</div>
+                <br />
+                <div class="attachment-media-view %7$s">
                     <p>
-                        <label for="%1$s"> %4$s </label>
-                        <input type="text" class="widefat" id="%1$s" name="%2$s" value="%3$s" />
-                    </p>
-                ',
-                $this->get_field_id( 'header' ),
-                $this->get_field_name( 'header' ),
-                esc_attr( $instance['header'] ),
-                esc_html__( 'Header:', 'htsa' ),
-            );
-
-            printf(
-                '
-                    <p>
-                        <label for="%1$s"> %4$s </label>
-                        <textarea class="widefat" id="%1$s" name="%2$s">%3$s</textarea>
-                    </p>
-                ',
-                $this->get_field_id( 'description' ),
-                $this->get_field_name( 'description' ),
-                esc_html( $instance['description'] ),
-                esc_html__( 'Description:', 'htsa' ),
-            );
-
-            printf(
-                '
-                    <p>
-                        <label for="%1$s"> %4$s </label>
-                        <input type="text" class="widefat" id="%1$s" name="%2$s" value="%3$s" />
-                    </p>
-                ',
-                $this->get_field_id( 'action_text' ),
-                $this->get_field_name( 'action_text' ),
-                esc_attr( $instance['action_text'] ),
-                esc_html__( 'Link Label:', 'htsa' ),
-            );
-
-            printf(
-                '
-                    <p>
-                        <label for="%1$s"> %4$s </label>
-                        <input type="url" class="widefat" id="%1$s" name="%2$s" value="%3$s" />
-                    </p>
-                ',
-                $this->get_field_id( 'action_url' ),
-                $this->get_field_name( 'action_url' ),
-                esc_attr( $instance['action_url'] ),
-                esc_html__( 'Link URL:', 'htsa' ),
-            );
-
-            printf(
-                '
-                <div data-htsa-id="card-media-wrap" class="media-widget-control">
-                    <input data-htsa-id="wp_media_upload_image_input" type="hidden" id="%1$s" name="%2$s" value="%3$s" />
-                    <div data-htsa-id="wp_media_upload_image" class="media-widget-preview media_image">%6$s</div>
-                    <br />
-                    <div class="attachment-media-view %7$s">
-                        <p>
-                            <button type="button" class="select-media button-add-media not-selected" data-htsa-id="wp_media_upload">%4$s</button>
-                        </p>
-                    </div>
-                    <p class="htsa-media-button-wrapper %7$s">
-                        <button type="button" class="button" data-htsa-id="wp_media_upload">%5$s</button>
+                        <button type="button" class="select-media button-add-media not-selected" data-htsa-id="wp_media_upload">%4$s</button>
                     </p>
                 </div>
-                ',
-                $this->get_field_id( 'image_url' ),
-                $this->get_field_name( 'image_url' ),
-                $instance['image_url'],
-                esc_html__( 'Add Image', 'htsa' ),
-                esc_html__( 'Replace Image', 'htsa' ),
-                ( $instance['image_url'] ) ? wp_get_attachment_image( $instance['image_url'] ) : null,
-                ( $instance['image_url'] ) ? 'htsa-hidden-1' : 'htsa-hidden-2'
-            );
+                <p class="htsa-media-button-wrapper %7$s">
+                    <button type="button" class="button" data-htsa-id="wp_media_upload">%5$s</button>
+                </p>
+            </div>
+            ',
+            $this->get_field_id( 'image_url' ),
+            $this->get_field_name( 'image_url' ),
+            $instance['image_url'],
+            esc_html__( 'Add Image', 'htsa' ),
+            esc_html__( 'Replace Image', 'htsa' ),
+            ( $instance['image_url'] ) ? wp_get_attachment_image( $instance['image_url'] ) : null,
+            ( $instance['image_url'] ) ? 'htsa-hidden-1' : 'htsa-hidden-2'
+        );
 
-            echo ob_get_clean();
-        }
+        echo ob_get_clean();
+    }
 
-        /**
-         * Sanitize widget form values as they are saved.
-         *
-         * @see WP_Widget::update()
-         * @access public
-         * @param array $new_instance Values just sent to be saved.
-         * @param array $old_instance Previously saved values from database.
-         * @return void
-         * @since 1.0.0
-         */
-        public function update( $new_instance, $old_instance )
-        {
-            $instance = $old_instance;
-            $new_instance = wp_parse_args( (array) $new_instance, array(
-                'header'        => sprintf( __( '%s', 'htsa' ), self::NAME ),
-                'description'   => null,
-                'action_text'   => null,
-                'action_url'    => null,
-                'image_url'     => null,
-            ) );
+    /**
+     * Sanitize widget form values as they are saved.
+     *
+     * @see WP_Widget::update()
+     * @access public
+     * @param array $new_instance Values just sent to be saved.
+     * @param array $old_instance Previously saved values from database.
+     * @return void
+     * @since 1.0.0
+     */
+    public function update( $new_instance, $old_instance )
+    {
+        $instance = $old_instance;
+        $new_instance = wp_parse_args( (array) $new_instance, array(
+            'header'        => sprintf( __( '%s', 'htsa' ), self::NAME ),
+            'description'   => null,
+            'action_text'   => null,
+            'action_url'    => null,
+            'image_url'     => null,
+        ) );
 
-            $instance['header'] = sanitize_text_field( $new_instance['header'] );
-            $instance['description'] = sanitize_text_field( $new_instance['description'] );
-            $instance['action_text'] = sanitize_text_field( $new_instance['action_text'] );
-            $instance['action_url'] = esc_url( $new_instance['action_url'] );
-            $instance['image_url'] = sanitize_text_field( $new_instance['image_url'] );
-            return $instance;
-        }
+        $instance['header'] = sanitize_text_field( $new_instance['header'] );
+        $instance['description'] = sanitize_text_field( $new_instance['description'] );
+        $instance['action_text'] = sanitize_text_field( $new_instance['action_text'] );
+        $instance['action_url'] = esc_url( $new_instance['action_url'] );
+        $instance['image_url'] = sanitize_text_field( $new_instance['image_url'] );
+        return $instance;
     }
 }

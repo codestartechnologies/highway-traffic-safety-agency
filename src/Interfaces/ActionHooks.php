@@ -20,23 +20,22 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if ( ! interface_exists( 'ActionHooks' ) ) {
+/**
+ * Interface ActionHooks
+ *
+ * Classes that make use of add_action() and remove_action() need to implement this interface.
+ *
+ * @package WordpressThemeStarter
+ * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+ */
+interface ActionHooks
+{
     /**
-     * Interface ActionHooks
+     * Register add_action() and remove_action().
      *
-     * Classes that make use of add_action() and remove_action() need to implement this interface.
-     *
-     * @package WordpressThemeStarter
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @access public
+     * @return void
+     * @since 1.0.0
      */
-    interface ActionHooks {
-        /**
-         * Register add_action() and remove_action().
-         *
-         * @access public
-         * @return void
-         * @since 1.0.0
-         */
-        public function register_actions() : void;
-    }
+    public function register_actions() : void;
 }

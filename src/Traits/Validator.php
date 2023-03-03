@@ -20,40 +20,39 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-if ( ! trait_exists( 'Validator' ) ) {
+/**
+ * Validator trait
+ *
+ * This trait is used for validating objects parent class.
+ *
+ * @package WordpressThemeStarter
+ * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+ */
+trait Validator
+{
     /**
-     * Validator trait
+     * This method will check the type of each objects in an array and return valid and invalid objects.
      *
-     * This trait is used for validating objects parent class.
-     *
-     * @package WordpressThemeStarter
-     * @author Chijindu Nzeako <chijindunzeako517@gmail.com>
+     * @access public
+     * @final
+     * @param array $objects        Array containing objects
+     * @param string $class_type    Class type to check against
+     * @return array
+     * @since 1.0.0
      */
-    trait Validator {
-        /**
-         * This method will check the type of each objects in an array and return valid and invalid objects.
-         *
-         * @access public
-         * @final
-         * @param array $objects        Array containing objects
-         * @param string $class_type    Class type to check against
-         * @return array
-         * @since 1.0.0
-         */
-        final public function check_objects_parent_type( array $objects, string $class_type) : array
-        {
-            $result['valid']    = array();
-            $result['invalid']  = array();
+    final public function check_objects_parent_type( array $objects, string $class_type) : array
+    {
+        $result['valid']    = array();
+        $result['invalid']  = array();
 
-            foreach ($objects as $object) {
-                if ( get_parent_class( $object ) == $class_type ) {
-                    $result['valid'][] = $object;
-                } else {
-                    $result['invalid'][] = $object;
-                }
+        foreach ($objects as $object) {
+            if ( get_parent_class( $object ) == $class_type ) {
+                $result['valid'][] = $object;
+            } else {
+                $result['invalid'][] = $object;
             }
-
-            return $result;
         }
+
+        return $result;
     }
 }
