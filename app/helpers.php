@@ -173,7 +173,7 @@ if ( ! function_exists( 'htsa_get_license_api_response' ) ) {
 
             case 'error':
                 $message['type'] = 'error';
-                $message['message'] = sprintf( __( '<b>%s</b>: An error occured! Refresh page and try again. Or contact plugin author', 'htsa' ), HTSA_THEME_NAME );
+                $message['message'] = sprintf( __( '<b>%s</b>: An error occured! Refresh page and try again. Or contact theme author', 'htsa' ), HTSA_THEME_NAME );
                 break;
 
             default:
