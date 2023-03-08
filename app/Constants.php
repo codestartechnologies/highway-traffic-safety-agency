@@ -61,6 +61,34 @@ final class Constants
         }
 
         /**
+         * Specify app environment
+         */
+        if ( ! defined( 'HTSA_ENV' ) ) {
+            define( 'HTSA_ENV', $_ENV['HTSA_ENV'] ?? 'production' );
+        }
+
+        /**
+         * Specify product api endpoint for development
+         */
+        if ( ! defined( 'HTSA_API_ENDPOINT_DEV' ) ) {
+            define( 'HTSA_API_ENDPOINT_DEV', $_ENV['HTSA_API_ENDPOINT_DEV'] ?? '' );
+        }
+
+        /**
+         * Specify product api endpoint for production
+         */
+        if ( ! defined( 'HTSA_API_ENDPOINT_PROD' ) ) {
+            define( 'HTSA_API_ENDPOINT_PROD', $_ENV['HTSA_API_ENDPOINT_PROD'] ?? 'https://codestar.com.ng/api/product-licenses/v1/' );
+        }
+
+        /**
+         * Specify product slug identifier
+         */
+        if ( ! defined( 'HTSA_API_PRODUCT_ID' ) ) {
+            define( 'HTSA_API_PRODUCT_ID', $_ENV['HTSA_API_PRODUCT_ID'] ?? 'highway-traffic-security-agency' );
+        }
+
+        /**
          * Specify theme recommended plugins
          */
         if ( ! defined( 'HTSA_THEME_RP_HTSA_PLUGIN_NAME' ) ) {
@@ -71,7 +99,7 @@ final class Constants
             define( 'HTSA_THEME_RP_HTSA_PLUGIN_URL', 'https://codestar.com.ng/shop/highway-traffic-security-agency-plugin' );
         }
 
-        if ( 'production' === $_ENV['HTSA_ENV'] ) {
+        if ( 'production' === HTSA_ENV ) {
 
             /**
              * Specify links to Semantic UI CSS
