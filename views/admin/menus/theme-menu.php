@@ -5,9 +5,15 @@
     <p class="htsa-main-content">
         <?php printf( __(
             '
-                <i>%1$s</i> is a WordPress theme for developing web applications that relates to road traffic safety agencies.
-                It comes with archives for displaying blogs, profiles, commanding officers, agency branches, and penalty tarrifs.
-                This theme recommends that you install <a href="%2$s" target="_blank">%3$s</a>.
+                <i>%1$s</i> is a WordPress theme for developing web applications that relates to a road/highway traffic safety agency.
+                It comes with different page archives, examples are <b>blogs/news archive</b> for displaying posts relating to the agency,
+                <b>profiles archive</b> for displaying lists of all officers and staffs employed by the agency, <b>commanding/principal officers
+                archive</b> for displaying contact information for top ranking officers/staffs, <b>branches/head offices archive</b> for
+                displaying information relating to all agency branches/head offices, and <b>penalty tariffs archive</b> for displaying tariffs
+                from the agency for road traffic offenders. <br /><br />
+                The theme also comes with a custom <b>contact page</b>, that can be easily customized via the customizer interface. <br /><br />
+                This theme recommends that you install <a href="%2$s" target="_blank">%3$s</a>. %3$s is responsible for adding all the above
+                mentioned archives in the theme.
             ',
             'htsa'
         ), HTSA_THEME_NAME, HTSA_THEME_RP_HTSA_PLUGIN_URL, HTSA_THEME_RP_HTSA_PLUGIN_NAME ); ?>
@@ -22,7 +28,7 @@
                 <h6 class="htsa-grid-item-title"> <?php esc_html_e( 'Customizer', 'htsa' ); ?> </h6>
                 <div class="htsa-grid-content">
                     <?php
-                        _e(
+                        printf( __(
                             '
                                 <p>
                                     This theme comes with customizer settings for customizing the site social links, front/home page, contact page, penalties archive page, and comments.
@@ -31,12 +37,12 @@
                                     <li><b>Customize Social Links</b> <p>Go to <mark>customize</mark> &rarr; <mark>Site Identity</mark></p> </li>
                                     <li><b>Customize Front/Home Page</b> <p>Go to <mark>customize</mark> &rarr; <mark>Homepage Settings</mark></p> </li>
                                     <li><b>Customize Contact Page</b> <p>Go to <mark>customize</mark> &rarr; <mark>Contact Page</mark> (visible only on the contact page having a slug of "contact-us")</p> </li>
-                                    <li><b>Customize Penalties Archive Page</b> <p>Go to <mark>customize</mark> &rarr; <mark>Penalties Archive Page</mark> (visible only on the penalties archive page registered by "<a href="%s" target="_blank">Highway Traffic Security Agency Plugin</a>")</p> </li>
+                                    <li><b>Customize Penalty Tariffs Archive Page</b> <p>Go to <mark>customize</mark> &rarr; <mark>Penalties Archive Page</mark> (visible only on the penalty tariffs archive page registered by <a href="%1$s" target="_blank">%2$s</a>)</p> </li>
                                     <li><b>Customize Post Comments</b> <p>Go to <mark>customize</mark> &rarr; <mark>Comments</mark> (visible only on a single post page, with comments enabled)</p> </li>
                                 </ul>
                             ',
                             'htsa'
-                        );
+                        ), HTSA_THEME_RP_HTSA_PLUGIN_URL, HTSA_THEME_RP_HTSA_PLUGIN_NAME );
                     ?>
                 </div>
                 <a href="<?php echo admin_url( 'customize.php' ); ?>" class="htsa-grid-item-link"> <?php esc_html_e( 'Customize Website', 'htsa' ); ?> </a>

@@ -67,7 +67,7 @@ return array(
      */
     'license_settings'  => array(
 
-        'page_title'    => esc_html__( 'License Settings - Highway Traffic Security Agency WordPress Theme', 'htsa' ),
+        'page_title'    => sprintf( esc_html__( 'License Settings -  %s', 'htsa' ), HTSA_THEME_NAME ),
 
         'menu_title'    => esc_html__( 'HTSA Theme License', 'htsa' ),
 

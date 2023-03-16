@@ -22,6 +22,10 @@ mark {
     padding: 8px;
 }
 
+.htsa-main-content b {
+    font-weight: 500 !important;
+}
+
 .htsa-section-title {
     font-size: 1.7rem;
     font-weight: 400;

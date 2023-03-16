@@ -43,7 +43,7 @@ final class Constants
          * Specify theme name
          */
         if ( ! defined( 'HTSA_THEME_NAME' ) ) {
-            define( 'HTSA_THEME_NAME', 'Highway Traffic Security Agency' );
+            define( 'HTSA_THEME_NAME', 'Highway Traffic Safety Agency' );
         }
 
         /**
@@ -92,7 +92,7 @@ final class Constants
          * Specify theme recommended plugins
          */
         if ( ! defined( 'HTSA_THEME_RP_HTSA_PLUGIN_NAME' ) ) {
-            define( 'HTSA_THEME_RP_HTSA_PLUGIN_NAME', 'Highway Traffic Security Agency Plugin' );
+            define( 'HTSA_THEME_RP_HTSA_PLUGIN_NAME', 'Highway Traffic Safety Agency Plugin' );
         }
 
         if ( ! defined( 'HTSA_THEME_RP_HTSA_PLUGIN_URL' ) ) {

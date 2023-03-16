@@ -83,7 +83,7 @@ return array(
 
                 'args'          => array(
 
-                    'description'   => esc_html__( 'Highway Traffic Security Agency Theme License Settings', 'htsa' ),
+                    'description'   => sprintf( esc_html__( '%s License Settings', 'htsa' ), HTSA_THEME_NAME ),
                 ),
 
                 'update_cb'     => 'update_license_setting_cb',

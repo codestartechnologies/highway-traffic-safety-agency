@@ -2032,7 +2032,7 @@ return array(
 
                     'section'           => 'htsa_contactpage_section',
 
-                    'label'             => esc_html__( 'Email Addess', 'htsa' ),
+                    'label'             => esc_html__( 'Email Address', 'htsa' ),
 
                     'type'              => 'email',
 
