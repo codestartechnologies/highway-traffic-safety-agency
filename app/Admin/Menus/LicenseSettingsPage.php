@@ -106,6 +106,7 @@ final class LicenseSettingsPage extends AbstractsOptionsPage
             $response = ( isset( $response->success ) ) ? $response->message : 'error';
             htsa_store_session_data( 'htsa_license_api', $response, strtotime( '+2 minutes' ) );
             wp_safe_redirect( admin_url( 'options-general.php?page=htsa-license-settings' ) );
+            exit;
         }
     }
 }
