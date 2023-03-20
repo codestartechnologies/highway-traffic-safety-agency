@@ -62,7 +62,7 @@ final class HTSAPostsCarouselWidget extends WP_Widget
             sprintf( __( '%s', 'htsa' ), self::NAME ),
             array(
                 'description'                   => __( 'A featured posts carousel widget', 'htsa' ),
-                'customize_selective_refresh'   => true,
+                // 'customize_selective_refresh'   => true,
                 'show_instance_in_rest'         => true,
             )
         );
@@ -81,9 +81,9 @@ final class HTSAPostsCarouselWidget extends WP_Widget
     public function widget( $args, $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'title'         => null,
-            'post_type'     => null,
-            'post_count'    => null,
+            'title'         => sprintf( __( '%s', 'htsa' ), self::NAME ),
+            'post_type'     => 'post',
+            'post_count'    => 5,
         ) );
 
         $meta_key = HTSA_FEATURED_META_KEY ?? null;
@@ -111,7 +111,7 @@ final class HTSAPostsCarouselWidget extends WP_Widget
     public function form( $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'title'         => sprintf( __( '%s', 'htsa' ), self::NAME ),
+            'title'         => null,
             'post_type'     => 'post',
             'post_count'    => 5,
         ) );
@@ -185,14 +185,14 @@ final class HTSAPostsCarouselWidget extends WP_Widget
      * @access public
      * @param array $new_instance Values just sent to be saved.
      * @param array $old_instance Previously saved values from database.
-     * @return void
+     * @return array Settings to save or bool false to cancel saving.
      * @since 1.0.0
      */
     public function update( $new_instance, $old_instance )
     {
         $instance = $old_instance;
         $new_instance = wp_parse_args( (array) $new_instance, array(
-            'title'         => sprintf( __( '%s', 'htsa' ), self::NAME ),
+            'title'         => null,
             'post_type'     => 'post',
             'post_count'    => 5,
         ) );

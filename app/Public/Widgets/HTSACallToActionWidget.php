@@ -62,7 +62,7 @@ final class HTSACallToActionWidget extends WP_Widget
             sprintf( __( '%s', 'htsa' ), self::NAME ),
             array(
                 'description'                   => __( 'A widget to display text and image, along with an action link' ),
-                'customize_selective_refresh'   => true,
+                // 'customize_selective_refresh'   => true,
                 'show_instance_in_rest'         => true,
             )
         );
@@ -81,8 +81,8 @@ final class HTSACallToActionWidget extends WP_Widget
     public function widget( $args, $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'header'        => null,
-            'description'   => null,
+            'header'        => sprintf( __( '%s', 'htsa' ), self::NAME ),
+            'description'   => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.',
             'action_text'   => null,
             'action_url'    => null,
             'image_url'     => null,
@@ -117,7 +117,7 @@ final class HTSACallToActionWidget extends WP_Widget
     public function form( $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'header'        => sprintf( __( '%s', 'htsa' ), self::NAME ),
+            'header'        => null,
             'description'   => null,
             'action_text'   => null,
             'action_url'    => null,
@@ -213,7 +213,7 @@ final class HTSACallToActionWidget extends WP_Widget
      * @access public
      * @param array $new_instance Values just sent to be saved.
      * @param array $old_instance Previously saved values from database.
-     * @return void
+     * @return array Settings to save or bool false to cancel saving.
      * @since 1.0.0
      */
     public function update( $new_instance, $old_instance )

@@ -44,7 +44,7 @@ get_header();
                 <div class="ui hidden divider"></div>
 
             </main>
-            <?php get_sidebar( 'front-page' ); ?>
+            <?php get_sidebar( 'front-page-aside' ); ?>
         </div>
     </div>
 </main>

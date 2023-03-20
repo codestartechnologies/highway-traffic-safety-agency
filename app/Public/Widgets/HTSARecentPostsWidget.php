@@ -62,7 +62,7 @@ final class HTSARecentPostsWidget extends WP_Widget
             sprintf( __( '%s', 'htsa' ), self::NAME ),
             array(
                 'description'                   => __( 'A recent posts widget', 'htsa' ),
-                'customize_selective_refresh'   => true,
+                // 'customize_selective_refresh'   => true,
                 'show_instance_in_rest'         => true,
             )
         );
@@ -81,10 +81,10 @@ final class HTSARecentPostsWidget extends WP_Widget
     public function widget( $args, $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'title'         => null,
-            'post_type'     => null,
-            'post_count'    => null,
-            'show_image'    => 'yes',
+            'title'         => sprintf( __( '%s', 'htsa' ), self::NAME ),
+            'post_type'     => 'post',
+            'post_count'    => 5,
+            'show_image'    => null,
         ) );
 
         $recent_posts = wp_get_recent_posts( array(
@@ -116,7 +116,7 @@ final class HTSARecentPostsWidget extends WP_Widget
     public function form( $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'title'         => sprintf( __( '%s', 'htsa' ), self::NAME ),
+            'title'         => null,
             'post_type'     => 'post',
             'post_count'    => 5,
             'show_image'    => null,
@@ -204,7 +204,7 @@ final class HTSARecentPostsWidget extends WP_Widget
      * @access public
      * @param array $new_instance Values just sent to be saved.
      * @param array $old_instance Previously saved values from database.
-     * @return void
+     * @return array Settings to save or bool false to cancel saving.
      * @since 1.0.0
      */
     public function update( $new_instance, $old_instance )
@@ -219,7 +219,7 @@ final class HTSARecentPostsWidget extends WP_Widget
 
         $instance['title'] = sanitize_text_field( $new_instance['title'] );
         $instance['post_type'] = sanitize_text_field( $new_instance['post_type'] );
-        $instance['post_count'] = filter_var( $new_instance['post_count'], FILTER_SANITIZE_NUMBER_INT );
+        $instance['post_count'] = intval( $new_instance['post_count'] );
         $instance['show_image'] = sanitize_text_field( $new_instance['show_image'] );
         return $instance;
     }
