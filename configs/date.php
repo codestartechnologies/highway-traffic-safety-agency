@@ -8,8 +8,10 @@
  */
 
 return array(
+
     /**
      * Customize your default timezone
      */
     'timezone_id'    => 'Africa/Lagos',
+
 );

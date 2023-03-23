@@ -8,6 +8,7 @@
  */
 
 return array(
+
     /**
      * Initial values to create "WTS Menu" menu page in the admin area.
      */

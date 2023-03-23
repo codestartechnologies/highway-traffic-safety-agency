@@ -8,10 +8,12 @@
  */
 
 return array(
+
     /**
      * Customize markups used when filtering comments lists
      */
     'comments_lists_markup' => array (
+
         /**
          * Markup for displaying a single comment opening list tag
          *
@@ -101,6 +103,7 @@ return array(
      * Customize the markup used when filtering comment form default arguments.
      */
     'form_defaults_markup'  => array(
+
         /**
          * Opening tag markup
          *
@@ -157,6 +160,7 @@ return array(
      * Customize markup for cancel comment reply link HTML
      */
     'cancel_reply_markup'  => array(
+
         /**
          * Markup for the cancel comment reply link
          *
@@ -165,6 +169,7 @@ return array(
          * Default: <a href="%1$s" %3$s>%2$s</a>
          */
         'container'  => '<a href="%1$s" %3$s class="fw-lighter link-danger text-lowercase fs-6">%2$s</a>',
+
     ),
 
     /**
@@ -214,6 +219,7 @@ return array(
      * Customize markup for filtering the submit field for the comment form to display
      */
     'submit_field_markup'   => array(
+
         /**
          * Default: <p> %1$s %2$s </p>
          */

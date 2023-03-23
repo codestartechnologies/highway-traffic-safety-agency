@@ -8,6 +8,7 @@
  */
 
 return array(
+
     /**
      * Initial values to create "WordPress Theme Starter - Footer Menu Two" customizer section.
      */
@@ -2188,4 +2189,5 @@ return array(
         ),
 
     ),
+
 );

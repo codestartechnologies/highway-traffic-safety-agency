@@ -8,6 +8,7 @@
  */
 
 return array(
+
     /**
      * Initial values to create 'WordPress Theme Starter Sidebar' settings.
      */
@@ -113,4 +114,5 @@ return array(
             ),
         ),
     ),
+
 );
