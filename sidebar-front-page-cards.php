@@ -5,11 +5,11 @@
  * @link https://github.com/codestartechnologies/wordpress-theme-starter
  */
 
-if ( is_active_sidebar( HTSA_FRONT_PAGE_RESOURCES_SIDEBAR_ID ) ) :
+if ( is_active_sidebar( HTSA_FRONT_PAGE_CARDS_SIDEBAR_ID ) ) :
 
 ?>
 
-<!-- Resources Sidebar Area -->
+<!-- Cards Sidebar Area -->
 <section>
     <div class="container">
         <?php
@@ -18,11 +18,11 @@ if ( is_active_sidebar( HTSA_FRONT_PAGE_RESOURCES_SIDEBAR_ID ) ) :
             ) );
         ?>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 justify-content-center" data-htsa-id="frontpageResources">
-            <?php dynamic_sidebar( HTSA_FRONT_PAGE_RESOURCES_SIDEBAR_ID ); ?>
+            <?php dynamic_sidebar( HTSA_FRONT_PAGE_CARDS_SIDEBAR_ID ); ?>
         </div>
     </div>
 </section>
 <div class="ui hidden divider"></div>
-<!-- End Resources Sidebar Area -->
+<!-- End Cards Sidebar Area -->
 
 <?php endif; ?>

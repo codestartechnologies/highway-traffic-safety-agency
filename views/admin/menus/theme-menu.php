@@ -61,7 +61,7 @@
                                 </p>
                                 <ul>
                                     <li><b>HTSA Call To Action</b> <p>A widget to display text and image, along with an action link. Recommended sidebar areas: Front Page</p></li>
-                                    <li><b>HTSA Card</b> <p>A card widget. Recommended sidebar areas: Front Page Resources</p></li>
+                                    <li><b>HTSA Card</b> <p>A card widget. Recommended sidebar areas: Front Page Cards</p></li>
                                     <li><b>HTSA Featured Posts</b> <p>An image carousel widget for displaying featured posts. Recommended sidebar areas: Front Page Aside, Archive Pages, and Single Pages</p></li>
                                     <li><b>HTSA Image Background With Content</b> <p>A widget to display text with an image background. Recommended sidebar areas: Front Page</p></li>
                                     <li><b>HTSA Recent Posts</b> <p>Widget for displaying recent posts. Recommended sidebar areas: Front Page Aside, Archive Pages, and Single Pages</p></li>
@@ -88,7 +88,7 @@
                                     This theme comes with five (5) sidebar areas.
                                 </p>
                                 <ul>
-                                    <li><b>Front Page Resources</b> <p>Widgets in this area are shown in the front page, immediately after the Mayor welcome address</p></li>
+                                    <li><b>Front Page Cards</b> <p>Widgets in this area are shown in the front page, immediately after the Mayor welcome address</p></li>
                                     <li><b>Front Page</b> <p>Widgets in this area are shown in the front page, before the blog/news section</p></li>
                                     <li><b>Front Page Aside</b> <p>Widgets in this area are shown in the front page, beside the featured and latest blog section</p></li>
                                     <li><b>Archive Pages</b> <p>Widgets in this area are shown in archive pages</p></li>

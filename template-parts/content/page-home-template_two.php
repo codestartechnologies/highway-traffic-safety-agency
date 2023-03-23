@@ -39,7 +39,7 @@ get_template_part( 'template-parts/parts/frontpage', 'md-welcome-address', array
     'author_tag_title'  => get_theme_mod( 'htsa_frontpage_md_tag_title', esc_html__( 'Commisioner, H.T.S.A', 'htsa' ) ),
 ) );
 
-get_sidebar( 'front-page-resources' );
+get_sidebar( 'front-page-cards' );
 
 get_template_part( 'template-parts/parts/widget', 'call-to-action', array(
     'header'        => get_theme_mod( 'htsa_frontpage_contact_banner_header', esc_html__( 'Have a safety problem?', 'htsa' ) ),

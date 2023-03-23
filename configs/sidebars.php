@@ -8,6 +8,7 @@
  */
 
 return array(
+
     /**
      * Initial values to create 'WordPress Theme Starter Sidebar' sidebar area.
      */
@@ -35,15 +36,15 @@ return array(
     ),
 
     /**
-     * Configuration values for 'Front Page Resources' sidebar area
+     * Configuration values for 'Front Page Cards' sidebar area
      */
     'front_page_cards_sidebar'  => array(
 
-        'name'              => esc_html__( 'Front Page Resources', 'htsa' ),
+        'name'              => esc_html__( 'Front Page Cards', 'htsa' ),
 
-        'id'                => HTSA_FRONT_PAGE_RESOURCES_SIDEBAR_ID,
+        'id'                => HTSA_FRONT_PAGE_CARDS_SIDEBAR_ID,
 
-        'description'       => esc_html__( 'Widgets in this area are shown in the front page, immediately after the Mayor welcome address', 'htsa' ),
+        'description'       => esc_html__( 'Widgets in this area are shown in the front page, immediately after the Mayor welcome address section', 'htsa' ),
 
         'class'             => '',
 

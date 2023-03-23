@@ -1,4 +1,4 @@
-# Highway Traffic Safety Agency - Version 0.3.0
+# Highway Traffic Safety Agency - Version 1.0.0
 
 ## Description
 
@@ -33,7 +33,7 @@ This theme comes with four (4) menu locations.
 
 This theme comes with five (5) sidebar areas.
 
-- Front Page Resources - Widgets here are shown on the site front page, after the Mayor address section. This sidebar will likely contain only **HTSA Card** widgets.
+- Front Page Cards - Widgets here are shown on the site front page, after the Mayor address section. This sidebar will likely contain only **HTSA Card** widgets.
 - Front Page - Widgets here are shown on the front page, before the blog section.
 - Front Page Aside - Widgets here are shown on the front page, beside the blog section.
 - Archive Pages - Widgets here are shown on all archive pages.
@@ -44,7 +44,7 @@ This theme comes with five (5) sidebar areas.
 This theme registers seven (7) widgets.
 
 - HTSA Call To Action - Used to display text and image, along with a clickable link button. Recommended sidebar areas: **Front Page**.
-- HTSA Card - A card widget. Recommended sidebar areas: **Front Page Resources**.
+- HTSA Card - A card widget. Recommended sidebar areas: **Front Page Cards**.
 - HTSA Featured Posts - Displays an image slider for featured posts. Recommended sidebar areas: **Front Page Aside**, **Archive Pages**, and **Single Pages**.
 - HTSA Image Background With Content - Used to to display text on an image background, along with a clickable link button. Recommended sidebar areas: **Front Page**.
 - HTSA Recent Posts - Displays recent posts. Recommended sidebar areas: **Front Page Aside**, **Archive Pages**, and **Single Pages**.
